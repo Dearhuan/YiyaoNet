@@ -1,0 +1,156 @@
+{
+  "id": "1306366",
+  "name": "myfont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "258548",
+      "name": "回到顶部",
+      "font_class": "btn",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "374847",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "464182",
+      "name": "圣诞简化-回到顶部",
+      "font_class": "top",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "554403",
+      "name": "wifi",
+      "font_class": "order",
+      "unicode": "e6f9",
+      "unicode_decimal": 59129
+    },
+    {
+      "icon_id": "566360",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "1206010",
+      "name": "local-2",
+      "font_class": "local2",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "1622274",
+      "name": "电脑",
+      "font_class": "diannao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1727712",
+      "name": "箭头 (1)",
+      "font_class": "jiantou1",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "2407266",
+      "name": "客服  选中",
+      "font_class": "kefu",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "2668386",
+      "name": "电话",
+      "font_class": "dianhua",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "2696593",
+      "name": "客服",
+      "font_class": "kefu1",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "3174139",
+      "name": "照相机 (1)",
+      "font_class": "zhaoxiangji",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "4568474",
+      "name": "智能家居",
+      "font_class": "zhinengjiaju",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "6401231",
+      "name": "二维码",
+      "font_class": "code",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "6822916",
+      "name": "wechat",
+      "font_class": "wechat2",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "7241490",
+      "name": "local",
+      "font_class": "local",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "7678908",
+      "name": "上箭头-2",
+      "font_class": "arror",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "7998518",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "8196846",
+      "name": "电动车",
+      "font_class": "diandongche",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "9937755",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10172220",
+      "name": "耳机",
+      "font_class": "headset",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

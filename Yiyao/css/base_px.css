@@ -1,0 +1,94 @@
+/*(1)清除默认样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,input{
+    margin:0; 
+    padding:0;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+fieldset, img,input,button {
+    border:0 none;
+    padding:0;
+    margin:0;
+    outline-style:none;
+}   
+
+ul,li,ol{
+    list-style:none;
+}
+select, input {
+    vertical-align:middle;
+}
+
+/*防止拖动*/
+textarea {
+    resize:none;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+img {
+    border:0 none;
+    vertical-align:middle;
+}  
+
+table {
+    border-collapse:collapse;
+}
+
+a {
+    text-decoration:none;
+}
+
+
+
+/*2.添加公共样式*/
+/*body {
+    font:12px Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff;
+}*/
+
+/*清除浮动（不管）*/
+.clearfix:before,.clearfix:after {  /*清楚浮动*/
+    content:"";
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    clear:both;
+    zoom:1;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+    font-size:1em;
+} 
+s,i,em{
+    font-style:normal;
+    text-decoration:none;
+}
+
+
+/*公共类*/
+.con {  /*内容、版心 提取 */
+    width: 1190px;
+    margin:0 auto;
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.ac {
+    text-align:center;
+}
+.hide {
+    display:none;
+}
+.f12{ font-size: 12px;}
+.f14{ font-size: 14px;}
+.f16{ font-size: 16px;}

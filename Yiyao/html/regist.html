@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注册</title>
+  <link rel="stylesheet" href="../css/base_px.css">
+  <link rel="stylesheet" href="../css/regist.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="../js/captcha.min.js"></script>
+  <script src="../js/regist.js"></script>
+</head>
+
+<body>
+  <div class="wrap head">
+    <a href="http://www.111.com.cn" class="logo">
+      <img src="https://s.maiyaole.com/images/passport/yao_logo.png" alt="" id="yao_logo">
+    </a>
+  </div>
+
+  <div class="wrap reg_wrap">
+    <a class="bg_link" id="2014_reg_background_a" target="_blank">&nbsp;</a>
+    <h2 class="lg_title">
+      <span class="fr">我已经注册，现在就<a href="login.html" class="blue_link">登录</a></span>Hi，欢迎注册！
+    </h2>
+    <div class="reg_form reg_form_step1">
+      <div class="reg_row ie_myemail">
+        <input id="username" name="username" autocomplete="off" placeholder="用户名" class="form-control u_name"
+          maxlength="100" type="text">
+        <div id="myname" style="display: none;"></div>
+        <i class="i_empty" id="username_empty" style="display: none;">不能为空</i>
+        <i class="i_true" id="username_true" style="display: none;"></i>
+        <span id="username_error" style="display: none;" class="error">用户名格式不正确</span>
+      </div>
+      <div class="reg_row ie_myemail">
+        <input id="email" name="email" autocomplete="off" placeholder="手机号" class="form-control u_name" maxlength="100"
+          type="text">
+        <div id="myemail" style="display: none;"></div>
+        <i class="i_empty" id="email_empty" style="display: none;">不能为空</i>
+        <i class="i_true" id="email_true" style="display: none;"></i>
+        <span id="email_error" style="display: none;" class="error">手机号格式不正确</span>
+      </div>
+      <div class="reg_row">
+        <!-- 密码 -->
+        <input type="password" name="user.password" placeholder="登录密码" class="form-control u_ps" id="password"
+          oncopy="return false;" oncut="return false;" onpaste="return false;" maxlength="20" aria-autocomplete="list">
+        <i class="i_empty" style="display: none" id="passport_empty">不能为空</i>
+        <i class="i_true" id="password_true" style="display: none;"></i>
+        <span id="password_error" style="display: none;" class="error">密码格式不正确</span>
+        <div class="box_safety pas_middle" id="pswdLevel" style="display: none;">
+          <ul>
+            <li>弱</li>
+            <li>中</li>
+            <li>强</li>
+          </ul>
+          安全程度
+        </div>
+      </div>
+      <div class="reg_row psheight">
+        <!-- 确认密码 -->
+        <input type="password" name="password2" id="password2" placeholder="确认密码" class="form-control u_ps u_ps2"
+          oncopy="return false;" oncut="return false;" onpaste="return false;" maxlength="20"
+          style="background-color: rgba(0, 0, 0, 0);">
+        <i class="i_true" id="password2_true" style="display: none;"></i>
+        <span id="password2_desc" style="display: none;"></span>
+        <span id="password2_tip" class="i_empty" style="display: none;">请再次输入登录密码</span>
+        <span id="password2_error" style="display: none;" class="error">两次密码输入不一致</span>
+      </div>
+      <div class="reg_row verify_box" id="vCodeDiv" style="display: block;">
+        <input type="text" class="form-control u_verify" placeholder="验证码" id="validCode" name="validCode"
+          maxlength="4">
+        <i class="i_false" id="code_false" style="display: none;"></i>
+        <i class="i_true" id="code_true" style="display: none;"></i>
+        <!-- <img align="验证码" class="verifyimg" id="valid_code_pic"
+          src='http://passport.111.com.cn/sso/getSecurityCode.action?t=1568712495519'> -->
+        <canvas width="120" height="40" id="captcha"></canvas>
+        <!-- <a class="verifylink" onclick="return false" href="javascript:void(0);" id="changecode">换一张</a> -->
+        <span id="vcd_desc" class="error" style="display: none;"></span>
+      </div>
+      <div class="reg_row verify_box" id="phoneCodeDiv" style="display: block;">
+        <input type="text" style="width:160px" class="form-control u_verify" placeholder="短信验证" id="verifyCode"
+          name="verifyCode" maxlength="6">
+
+        <i class="i_false" id="verifyCode_false" style="display: none"></i>
+        <i class="i_true" id="verifyCode_true" style="display: none"></i>
+
+        <a class="btn_verify" id="btnCode" href="javascript:void(0);">获取短信验证码</a>
+        <span id="msgcd_desc" class="error" style="display: none;"></span>
+      </div>
+      <div data-ywpoint="null_null_null_null_I0212_0" class="reg_row">
+        <!-- 1药网协议-->
+        <label class="checkbox"><span class="two_week">注册即代表您已同意1药网<a class="blue_link"
+              onclick="window.open('//www.111.com.cn/cmsPage/2019f923d1220215103717/index.html','', 'width=600,height=600,scrollbars=1,resizable=yes')"
+              href="javascript:void(0);">《服务协议》</a>和
+            <a class="blue_link"
+              onclick="window.open('//www.111.com.cn/cmsPage/20199f79a4020215104224/index.html','', 'width=600,height=600,scrollbars=1,resizable=yes')"
+              href="javascript:void(0);">《隐私条款》</a>
+          </span></label>
+        <button type="button" class="btn btn-primary" id="registerButton">立即注册</button>
+      </div>
+      <div class="reg_row hz_login">
+        <p>使用合作伙伴账号登录：</p>
+        <a data-ywpoint="null_null_S0012_null_I0213_0" class="first a_yhd" href="javascript:void(0);">1号店</a>
+        <a data-ywpoint="null_null_S0012_null_I0214_1" class="a_zfb" href="javascript:void(0);">支付宝</a>
+        <a data-ywpoint="null_null_S0012_null_I0215_2" class="a_qq" href="javascript:void(0);">QQ</a>
+        <a data-ywpoint="null_null_S0012_null_I0216_3" class="a_sina" href="javascript:void(0);">新浪微博</a>
+        <a data-ywpoint="null_null_S0012_null_I0217_4" class="a_wlt" href="javascript:void(0);">万里通</a>
+        <a data-ywpoint="null_null_S0012_null_I0218_5" class="last a_wy" href="javascript:void(0);">网易</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="common_footer_simple">
+    <div class="bottom_link">
+      <p><a href="//gangling.111.com.cn" rel="nofollow">关于111集团</a>|<a href="//www.111.com.cn/cmsPage/2015012602/"
+          rel="nofollow">关于1药网</a>|<a href="//mall.yaoex.com" rel="nofollow">关于1药城</a>|<a href="http://ir.111.com.cn/"
+          rel="nofollow">Investor Relations</a>|<a href="//www.111.com.cn/cmsPage/2015012707/"
+          rel="nofollow">诚聘英才</a>|<a href="//www.111.com.cn/cmsPage/2014022401/index.html" rel="nofollow">直营实体药房</a></p>
+      <p><a href="//www.111.com.cn/cmsPage/2013101401/" rel="nofollow">互联网药品信息服务资格证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101402/" rel="nofollow">互联网药品交易资格证：粤C20150007</a>|<a
+          href="//www.111.com.cn/cmsPage/2014041703/" rel="nofollow">连锁营业执照</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101405/" rel="nofollow">药品营业许可证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101407/" rel="nofollow">医疗器械许可证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101404/" rel="nofollow">食品经营许可证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101408/" rel="nofollow">GSP证书</a>|<a
+          href="//www.111.com.cn/cmsPage/2015032501/" rel="nofollow">ICP粤B2-20150066</a></p>
+    </div>
+    <div class="copy_info">
+      <p>1药网网上药店，国家药监局认证通过的合法网上药店，中国医药电子商务行业的开拓者领跑者。<a href="http://www.beian.miit.gov.cn"
+          style="color:#999">粤ICP备12015869号-1</a>
+        <!--<br/>公司名称：广东壹号大药房连锁有限公司 公司地址：广东省广州市越秀区共和西路1号2层 联系电话：020-31067218-->
+      </p>
+      <p><span>Copyright(C)2010-2015 1药网版权所有</span><span><a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000743" class="copy_ico"
+            rel="nofollow"></a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000743"
+            style="color:#999" rel="nofollow">公安备案号 440104020000743</a></span></p>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      let usernameInput = $('#username');
+      let phoneInput = $('#email');
+      let passwordAInput = $('#password');
+      let passwordBInput = $('#password2');
+      let imageCodeInput = $('#validCode');
+      let msgCodeInput = $('#verifyCode');
+      let msgCodeBtn = $('#btnCode');
+      let registBtn = $('#registerButton');
+
+
+      let passwordVal = "";
+      let imageCodeVal = "";
+      let num;
+
+      let usernameReg = /^[a-zA-Z]{6,8}$/; /* 请设置您的用户名(6~8位字母区分大小写) */
+      let phoneReg = /^1[3-9]\d{9}$/; /* 第一位：1 第二位不能为012 11位数字 */
+      let passwordReg = /^[a-zA-Z0-9]{6,16}$/;
+
+
+      (new Captcha({
+        lineNum: 5,
+        dotNum: 10,
+        length: 4,
+        fontSize: 30
+      })).draw(document.querySelector('#captcha'), r => {
+        console.log(r, '验证++++');
+        imageCodeVal = r;
+      });
+
+      registBtn.click(function(){
+        msgCodeInput.trigger('blur');
+        let flag;
+      })
+
+      checkInput(usernameInput, usernameReg);
+      checkInput(phoneInput, phoneReg);
+
+      checkInput(msgCodeInput);
+      checkPwd(passwordAInput, passwordReg);
+      checkRepwd(passwordBInput);
+      checkImgCode(imageCodeInput);
+
+
+      function checkInput(iInput, reg) {
+        /* 先获取输入框的值，检查和清理(空格|空) */
+        iInput.blur(function () {
+          var val = $(this).val().trim();
+          if (val.length == 0) {
+            $(this).siblings('.i_empty').css('display', 'block');
+            $(this).siblings('span').css('display', 'none');
+            $(this).addClass('empty');
+          } else {
+            if (!reg.test(val)) {
+              $(this).siblings('.i_empty').css('display', 'none');
+              $(this).siblings('span').css('display', 'block');
+              $(this).addClass("error");
+            } else {
+              $(this).removeClass("error");
+              $(this).removeClass("empty");
+              $(this).siblings('.i_empty').css('display', 'none');
+              $(this).siblings('span').css('display', 'none');
+              $(this).siblings('.i_true').css('display', 'inline');
+            }
+          }
+        })
+      }
+
+      function checkPwd(iInput, reg) {
+        /* 先获取输入框的值，检查和清理(空格|空) */
+        iInput.blur(function () {
+          var val = $(this).val().trim();
+          if (val.length == 0) {
+            $(this).siblings('.i_empty').css('display', 'block');
+            $(this).siblings('span').css('display', 'none');
+            $(this).addClass('empty');
+          } else {
+            if (!reg.test(val)) {
+              $(this).siblings('.i_empty').css('display', 'none');
+              $(this).siblings('span').css('display', 'block');
+              $(this).addClass("error");
+            } else {
+              $(this).removeClass("error");
+              $(this).removeClass("empty");
+              $(this).siblings('.i_empty').css('display', 'none');
+              $(this).siblings('span').css('display', 'none');
+              $(this).siblings('.i_true').css('display', 'inline');
+              passwordVal = val;
+            }
+          }
+        })
+      }
+
+      function checkRepwd(iInput) {
+        iInput.blur(function () {
+          var val = $(this).val().trim();
+          if (val.length == 0) {
+            $(this).siblings('.i_empty').css('display', 'block');
+            $(this).addClass('empty');
+          } else {
+            if (passwordVal != val) {
+              $(this).siblings('#password2_error').css('display', 'block');
+              $(this).removeClass("i_empty");
+              $(this).addClass("error");
+            } else {
+              $(this).siblings('#password2_error').css('display', 'none');
+              $(this).siblings('.i_true').css('display', 'block');
+              $(this).removeClass("error");
+            }
+          }
+        })
+      }
+
+      function checkImgCode(iInput) {
+        iInput.blur(function () {
+          var val = $(this).val().trim();
+          val = val.toLowerCase();
+          imageCodeVal = imageCodeVal.toLowerCase();
+          if (val.length == 0) {
+            $(this).siblings('.i_false').css('display', 'inline');
+            $(this).siblings('.error').text('请输入验证码');
+            $(this).siblings('.error').css('display', 'block');
+            $(this).addClass('empty');
+          } else {
+            if (val != imageCodeVal) {
+              $(this).siblings('.i_false').css('display', 'inline');
+              $(this).siblings('.i_true').css('display', 'none');
+              $(this).siblings('.error').text('验证码错误');
+              $(this).siblings('.error').css('display', 'block');
+              $(this).removeClass('empty');
+              $(this).addClass('error');
+            } else {
+              $(this).removeClass('error');
+              $(this).siblings('.i_false').css('display', 'none');
+              $(this).siblings('.i_true').css('display', 'inline');
+              $(this).siblings('.error').css('display', 'none');
+            }
+          }
+        })
+      }
+    
+      function checkMsgCode(iInput){
+        var val = $(this).val().trim();
+        if(val.length == 0){
+          $(this)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+/* -----------------------------------头部-------------------------------------------- */
+.head {
+  height: 98px;
+  overflow: hidden;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 990px;
+}
+
+.head .logo {
+  float: left;
+  margin-left: 10px;
+}
+/* -----------------------------------头部-------------------------------------------- */
+
+/* -----------------------------------主体-------------------------------------------- */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+.reg_wrap {
+  position: relative;
+  background: #fff url(https://s.maiyaole.com/images/passport/r_bg_02.png) no-repeat right bottom;
+  width: 988px;
+  min-height: 352px;
+  color: #5e5e5e;
+  border: #e6e6e6 1px solid;
+  border-top: #0083ce 2px solid;
+  -webkit-box-shadow: -1px 1px 10px #EFEFEF, -1px 10px 10px #EFEFEF;
+  -moz-box-shadow: -1px 1px 10px #EFEFEF, -1px 10px 10px #EFEFEF;
+  box-shadow: -1px 1px 10px #EFEFEF, -1px 10px 10px #EFEFEF;
+  padding-bottom: 20px;
+}
+
+.bg_link {
+  /* bblr: expression(this.onFocus=this.blur()); */
+  outline-style: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-indent: -9999px;
+  display: block;
+  width: 500px;
+  height: 372px;
+}
+
+.lg_title {
+  font: 20px "microsoft yahei";
+  margin: 13px 0;
+  padding-left: 50px;
+  padding-right: 18px;
+}
+
+.lg_title span {
+  float: right;
+  font-size: 12px;
+  margin-top: 7px;
+  font-family: \5b8b\4f53;
+}
+
+a.blue_link {
+  color: #0083ce;
+}
+
+.reg_form {
+  padding-left: 100px;
+  padding-top: 5px;
+}
+
+.ie_myemail {
+  z-index: 99;
+}
+
+.reg_row {
+  min-height: 70px;
+  _height: 70px;
+  width: 342px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.form-control {
+  display: block;
+  width: 286px;
+  height: 26px;
+  padding: 6px 12px 6px 40px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid #e6e6e6;
+  -webkit-appearance: none;
+}
+.form-control:focus{
+  border-color: #0083ce;
+  color: #333;
+  outline: 0;
+}
+
+.tellnumber,
+.u_ps,
+.u_name,
+.u_email,
+.i_empty,
+.i_true,
+.i_false {
+  background: url(https://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+}
+
+.empty {
+  border: #ffaa00 1px solid;
+}
+
+.verify_box .i_true,
+.verify_box .i_false {
+  float: left;
+  margin-left: -34px;
+  margin-top: 12px;
+}
+
+.i_false {
+  background-position: right -26px;
+}
+.i_empty {
+  background-position: right -57px;
+}
+
+.i_empty,
+.i_true,
+.i_false {
+  height: 16px;
+  width: auto;
+  float: right;
+  padding-right: 25px;
+  margin-top: -28px;
+  font-size: 12px;
+}
+.reg_form span {
+  line-height: 24px;
+  color: #a5a5a5;
+}
+input.error {
+  border: #e72418 1px solid;
+}
+span.error {
+  color: #e72418;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+
+
+.u_name {
+  background-position: 8px -114px;
+}
+
+.u_ps {
+  background-position: 8px -145px;
+}
+
+.i_true {
+  background-position: right 2px;
+}
+
+.psheight {
+  height: 60px;
+}
+
+.verify_box {
+  height: 60px;
+}
+
+.u_verify {
+  width: 180px;
+  margin-right: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  float: left;
+}
+
+.verifyimg,#captcha {
+  margin-left: 10px;
+  float: left;
+}
+
+.verifylink {
+  float: left;
+  margin-left: 10px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #0083ce;
+}
+.btn_verify {
+  width: 120px;
+  border: 1px solid #E6E6E6;
+  display: block;
+  height: 38px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 38px;
+  float: right;
+  font-size: 12px;
+  margin-right: 20px;
+  background: #fff url(https://s.maiyaole.com/images/passport/btn_verify_bg.jpg) repeat-x left bottom;
+}
+.reg_row {
+  min-height: 70px;
+  _height: 70px;
+  width: 342px;
+  position: relative;
+  z-index: 1;
+}
+.radio, .checkbox {
+  display: block;
+  min-height: 20px;
+  margin-top: 0px;
+  margin-bottom: 6px;
+  /* padding-left: 20px; */
+  vertical-align: middle;
+}
+.reg_form .two_week {
+  line-height: 12px;
+  font-size: 12px;
+}
+.reg_form span a {
+  color: #0083ce;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-color: #0099F1;
+  width: 340px;
+  border-bottom: #0083ce 2px solid;
+  color: #fff;
+  font: 16px "microsoft yahei";
+  border-radius: 1px;
+}
+.hz_login p {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #5e5e5e;
+}
+.hz_login a.a_yhd {
+  background-position: 0 0;
+}
+.hz_login a.a_zfb {
+  background-position: -48px 0;
+}
+.hz_login a.a_qq {
+  background-position: -95px 0;
+}
+.hz_login a.a_sina {
+  background-position: -143px 0;
+}
+.hz_login a.a_wlt {
+  background-position: -241px 0;
+}
+.hz_login a.a_wy {
+  background-position: -191px 0;
+}
+
+.hz_login a.first {
+  padding-left: 0;
+}
+.hz_login a {
+  line-height: 24px;
+  color: #a5a5a5;
+  text-indent: -9999px;
+}
+.a_yhd, .a_zfb, .a_qq, .a_sina, .a_wlt, .a_wy {
+  background: url(https://s.maiyaole.com/images/201306/images/private/img_zhifu.png) no-repeat left top;
+  border: medium none;
+  display: block;
+  float: left;
+  height: 39px;
+  margin-right: 18px;
+  width: 39px;
+}
+
+/* -----------------------------------主体-------------------------------------------- */
+
+/* -----------------------------------底部-------------------------------------------- */
+
+.common_footer_simple {
+  padding: 30px 0 20px 0;
+  line-height: 26px;
+  text-align: center;
+  color: #a5a5a5;
+}
+.common_footer_simple a {
+  display: inline-block;
+  margin: 0 5px;
+  color: #a5a5a5;
+  font-size: 12px;
+}
+.common_footer_simple p{
+  font-size: 12px;
+}
+.common_footer_simple .copy_ico:before {
+  background: url(//s.maiyaole.com/images/201306/images/copy_ico.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 3px;
+  position: relative;
+  top: 5px;
+  content: "";
+}
+/* -----------------------------------底部-------------------------------------------- */

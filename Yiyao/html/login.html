@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录</title>
+  <link rel="stylesheet" href="../css/base_px.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="../js/login.js"></script>
+</head>
+
+<body>
+  <div class="wrap head">
+    <a href="http://www.111.com.cn" class="logo">
+      <img src="https://s.maiyaole.com/images/passport/yao_logo.png" alt="" id="yao_logo">
+    </a>
+  </div>
+
+  <div class="wrap login_wrap">
+    <a class="bg_link" id="2014_login_background_a" target="_blank">&nbsp;</a>
+    <div class="tab_box clearfix">
+      <div data-ywpoint="null_null_null_null_I0200_0" class="item cur" id="commonLoginTab">
+        <a href="javascript:switchLoginTab(1);">普通登录</a>
+      </div>
+      <div data-ywpoint="null_null_null_null_I0201_0" class="item" id="quickLoginTab">
+        <a href="javascript:switchLoginTab(2);">手机快速登录</a>
+      </div>
+    </div>
+    <div class="tab_con" id="commonLogin" style="display: block">
+      <h2 data-ywpoint="null_null_null_null_I0202_0" class="lg_title"><span class="fr">还不是1药网会员？<a href="regist.html"
+            class="blue_link">免费注册</a></span>Hi，欢迎登录！</h2>
+      <form action="" autocomplete="off">
+        <div class="reg_row">
+          <!-- 用户名 -->
+          <input type="text" name="ecuserCustomer.id" id="userName" autocomplete="off" placeholder="邮箱/手机号/用户名"
+            class="form-control u_name" tabindex="1">
+          <i id="pas_empty" class="i_empty" style="display:none;">不能为空</i>
+          <span id="accountDesc" class="error"></span>
+        </div>
+        <div class="reg_row">
+          <!-- 密码 -->
+          <input type="password" id="userPass" name="ecuserCustomer.password" autocomplete="off" placeholder="登录密码"
+            class="form-control u_ps" tabindex="2">
+          <span class="fr"><a href="/sso/lost.action" tabindex="-1" target="_blank" class="gray">忘记密码？</a></span>
+          <span id="pwd_desc" class="error"></span>
+        </div>
+        <div id="vcd_div" class="reg_row verify_box">
+          <input type="text" maxlength="4" id="vcd" tabindex="3" name="validCode" placeholder="验证码"
+            class="form-control u_verify">
+          <i id="vcd_tatus"></i>
+          <img id="loginVcode" class="code verifyimg"
+            onclick="this.src='/sso/getSecurityCode.action?t='+(new Date()).getTime()" alt="验证码"
+            src="http://passport.111.com.cn/sso/getSecurityCode.action?t=1568712495519">
+          <a class="verifylink" id="changecode" tabindex="-1" href="javascript:void(0);">换一张</a>
+          <span id="vcd_desc" class="error"></span>
+        </div>
+        <div class="">
+          <!-- 1药网协议-->
+          <label class="checkbox"><input type="checkbox" value="1" name="rememberPwd" id="rememberPwd" tabindex="-1">
+            <span class="two_week">两周内免登录</span>
+          </label>
+          <button data-ywpoint="null_null_null_null_I0203_0" type="button" id="btnSubmit"
+            class="btn btn-primary">登录</button><br>
+          <span id="login_desc" class="error"></span>
+        </div>
+        <div class="protocal_warm">
+          <span class="two_week">登录即代表您已同意1药网
+            <a class="blue_link"
+              onclick="window.open('//www.111.com.cn/cmsPage/2019f923d1220215103717/index.html','', 'width=600,height=600,scrollbars=1,resizable=yes')"
+              href="javascript:void(0);">《服务协议》</a>和
+            <a class="blue_link"
+              onclick="window.open('//www.111.com.cn/cmsPage/20199f79a4020215104224/index.html','', 'width=600,height=600,scrollbars=1,resizable=yes')"
+              href="javascript:void(0);">《隐私条款》</a>
+          </span>
+        </div>
+        <div class="reg_row hz_login">
+          <p>使用合作伙伴账号登录：</p>
+          <a data-ywpoint="null_null_S0011_null_I0205_0" class="first a_wx" onclick="jointLogin('WX');"
+            href="javascript:void(0);">微信</a>
+          <a data-ywpoint="null_null_S0011_null_I0206_1" class="a_zfb" onclick="jointLogin('ZFB')"
+            href="javascript:void(0);">支付宝</a>
+          <a data-ywpoint="null_null_S0011_null_I0207_2" class="a_qq" onclick="jointLogin('QQ')"
+            href="javascript:void(0);">QQ</a>
+
+        </div>
+        <div class="moreWebDiv">
+          <span class="moreWeb">更多合作网站<button class="moreWebBtn"></button></span>
+          <div class="moreTab">
+            <a data-ywpoint="null_null_S0011_null_I0208_3" class="first a_yhd" onclick="jointLogin('YHD');"
+              href="javascript:void(0);"></a>
+            <a data-ywpoint="null_null_S0011_null_I0209_4" class="a_sina" href="javascript:void(0);"
+              onclick="jointLogin('SINA')"></a>
+            <a data-ywpoint="null_null_S0011_null_I0210_5" class="a_wlt" onclick="jointLogin('WLT')"
+              href="javascript:void(0);"></a>
+            <a data-ywpoint="null_null_S0011_null_I0211_6" class="last a_wy" href="javascript:void(0);"
+              onclick="jointLogin('163')"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="tab_con" id="quickLogin" style="display: none">
+      <h2 class="lg_title"><span class="fr">还不是1药网会员？<a href="/sso/register.action"
+            class="blue_link">免费注册</a></span>Hi，欢迎登录！</h2>
+      <div class="form_group pb35 clearfix">
+        <label class="lbs fl">
+          <input type="text" class="txt phone" id="phoneNum4QuickLogin" placeholder="请输入您的手机号码" value="">
+          <i id="phoneNum4QuickLogin_empty" class="i_empty" style="display:none;">不能为空</i>
+          <span id="phoneNum4QuickLoginDesc" class="error"></span>
+          <!-- <a class="forget gray" href="/sso/lost.action" tabindex="-1" target="_blank">忘记密码？</a> -->
+        </label>
+      </div>
+      <div id="vcd_div_sms" class="reg_row pb35 verify_box" style="display: none">
+        <input type="text" maxlength="4" id="vcd_sms" tabindex="3" name="validCode" placeholder="验证码"
+          class="form-control u_verify">
+        <i id="vcd_tatus_sms"></i>
+        <img id="loginVcode_sms" class="code verifyimg"
+          onclick="this.src='/sso/getSecurityCode.action?t='+(new Date()).getTime()" alt="验证码">
+        <a class="verifylink" id="changecode_sms" tabindex="-1" href="javascript:void(0);">换一张</a>
+        <span id="vcd_desc_sms" class="error"></span>
+      </div>
+
+      <div class="form_group pb35 clearfix">
+        <label class="lbs fl mr10">
+          <input type="text" class="txt check_num" id="smsCode4QuickLogin" placeholder="请输入短信验证码" value="">
+          <span id="smsCode4QuickLoginDesc" class="error"></span>
+        </label>
+        <label class="lbs fl ">
+          <!-- <a href="javascript:void(0);" class="check_btn" id="getSmsCodeBtn">获取短信验证码</a> -->
+          <button type="button" id="getSmsCodeBtn" class="check_btn" style="cursor: pointer">获取短信验证码</button>
+        </label>
+      </div>
+
+      <div data-ywpoint="null_null_null_null_I0204_0" class="">
+        <!-- 1药网协议-->
+
+        <button type="button" id="btnSubmit4QuickLogin" class="btn btn-primary" onclick="quickLogin();">登录</button><br>
+        <span id="quickLogin_desc" class="error"></span>
+      </div>
+      <div class="protocal_warm">
+        <span class="two_week">登录即代表您已同意1药网
+          <a class="blue_link"
+            onclick="window.open('//www.111.com.cn/cmsPage/2019f923d1220215103717/index.html','', 'width=600,height=600,scrollbars=1,resizable=yes')"
+            href="javascript:void(0);">《服务协议》</a>和
+          <a class="blue_link"
+            onclick="window.open('//www.111.com.cn/cmsPage/20199f79a4020215104224/index.html','', 'width=600,height=600,scrollbars=1,resizable=yes')"
+            href="javascript:void(0);">《隐私条款》</a>
+        </span>
+      </div>
+      <div class="reg_row hz_login">
+        <p>使用合作伙伴账号登录：</p>
+        <a data-ywpoint="null_null_S0011_null_I0205_0" class="first a_wx" onclick="jointLogin('WX');"
+          href="javascript:void(0);">微信</a>
+        <a data-ywpoint="null_null_S0011_null_I0206_1" class="a_zfb" onclick="jointLogin('ZFB')"
+          href="javascript:void(0);">支付宝</a>
+        <a data-ywpoint="null_null_S0011_null_I0207_2" class="a_qq" onclick="jointLogin('QQ')"
+          href="javascript:void(0);">QQ</a>
+
+      </div>
+      <div class="moreWebDiv">
+        <span class="moreWeb">更多合作网站<button class="moreWebBtn"></button></span>
+        <div class="moreTab">
+          <a data-ywpoint="null_null_S0011_null_I0208_3" class="first a_yhd" onclick="jointLogin('YHD');"
+            href="javascript:void(0);"></a>
+          <a data-ywpoint="null_null_S0011_null_I0209_4" class="a_sina" href="javascript:void(0);"
+            onclick="jointLogin('SINA')"></a>
+          <a data-ywpoint="null_null_S0011_null_I0210_5" class="a_wlt" onclick="jointLogin('WLT')"
+            href="javascript:void(0);"></a>
+          <a data-ywpoint="null_null_S0011_null_I0211_6" class="last a_wy" href="javascript:void(0);"
+            onclick="jointLogin('163')"></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="common_footer_simple">
+    <div class="bottom_link">
+      <p><a href="//gangling.111.com.cn" rel="nofollow">关于111集团</a>|<a href="//www.111.com.cn/cmsPage/2015012602/"
+          rel="nofollow">关于1药网</a>|<a href="//mall.yaoex.com" rel="nofollow">关于1药城</a>|<a href="http://ir.111.com.cn/"
+          rel="nofollow">Investor Relations</a>|<a href="//www.111.com.cn/cmsPage/2015012707/"
+          rel="nofollow">诚聘英才</a>|<a href="//www.111.com.cn/cmsPage/2014022401/index.html" rel="nofollow">直营实体药房</a></p>
+      <p><a href="//www.111.com.cn/cmsPage/2013101401/" rel="nofollow">互联网药品信息服务资格证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101402/" rel="nofollow">互联网药品交易资格证：粤C20150007</a>|<a
+          href="//www.111.com.cn/cmsPage/2014041703/" rel="nofollow">连锁营业执照</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101405/" rel="nofollow">药品营业许可证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101407/" rel="nofollow">医疗器械许可证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101404/" rel="nofollow">食品经营许可证</a>|<a
+          href="//www.111.com.cn/cmsPage/2013101408/" rel="nofollow">GSP证书</a>|<a
+          href="//www.111.com.cn/cmsPage/2015032501/" rel="nofollow">ICP粤B2-20150066</a></p>
+    </div>
+    <div class="copy_info">
+      <p>1药网网上药店，国家药监局认证通过的合法网上药店，中国医药电子商务行业的开拓者领跑者。<a href="http://www.beian.miit.gov.cn"
+          style="color:#999">粤ICP备12015869号-1</a>
+        <!--<br/>公司名称：广东壹号大药房连锁有限公司 公司地址：广东省广州市越秀区共和西路1号2层 联系电话：020-31067218-->
+      </p>
+      <p><span>Copyright(C)2010-2015 1药网版权所有</span><span><a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000743" class="copy_ico"
+            rel="nofollow"></a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000743"
+            style="color:#999" rel="nofollow">公安备案号 440104020000743</a></span></p>
+    </div>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+
+</html>

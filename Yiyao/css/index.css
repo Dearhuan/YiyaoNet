@@ -1,0 +1,569 @@
+/* -----------------------------------------头部------------------------------------------ */
+#head {
+  height: 36px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.favorite em,
+.tell em {
+  background: url(https://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+}
+
+.tell em {
+  background-position: right -108px;
+  width: 9px;
+}
+
+.favorite em {
+  background-position: right -61px;
+  width: 15px;
+  margin-left: -2px;
+  margin-right: 5px;
+}
+
+.favorite em {
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.tell em {
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 0px;
+  overflow: hidden;
+}
+
+.favorite em,
+.tell em {
+  display: inline;
+  float: left;
+  cursor: pointer;
+}
+
+.ult {
+  float: left;
+}
+
+.ult li {
+  float: left;
+}
+
+.ult li a:first-child {
+  border-right: 1px solid #ccc;
+  padding: 0 10px 0 0;
+}
+
+.head a,
+.head span {
+  font-size: 12px;
+  text-align: center;
+  line-height: 36px;
+  color: #5e5e5e;
+}
+
+.ult div {
+  margin: 0 0 0 10px;
+}
+
+.ult .province {
+  margin: 0 0 0 5px;
+}
+
+.urt {
+  float: right;
+}
+
+.urt li {
+  float: left;
+  /* padding: 0 10px; */
+}
+
+.urt li a {
+  border-right: 1px solid #ccc;
+  padding: 0 10px;
+}
+
+.urt li .red {
+  color: #e54948
+}
+
+.urt li:nth-child(1) a {
+  padding-left: 0;
+}
+
+.urt .last a {
+  border: none;
+  padding: 0;
+}
+
+.telnum {
+  overflow: hidden;
+  float: left;
+  font-size: 12px;
+  color: #c7a774;
+  font-weight: 700;
+  font-family: Tahoma;
+  padding: 0;
+  line-height: 36px;
+  margin: 0 10px 0 10px;
+}
+
+/* -----------------------------------------头部------------------------------------------ */
+/* -----------------------------------------导航------------------------------------------ */
+#nav {
+  height: 121px;
+  /* background: cyan; */
+}
+
+.logo {
+  width: 180px;
+  float: left;
+  height: 113px;
+  overflow: hidden;
+  margin-right: 105px;
+  zoom: 1;
+  position: relative;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+  text-indent: -9999px;
+  width: 180px;
+  height: 61px;
+  margin-top: 26px;
+  background: url(https://s.maiyaole.com/images/common/logo_01.png) no-repeat;
+}
+
+.search {
+  width: 532px;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.search input {
+  width: 435px;
+  outline: 0;
+  float: left;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 5px 0 9px;
+  border: 1px solid #c7a774;
+  color: #666;
+  font-size: 15px;
+  vertical-align: middle;
+  background-color: #fff;
+
+}
+
+.search .sbtn {
+  float: left;
+  width: 82px;
+  height: 46px;
+  /* line-height: 55px; */
+  border: 1px solid #c7a774;
+  cursor: pointer;
+  background-color: #fff;
+  margin-left: -1px;
+}
+
+.search .form {
+  float: left;
+  margin: 34px 0 0 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 9999;
+}
+
+.hotwords {
+  float: left;
+  height: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 6px;
+  width: 532px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.hotwords a {
+  color: #5e5e5e;
+  padding: 0 6px 0 0;
+  margin-right: 6px;
+  height: 16px;
+  line-height: 16px;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+.hotwords .red {
+  color: #e54948;
+}
+
+.erDCode {
+  position: absolute;
+  right: 230px;
+  top: 45px;
+  width: 123px;
+  height: 115px;
+}
+
+.mod_minicart {
+  width: 140px;
+  font-size: 12px;
+  position: relative;
+  top: 34px;
+  right: -1050px;
+  margin-bottom: -41px;
+  z-index: 99;
+  border: 1px solid #eee;
+}
+.mod_minicart .iconfont{
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  color: #5e5e5e;
+}
+.mod_minicart .icongouwuche{
+  top: 0px;
+  left: 20px;
+}
+.mod_minicart .iconjiantou1{
+  top: 0px;
+  left: 104px;
+  font-size: 12px;
+}
+
+.mini_cart_btn {
+  background-position: 10px -312px;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  vertical-align: middle;
+  color: #5e5e5e;
+  /* background: url(//s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0; */
+}
+
+.cart_num {
+  display: block;
+  position: absolute;
+  float: left;
+  top: 3px;
+  line-height: 10px;
+  width: auto;
+  min-width: 12px;
+  text-align: center;
+  vertical-align: middle;
+  left: 30px;
+  font-weight: 700;
+  font-family: tahoma;
+  font-style: normal;
+  color: #fff;
+  font-size: 12px;
+  height: 12px;
+  padding: 2px;
+  background: red;
+  border-radius: 16px;
+}
+
+.mini_cart_btn .icart {
+  position: absolute;
+  width: 50px;
+  left: 55px;
+  top: 0px;
+  background-position: -110px -312px;
+  padding-right: 15px;
+}
+
+/* -----------------------------------------导航------------------------------------------ */
+
+/* -----------------------------------------底部------------------------------------------ */
+#footer a {
+  font-size: 12px;
+}
+
+.new_app_part_ul li .intro {
+  font-size: 12px;
+  color: #5e5e5e;
+}
+
+.new_ft_commit {
+  padding-top: 62px;
+  clear: both;
+}
+
+.new_ft_commit_con {
+  width: 1190px;
+  height: 100px;
+  margin: 0 auto;
+  background: url(//s.maiyaole.com/images/201306/images/jsyhm.png) no-repeat 0 0;
+}
+
+.new_app_part {
+  margin-top: 60px;
+}
+
+.new_app_part_con {
+  width: 1190px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.service_port {
+  width: 250px;
+  float: right;
+  border-left: 1px solid #eee;
+  text-align: center;
+  padding: 15px 0;
+  margin-right: 50px;
+}
+
+.service_port .tel {
+  font-size: 20px;
+  color: #c7a774;
+  font-weight: 700;
+}
+
+.service_port .service_time {
+  color: #999;
+  line-height: 18px;
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+.new_app_part_ul {
+  float: left;
+  padding-left: 110px;
+}
+
+.new_app_part_ul li {
+  width: 255px;
+  float: left;
+}
+
+.new_app_part_ul .code_img {
+  width: 94px;
+  height: 94px;
+  float: left;
+  margin-right: 12px;
+}
+
+.new_app_part_ul .app_part_right {
+  padding-top: 27px;
+}
+
+.new_app_part_ul .app_part_right .h2_tt {
+  font-size: 15px;
+  color: #1c1c1c;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.new_page_footer {
+  background: #f0f0f0;
+  margin-top: 65px;
+  padding-top: 45px;
+}
+
+.new_page_footer_con {
+  width: 1190px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer_bottom_unit {
+  position: relative;
+  padding-left: 215px;
+  padding-top: 15px;
+}
+
+.footer_bottom_unit .footer_logo_img {
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+
+.footer_bottom_unit dl a {
+  color: #666;
+}
+
+.footer_bottom_unit .help_part {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 25px;
+  overflow: hidden;
+}
+
+.footer_bottom_unit dl {
+  width: 155px;
+  float: left;
+}
+
+.footer_bottom_unit dl dt {
+  font-weight: bold;
+  color: #1c1c1c;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.copy_right {
+  color: #5e5e5e;
+  text-align: center;
+  padding: 5px 0 30px;
+}
+
+.yyw_member {
+  overflow: hidden;
+  padding-top: 25px;
+}
+
+.yyw_member .member_mark {
+  color: #666;
+  float: left;
+  line-height: 56px;
+  display: inline-block;
+}
+
+.yyw_member .member_ul {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.yyw_member .member_ul li {
+  width: 270px;
+  float: left;
+  line-height: 56px;
+}
+
+.yyw_member .member_ul img {
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+}
+
+.footer_bottom_unit .bottom_link {
+  text-align: left;
+  line-height: 30px;
+  padding-top: 30px;
+  margin-left: -20px;
+}
+
+.footer_bottom_unit .bottom_link a {
+  margin: 0 20px;
+  color: #666;
+}
+
+.footer_bottom_unit .copy_info {
+  text-align: left;
+  color: #999;
+  line-height: 20px;
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+.footer_bottom_unit .copy_info .copy_ico {
+  background-size: 17px 20px;
+  float: left;
+}
+
+.copy_right .copy_ico {
+  margin-left: 5px;
+}
+
+.footer_bottom_unit .sf_verify {
+  overflow: hidden;
+  margin-left: -10px;
+}
+
+.sf_verify {
+  padding: 10px 0 0 10px;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.footer_bottom_unit .sf_verify .v1 {
+  width: 90px;
+  height: 35px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.footer_bottom_unit .sf_verify .v1 {
+  width: 90px;
+  height: 35px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.sf_verify a,
+.sf_verify span {
+  margin-right: 7px;
+  display: block;
+  float: left;
+}
+
+.vl_1 {
+  background-position: 0 0;
+}
+
+.vl_2 {
+  background-position: -98px 0;
+}
+
+.vl_3 {
+  background-position: -196px 0;
+}
+
+.vl_4 {
+  background-position: -294px 0;
+}
+
+.vl_5 {
+  background-position: -392px 0;
+}
+
+.vl_6 {
+  background-position: -490px 0;
+}
+
+.vl_7 {
+  background-position: -588px 0;
+}
+
+.vl_8 {
+  background-position: -686px 0;
+}
+
+.vl_9 {
+  background-position: -780px 0;
+}
+
+.vl_1,
+.vl_2,
+.vl_3,
+.vl_4,
+.vl_5,
+.vl_6,
+.vl_7,
+.vl_8,
+.vl_9 {
+  background-image: url(//s.maiyaole.com/images/201306/img/outherLogo_min.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  float: left;
+  zoom: 1;
+  width: 88px;
+  height: 35px;
+  text-indent: -9999px;
+  ertical-align: top;
+}
+
+/* -----------------------------------------底部------------------------------------------ */
