@@ -48,6 +48,9 @@ a {
   text-decoration: none;
   color: #333;
 }
+.ilogin{
+  margin: 10px 0 0 0;
+}
 .login_wrap .tab_box {
   height: 25px;
   margin-left: 560px;
@@ -107,6 +110,10 @@ a.blue_link {
   padding-left: 10px;
   float: left;
 }
+.verifyimg,#captcha {
+  margin-left: 27px;
+  float: left;
+}
 .form-control {
   display: block;
   width: 286px;
@@ -146,6 +153,9 @@ a.blue_link {
   padding-left: 10px;
   float: left;
 }
+input.ierror {
+  border: #e72418 1px solid !important;
+}
 span.error {
   color: #e72418;
 }
@@ -166,7 +176,7 @@ span.error {
 .radio, .checkbox {
   display: block;
   min-height: 20px;
-  margin-top: 0px;
+  margin-top: 12px;
   margin-bottom: 6px;
   padding-left: 20px;
   vertical-align: middle;

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/base_px.css">
   <link rel="stylesheet" href="../css/login.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="../js/captcha.min.js"></script>
   <script src="../js/login.js"></script>
 </head>
 
@@ -38,24 +39,26 @@
           <input type="text" name="ecuserCustomer.id" id="userName" autocomplete="off" placeholder="邮箱/手机号/用户名"
             class="form-control u_name" tabindex="1">
           <i id="pas_empty" class="i_empty" style="display:none;">不能为空</i>
-          <span id="accountDesc" class="error"></span>
+          <span id="accountDesc" class="error" style="display:none;">请输入正确的用户名</span>
         </div>
         <div class="reg_row">
           <!-- 密码 -->
           <input type="password" id="userPass" name="ecuserCustomer.password" autocomplete="off" placeholder="登录密码"
             class="form-control u_ps" tabindex="2">
+          <i id="pwd_empty" class="i_empty" style="display:none;">不能为空</i>
           <span class="fr"><a href="/sso/lost.action" tabindex="-1" target="_blank" class="gray">忘记密码？</a></span>
-          <span id="pwd_desc" class="error"></span>
+          <span id="pwd_desc" class="error" style="display:none;">请输入正确的密码</span>
         </div>
         <div id="vcd_div" class="reg_row verify_box">
           <input type="text" maxlength="4" id="vcd" tabindex="3" name="validCode" placeholder="验证码"
             class="form-control u_verify">
+          <i id="vcd_empty" class="i_empty" style="display:none;">不能为空</i>
           <i id="vcd_tatus"></i>
-          <img id="loginVcode" class="code verifyimg"
-            onclick="this.src='/sso/getSecurityCode.action?t='+(new Date()).getTime()" alt="验证码"
+          <!-- <img id="loginVcode" class="code verifyimg"onclick="this.src='/sso/getSecurityCode.action?t='+(new Date()).getTime()" alt="验证码"
             src="http://passport.111.com.cn/sso/getSecurityCode.action?t=1568712495519">
-          <a class="verifylink" id="changecode" tabindex="-1" href="javascript:void(0);">换一张</a>
-          <span id="vcd_desc" class="error"></span>
+          <a class="verifylink" id="changecode" tabindex="-1" href="javascript:void(0);">换一张</a> -->
+          <canvas width="120" height="40" id="captcha"></canvas>
+          <span id="vcd_desc" class="error" style="display:none;">请输入正确的验证码</span>
         </div>
         <div class="">
           <!-- 1药网协议-->
@@ -108,7 +111,7 @@
         <label class="lbs fl">
           <input type="text" class="txt phone" id="phoneNum4QuickLogin" placeholder="请输入您的手机号码" value="">
           <i id="phoneNum4QuickLogin_empty" class="i_empty" style="display:none;">不能为空</i>
-          <span id="phoneNum4QuickLoginDesc" class="error"></span>
+          <span id="phoneNum4QuickLoginDesc" class="error" style="display: none">请输入正确的手机号码</span>
           <!-- <a class="forget gray" href="/sso/lost.action" tabindex="-1" target="_blank">忘记密码？</a> -->
         </label>
       </div>
@@ -116,27 +119,28 @@
         <input type="text" maxlength="4" id="vcd_sms" tabindex="3" name="validCode" placeholder="验证码"
           class="form-control u_verify">
         <i id="vcd_tatus_sms"></i>
-        <img id="loginVcode_sms" class="code verifyimg"
-          onclick="this.src='/sso/getSecurityCode.action?t='+(new Date()).getTime()" alt="验证码">
-        <a class="verifylink" id="changecode_sms" tabindex="-1" href="javascript:void(0);">换一张</a>
-        <span id="vcd_desc_sms" class="error"></span>
+        <!-- <img id="loginVcode_sms" class="code verifyimg" onclick="this.src='/sso/getSecurityCode.action?t='+(new Date()).getTime()" alt="验证码"> -->
+        <canvas width="120" height="40" id="captcha"></canvas>
+        <!-- <a class="verifylink" id="changecode_sms" tabindex="-1" href="javascript:void(0);">换一张</a> -->
+        <span id="vcd_desc_sms" class="error" style="display: none">请输入正确的验证码</span>
       </div>
 
       <div class="form_group pb35 clearfix">
         <label class="lbs fl mr10">
           <input type="text" class="txt check_num" id="smsCode4QuickLogin" placeholder="请输入短信验证码" value="">
-          <span id="smsCode4QuickLoginDesc" class="error"></span>
+          <span id="smsCode4QuickLoginDesc" class="error" style="display: none">请输入正确的验证码</span>
         </label>
         <label class="lbs fl ">
           <!-- <a href="javascript:void(0);" class="check_btn" id="getSmsCodeBtn">获取短信验证码</a> -->
-          <button type="button" id="getSmsCodeBtn" class="check_btn" style="cursor: pointer">获取短信验证码</button>
+          <button type="button" id="getSmsCodeBtn" class="check_btn"
+            style="cursor: pointer;display: block;">获取短信验证码</button>
+          <button type="button" id="SmsCodeInfoBtn" class="check_btn" style="cursor: pointer;display: none"></button>
         </label>
       </div>
 
-      <div data-ywpoint="null_null_null_null_I0204_0" class="">
+      <div data-ywpoint="null_null_null_null_I0204_0" class="ilogin">
         <!-- 1药网协议-->
-
-        <button type="button" id="btnSubmit4QuickLogin" class="btn btn-primary" onclick="quickLogin();">登录</button><br>
+        <button type="button" id="btnSubmit4QuickLogin" class="btn btn-primary">登录</button><br>
         <span id="quickLogin_desc" class="error"></span>
       </div>
       <div class="protocal_warm">
@@ -204,7 +208,259 @@
   </div>
 
   <script>
-    
+    let usernameInput = $('#userName');
+    let passwordInput = $('#userPass');
+    let imageCodeInput = $('#vcd');
+    let phoneInput = $('#phoneNum4QuickLogin');
+    let msgCodeInput = $('#smsCode4QuickLogin');
+
+    let msgCodeBtn = $('#getSmsCodeBtn');
+    let msgInfoBtn = $('#SmsCodeInfoBtn');
+    let loginBtn = $('#btnSubmit');
+    let quickLogin = $('#btnSubmit4QuickLogin');
+
+    let usernameVal = "";
+    let passwordVal = "";
+    let phoneVal = "";
+    let imageCodeVal = "";
+    let msgCodeVal = "";
+    let num;
+
+    let usernameReg = /^[a-zA-Z]{6,8}$/; /* 请设置您的用户名(6~8位字母区分大小写) */
+    let phoneReg = /^1[3-9]\d{9}$/; /* 第一位：1 第二位不能为012 11位数字 */
+    let passwordReg = /^[a-zA-Z0-9]{6,16}$/;
+
+    (new Captcha({
+      lineNum: 5,
+      dotNum: 10,
+      length: 4,
+      fontSize: 30
+    })).draw(document.querySelector('#captcha'), r => {
+      console.log(r, '验证++++');
+      imageCodeVal = r;
+    });
+
+    loginBtn.click(function () {
+      $.ajax({
+        type: "post",
+        url: "../api/login.php",
+        data: `username=${$('#userName').val().trim()}&password=${$('#userPass').val().trim()}`,
+        dataType: "json",
+        success: function (response) {
+          if (response.status == "success") {
+            alert(response.data.msg);
+            // window.location.href = "../index.html";
+          } else {
+            alert(response.data.msg);
+          }
+        }
+      });
+    })
+
+    $('#getSmsCodeBtn').click(function () { //获取短信验证码
+      phoneInput.trigger('blur');
+      let flag = phoneInput.hasClass('error');
+      if (flag) {
+        alert('手机号码不正确！请重新输入');
+        return;
+      } else {
+        let timeCount = 60;
+        msgCodeBtn.stop().hide();
+        msgInfoBtn.stop().show();
+        let timer = setInterval(function () {
+          timeCount--;
+          msgInfoBtn.text(`${timeCount}秒`);
+          if (timeCount == 0) {
+            clearInterval(timer);
+            msgCodeBtn.stop().show();
+            msgInfoBtn.stop().hide();
+            msgCodeBtn.text('获取短信验证码');
+          }
+        }, 1000);
+
+        //获取随机数
+        function getRandNum(min, max) {
+          return parseInt(Math.random() * (max - min + 1) + min);
+        }
+
+        function formatterDateTime() {
+          var date = new Date()
+          var month = date.getMonth() + 1
+          var datetime = date.getFullYear() +
+            "" // "年"
+            +
+            (month >= 10 ? month : "0" + month) +
+            "" // "月"
+            +
+            (date.getDate() < 10 ? "0" + date.getDate() : date
+              .getDate()) +
+            "" +
+            (date.getHours() < 10 ? "0" + date.getHours() : date
+              .getHours()) +
+            "" +
+            (date.getMinutes() < 10 ? "0" + date.getMinutes() : date
+              .getMinutes()) +
+            "" +
+            (date.getSeconds() < 10 ? "0" + date.getSeconds() : date
+              .getSeconds());
+          return datetime;
+        }
+
+        num = getRandNum(1000, 9999); //生成四位随机验证码
+        console.log(num);
+        // msgCodeVal = num;   //存短信验证码
+        $.ajax({
+          type: 'post',
+          url: 'http://route.showapi.com/28-1',
+          dataType: 'json',
+          data: {
+            "showapi_timestamp": formatterDateTime(),
+            "showapi_appid": '105009', //这里需要改成自己的appid
+            "showapi_sign": '51084e3ee1f34d5c86af6e0e3506a8fa', //这里需要改成自己的应用的密钥secret
+            "mobile": phoneInput.val().trim(),
+            "content": `{\"name\":\"牛二\",\"code\":\"${num}\",\"minute\":\"3\",\"comName\":\"千峰教育\"}`,
+            "tNum": "T150606060601",
+            "big_msg": ""
+          },
+          error: function (XmlHttpRequest, textStatus, errorThrown) {
+            alert("操作失败!");
+          },
+          success: function (result) {
+            console.log(result) //console变量在ie低版本下不能用
+            // alert(result.showapi_res_code);
+            alert('发送成功');
+          }
+        });
+      }
+    })
+
+    phoneInput.blur(function () { //手机号校验
+      let val = $(this).val().trim();
+      if (val.length == 0) {
+        $(this).siblings('.i_empty').css('display', 'block');
+        $(this).siblings('span').css('display', 'block');
+        $(this).addClass('ierror');
+      } else {
+        if (!phoneReg.test(val)) {
+          $(this).siblings('.i_empty').css('display', 'none');
+          $(this).siblings('span').css('display', 'block');
+          $(this).addClass('ierror');
+
+        } else {
+          $(this).siblings('.i_empty').css('display', 'none');
+          $(this).siblings('span').css('display', 'none');
+          $(this).removeClass('ierror');
+
+          phoneVal = val;
+        }
+      }
+    });
+
+    msgCodeInput.blur(function () { //短信验证码校验
+      let val = $(this).val().trim();
+      if (val.length == 0) {
+        $(this).siblings('.i_empty').css('display', 'block');
+        $(this).siblings('span').css('display', 'block');
+        $(this).addClass('ierror');
+
+      } else {
+        if (val != num) {
+          $(this).siblings('.i_empty').css('display', 'none');
+          $(this).siblings('span').css('display', 'block');
+          $(this).addClass('ierror');
+
+        } else {
+          $(this).siblings('.i_empty').css('display', 'none');
+          $(this).siblings('span').css('display', 'none');
+          $(this).removeClass('ierror');
+
+          msgCodeVal = val;
+        }
+      }
+    });
+
+    usernameInput.blur(function () {
+      let val = $(this).val().trim();
+      if (val.length == 0) {
+        $(this).siblings('.i_empty').css('display', 'block');
+        $(this).siblings('.error').css('display', 'block');
+        $(this).addClass('ierror');
+
+      } else {
+        $(this).siblings('.i_empty').css('display', 'none');
+        $(this).siblings('.error').css('display', 'none');
+        $(this).removeClass('ierror');
+
+        phoneVal = val;
+      }
+    })
+    passwordInput.blur(function () {
+      let val = $(this).val().trim();
+      if (val.length == 0) {
+        $(this).siblings('.i_empty').css('display', 'block');
+        $(this).siblings('.error').css('display', 'block');
+        $(this).addClass('ierror');
+
+      } else {
+        $(this).siblings('.i_empty').css('display', 'none');
+        $(this).siblings('.error').css('display', 'none');
+        $(this).removeClass('ierror');
+
+        passwordVal = val;
+      }
+    });
+
+    imageCodeInput.blur(function () {
+      let val = $(this).val().trim();
+      if (val.length == 0) {
+        // $(this).siblings('.i_empty').css('display', 'block');
+        $(this).siblings('.error').css('display', 'block');
+        $(this).addClass('ierror');
+
+      } else {
+        if (val != imageCodeVal) {
+          // $(this).siblings('.i_empty').css('display', 'none');
+          $(this).siblings('.error').css('display', 'block');
+          $(this).addClass('ierror');
+
+        } else {
+          // $(this).siblings('.i_empty').css('display', 'none');
+          $(this).siblings('span').css('display', 'none');
+          $(this).removeClass('ierror');
+
+          imageCodeVal = val;
+        }
+      }
+    })
+
+    quickLogin.click(function () {
+      // console.log($('.ierror').length);
+      let len = $('.ierror').length - 1;
+      let isSuccess =
+        len == 0 && phoneVal && msgCodeVal;
+      console.log(isSuccess);
+      if (!isSuccess) {
+        alert('请完善信息!');
+        return;
+      } else {
+        console.log('---ok----');
+        $.ajax({
+          type: "post",
+          url: "../api/loginByPhone.php",
+          data: `phone=${phoneVal}`,
+          dataType: "json",
+          success: function (response) {
+            if (response.status == "success") {
+              alert(response.data.msg);
+              window.location.href = "../index.html";
+            } else {
+              alert(response.data.msg);
+            }
+
+          }
+        });
+      }
+    })
   </script>
 </body>
 

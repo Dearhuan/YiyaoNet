@@ -86,7 +86,8 @@
         <i class="i_false" id="verifyCode_false" style="display: none"></i>
         <i class="i_true" id="verifyCode_true" style="display: none"></i>
 
-        <a class="btn_verify" id="btnCode" href="javascript:void(0);">获取短信验证码</a>
+        <a class="btn_verify" id="btnCode" style="display: block" href="javascript:void(0);">获取短信验证码</a>
+        <a class="btn_verify" id="btnInfo" href="javascript:void(0);" style="display: none"></a>
         <span id="msgcd_desc" class="error" style="display: none;"></span>
       </div>
       <div data-ywpoint="null_null_null_null_I0212_0" class="reg_row">
@@ -140,154 +141,7 @@
   </div>
 
   <script>
-    $(function () {
-      let usernameInput = $('#username');
-      let phoneInput = $('#email');
-      let passwordAInput = $('#password');
-      let passwordBInput = $('#password2');
-      let imageCodeInput = $('#validCode');
-      let msgCodeInput = $('#verifyCode');
-      let msgCodeBtn = $('#btnCode');
-      let registBtn = $('#registerButton');
-
-
-      let passwordVal = "";
-      let imageCodeVal = "";
-      let num;
-
-      let usernameReg = /^[a-zA-Z]{6,8}$/; /* 请设置您的用户名(6~8位字母区分大小写) */
-      let phoneReg = /^1[3-9]\d{9}$/; /* 第一位：1 第二位不能为012 11位数字 */
-      let passwordReg = /^[a-zA-Z0-9]{6,16}$/;
-
-
-      (new Captcha({
-        lineNum: 5,
-        dotNum: 10,
-        length: 4,
-        fontSize: 30
-      })).draw(document.querySelector('#captcha'), r => {
-        console.log(r, '验证++++');
-        imageCodeVal = r;
-      });
-
-      registBtn.click(function(){
-        msgCodeInput.trigger('blur');
-        let flag;
-      })
-
-      checkInput(usernameInput, usernameReg);
-      checkInput(phoneInput, phoneReg);
-
-      checkInput(msgCodeInput);
-      checkPwd(passwordAInput, passwordReg);
-      checkRepwd(passwordBInput);
-      checkImgCode(imageCodeInput);
-
-
-      function checkInput(iInput, reg) {
-        /* 先获取输入框的值，检查和清理(空格|空) */
-        iInput.blur(function () {
-          var val = $(this).val().trim();
-          if (val.length == 0) {
-            $(this).siblings('.i_empty').css('display', 'block');
-            $(this).siblings('span').css('display', 'none');
-            $(this).addClass('empty');
-          } else {
-            if (!reg.test(val)) {
-              $(this).siblings('.i_empty').css('display', 'none');
-              $(this).siblings('span').css('display', 'block');
-              $(this).addClass("error");
-            } else {
-              $(this).removeClass("error");
-              $(this).removeClass("empty");
-              $(this).siblings('.i_empty').css('display', 'none');
-              $(this).siblings('span').css('display', 'none');
-              $(this).siblings('.i_true').css('display', 'inline');
-            }
-          }
-        })
-      }
-
-      function checkPwd(iInput, reg) {
-        /* 先获取输入框的值，检查和清理(空格|空) */
-        iInput.blur(function () {
-          var val = $(this).val().trim();
-          if (val.length == 0) {
-            $(this).siblings('.i_empty').css('display', 'block');
-            $(this).siblings('span').css('display', 'none');
-            $(this).addClass('empty');
-          } else {
-            if (!reg.test(val)) {
-              $(this).siblings('.i_empty').css('display', 'none');
-              $(this).siblings('span').css('display', 'block');
-              $(this).addClass("error");
-            } else {
-              $(this).removeClass("error");
-              $(this).removeClass("empty");
-              $(this).siblings('.i_empty').css('display', 'none');
-              $(this).siblings('span').css('display', 'none');
-              $(this).siblings('.i_true').css('display', 'inline');
-              passwordVal = val;
-            }
-          }
-        })
-      }
-
-      function checkRepwd(iInput) {
-        iInput.blur(function () {
-          var val = $(this).val().trim();
-          if (val.length == 0) {
-            $(this).siblings('.i_empty').css('display', 'block');
-            $(this).addClass('empty');
-          } else {
-            if (passwordVal != val) {
-              $(this).siblings('#password2_error').css('display', 'block');
-              $(this).removeClass("i_empty");
-              $(this).addClass("error");
-            } else {
-              $(this).siblings('#password2_error').css('display', 'none');
-              $(this).siblings('.i_true').css('display', 'block');
-              $(this).removeClass("error");
-            }
-          }
-        })
-      }
-
-      function checkImgCode(iInput) {
-        iInput.blur(function () {
-          var val = $(this).val().trim();
-          val = val.toLowerCase();
-          imageCodeVal = imageCodeVal.toLowerCase();
-          if (val.length == 0) {
-            $(this).siblings('.i_false').css('display', 'inline');
-            $(this).siblings('.error').text('请输入验证码');
-            $(this).siblings('.error').css('display', 'block');
-            $(this).addClass('empty');
-          } else {
-            if (val != imageCodeVal) {
-              $(this).siblings('.i_false').css('display', 'inline');
-              $(this).siblings('.i_true').css('display', 'none');
-              $(this).siblings('.error').text('验证码错误');
-              $(this).siblings('.error').css('display', 'block');
-              $(this).removeClass('empty');
-              $(this).addClass('error');
-            } else {
-              $(this).removeClass('error');
-              $(this).siblings('.i_false').css('display', 'none');
-              $(this).siblings('.i_true').css('display', 'inline');
-              $(this).siblings('.error').css('display', 'none');
-            }
-          }
-        })
-      }
     
-      function checkMsgCode(iInput){
-        var val = $(this).val().trim();
-        if(val.length == 0){
-          $(this)
-        }
-      }
-    })
   </script>
 </body>
 
