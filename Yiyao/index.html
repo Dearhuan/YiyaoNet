@@ -8,10 +8,15 @@
   <title>1药网-合法网上药店,网上买药,购药放心药房网,药品品类齐全的网上药店,网上买药就上1药网</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/base_px.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/iconfont.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/Cookie.js"></script>
+
 </head>
 
 <body>
@@ -24,7 +29,7 @@
   <div id="nav">
     <div class="nav con">
       <div class="logo">
-        <a href="https://www.111.com.cn"></a>
+        <a href="./index.html"></a>
       </div>
       <div class="search">
         <div class="form">
@@ -33,20 +38,16 @@
             <img src="https://s.maiyaole.com/images/201306/images/search.png" alt="">
           </button>
         </div>
-        <div class="hotwords">
-          <a href="#" class="red">hello</a>
-          <a href="#">感冒</a>
-          <a href="#">感冒</a>
-          <a href="#">感冒</a>
-        </div>
+        <div class="hotwords"></div>
       </div>
       <div class="erDCode" id="erDCode">
         <img src="//s.maiyaole.com/images/201306/images/2DCodenew2.jpg" width="100" style="margin-top:22px;"
           alt="1药网App二维码"></div>
       <div class="mod_minicart">
-        <a rel="nofollow" data-ywpoint="null_null_null_null_I1008_0" target="_self" href="//buy.111.com.cn/cart/shoppingcart/queryshoppingcart.action" class="mini_cart_btn"> 
+        <a rel="nofollow" data-ywpoint="null_null_null_null_I1008_0" target="_self"
+          href="//buy.111.com.cn/cart/shoppingcart/queryshoppingcart.action" class="mini_cart_btn">
           <span class="iconfont icongouwuche"></span>
-          <em class="cart_num">1</em> 
+          <em class="cart_num">1</em>
           <span class="icart">购物车</span>
           <span class="iconfont iconjiantou1"></span>
         </a>
@@ -54,11 +55,139 @@
     </div>
   </div>
 
-  <script>
-    $('body').append('<div id="footer"></head>');
-    $('#footer').load('./html/footer.html')
-  </script>
+  <div class="head_wrap clearfix">
+    <div class="headerNavMain">
+      <div class="allSort">
+        <a href="//www.111.com.cn/categories/" class="more" id="allSortOuterbox" style="display:block"
+          data-ywpoint="null_null_null_null_I1009_0">所有商品分类</a>
+        <div class="sortbox w1190" id="allCategoryHeader">
+          <ul id="sortul"></ul>
+        </div>
+      </div>
+      <ul class="sitenav" id="sideNav">
+        <li class="s_m home"><a href="./index.html" data-ywpoint="null_null_null_null_I1010_0" class="nav_link cur"
+            target="_self">首页</a></li>
+        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/2015061908/index.html?tp=9-2"
+            data-ywpoint="null_null_null_null_I1010_1" class="nav_link" data-rel="navHover1">家庭常备药</a></li>
+        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/20184ee7ab470926100714/index.html?tp=8-4&amp;tp=9-3"
+            data-ywpoint="null_null_null_null_I1010_2" class="nav_link" data-rel="navHover2">乙肝</a></li>
+        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/2017e7cbee3a1211161537/index.html?tp=9-4"
+            class="nav_link red" data-ywpoint="null_null_null_null_I1010_3" data-rel="navHover3">传统滋补</a></li>
+        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/20188664d90f0514141253/index.html?tp=9-5"
+            data-ywpoint="null_null_null_null_I1010_4" class="nav_link" data-rel="navHover4">男性早泄</a></li>
+        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/20181d6642160426113758/index.html?tp=9-6"
+            data-ywpoint="null_null_null_null_I1010_5" class="nav_link">控制三高</a></li>
+        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/201732ed342b0118160705/index.html?tp=9-7"
+            data-ywpoint="null_null_null_null_I1010_6" class="nav_link red">中药抓药</a></li>
+        <li class="s_m"><a href="http://ir.111.com.cn/?tp=9-8" data-ywpoint="null_null_null_null_I1010_7"
+            class="nav_link">投资者关系</a></li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="wrap main_body clearfix">
+    <div class="main-l">
+      <div class="tsSlide" id="tsSlideid" data-ywpoint="null_null_null_null_I1011_0">
+
+      </div>
+    </div>
+    <div class="main-r"></div>
+    <div class="clearfix h_0"></div>
+    <div class="specialAds" id="specialAds" data-ywpoint="F1000_0_null_null_I1015_0">
+      <a class="limited_time">
+        <div class="clock-wrap">
+          <div class="clock">
+            <div class="clock-h" id="ClockHours" style="-webkit-transform: rotate(93deg);"></div>
+            <div class="clock-m"></div>
+            <div class="clock-s"></div>
+          </div>
+        </div>
+      </a>
+      <a href=""><img src="https://p1.maiyaole.com/img/item/1568269959565397.jpg" alt="惠氏 善存银片 100片"></a>
+      <a href=""><img src="https://p1.maiyaole.com/img/item/1568258271435393.jpg" alt="江中 健胃消食片 0.8g*32片家庭装"></a>
+      <a href=""><img src="https://p3.maiyaole.com/img/item/1568687283980413.jpg" alt="优思明 口服短效避孕药屈螺酮炔雌醇片 21片"></a>
+      <a href="" class="lastAds"><img src="https://p1.maiyaole.com/img/item/1568269996209405.jpg"
+          alt="妇炎洁 植物本草抑菌洗液 380ml"></a>
+    </div>
+
+    <div class="wrap index_floor floor_1 clearfix">
+      <div class="in_floor_l">
+        <div class="floor_name floor_name_1 cur">1F&nbsp;&nbsp;家庭常备药</div>
+        <ul class="clearfix">
+          <li><a href="">补肾</a></li>
+          <li><a href="">皮炎癣症</a></li>
+          <li><a href="">补血补气</a></li>
+          <li><a href="">腹泻</a></li>
+          <li><a href="">鼻炎</a></li>
+          <li><a href="">前列腺炎</a></li>
+          <li><a href="">青春痘</a></li>
+          <li><a href="">保肝护肝</a></li>
+        </ul>
+        <ul class="clearfix">
+          <li><a href="">减肥瘦身</a></li>
+          <li><a href="">男性不育症</a></li>
+          <li><a href="">眼干眼涩</a></li>
+          <li><a href="">感冒发烧</a></li>
+          <li><a href="">阴道炎</a></li>
+          <li><a href="">避孕</a></li>
+          <li><a href="">胃炎</a></li>
+          <li><a href="">增强抵抗力</a></li>
+        </ul>
+      </div>
+      <div class="in_floor_r">
+        <div class="sale clearfix">
+          <div class="sale_slider" id="sale_slider_1" lzdata="addSlide1()"><a id="tsSlideLi_1"><img alt="" title=""
+                class="y_slide_img" style="left:0;z-index:9" id="slideImg_10" src=""></a>
+          </div>
+          <div class="sale_ads" id="sale_ads_1" lzdata="addAds1();"><a><img src="" alt=""></a>
+            <a href=""><img class="last" src="" alt=""></a></div>
+        </div>
+        <ul class="sp_show clearfix">
+          <li data-ywpoint="F1001_0_null_null_I1019_0">
+            <a href=""><img alt="【保心良药】益安宁丸" src="" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+            <a href="" class="tit" title="【保心良药】益安宁丸">【保心良药】益安宁丸</a>
+            <p><i>¥</i>790.0</p>
+          </li>
+          <li data-ywpoint="F1001_0_null_null_I1019_0">
+            <a href=""><img alt="同仁堂 五子衍宗丸 60g/瓶" src="" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+            <a href="" class="tit" title="同仁堂 五子衍宗丸 60g/瓶">同仁堂 五子衍宗丸 60g/瓶</a>
+            <p><i>¥</i>25.0</p>
+          </li>
+          <li data-ywpoint="F1001_0_null_null_I1019_0">
+            <a href=""><img alt="LF/老方 红金消结胶囊 0.4g*36粒" src="" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+            <a href="" class="tit" title="LF/老方 红金消结胶囊 0.4g*36粒">LF/老方 红金消结胶囊
+              0.4g*36粒</a>
+            <p><i>¥</i>35.0</p>
+          </li>
+          <li data-ywpoint="F1001_0_null_null_I1019_0">
+            <a href=""><img alt="福牌阿胶 阿胶 250g" src="" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+            <a href="" class="tit" title="福牌阿胶 阿胶 250g">福牌阿胶 阿胶 250g</a>
+            <p><i>¥</i>368.0</p>
+          </li>
+          <li data-ywpoint="F1001_0_null_null_I1019_0" class="last">
+            <a href=""><img alt="【艾丽】奥利司他胶囊 0.12g*21粒" src="" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+            <a href="" class="tit" title="【艾丽】奥利司他胶囊 0.12g*21粒">【艾丽】奥利司他胶囊
+              0.12g*21粒</a>
+            <p><i>¥</i>99.0</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      $('body').append('<div id="footer"></head>');
+      $('#footer').load('./html/footer.html')
+    </script>
+    <script>
+      $(function () {
+        let cookieUsername = Cookie.get('username'); //检查cookie
+        let cookiePassword = Cookie.get('password');
+        let cookiePhone = Cookie.get('phone');
+        if (cookieUsername && cookiePassword) {
+          $('#ilogin').text(cookieUsername);
+        }
+      })
+    </script>
 </body>
 
 </html>

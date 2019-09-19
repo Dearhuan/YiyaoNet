@@ -112,7 +112,7 @@
 }
 
 /* -----------------------------------------头部------------------------------------------ */
-/* -----------------------------------------导航------------------------------------------ */
+/* -----------------------------------------搜索------------------------------------------ */
 #nav {
   height: 121px;
   /* background: cyan; */
@@ -279,7 +279,387 @@
   padding-right: 15px;
 }
 
+/* -----------------------------------------搜索------------------------------------------ */
+
 /* -----------------------------------------导航------------------------------------------ */
+.head_wrap {
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px solid #d2b994;
+}
+.head_wrap .headerNavMain {
+  z-index: 100;
+}
+.head_wrap .headerNavMain {
+  width: 1190px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+.allSort {
+  float: left;
+  width: 180px;
+}
+.allSort .more {
+  background-image: none;
+}
+
+.allSort .more {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  font: 400 15px/48px tahoma,arial,Microsoft YaHei;
+  color: #fff;
+  width: 166px;
+  padding: 0 0 0 14px;
+  height: 48px;
+  background-color: #19323a;
+  background-position: right -438px;
+  font-weight: 700;
+}
+.sortbox {
+    position: absolute;
+    z-index: 99;
+    width: 180px;
+    height: auto;
+    margin-top: 48px;
+    border-bottom: #e6e6e6 1px solid;
+}
+#sortul{
+  width: 180px;
+  height: 400px;
+  background: #314349;
+}
+.stitle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .1s ease-out 0s;
+}
+.stitle>a {
+  display: block;
+  width: 180px;
+  height: 40px;
+  color: #fff;
+  background-color: #314349;
+  text-decoration: none;
+}
+.stitle i {
+  float: left;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 15px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 103;
+}
+.stitle h4 {
+  margin-left: 47px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: "Microsoft YaHei",tahoma,arial,\5b8b\4f53;
+}
+
+.sitenav {
+  float: left;
+  height: 46px;
+  font-size: 0;
+  background: #fff;
+  font-family: tahoma,arial,\5b8b\4f53;
+  vertical-align: middle;
+  padding-left: 180px;
+}
+.sitenav .s_m {
+  word-spacing: -1px;
+  float: left;
+  margin-left: -2px;
+}
+.headerNavMain .sitenav .home a {
+  color: #505050;
+}
+.headerNavMain .sitenav .home a {
+  cursor: pointer;
+  padding: 0 15px;
+}
+.sitenav .cur, .sitenav .nav_link:hover, .sitenav li:hover .nav_link {
+  color: #0083ce;
+  text-decoration: none;
+  height: 48px;
+}
+
+.sitenav .nav_link {
+  font-weight: 400;
+  font-family: "Microsoft YaHei";
+  color: #505050;
+  padding: 0 16px;
+  font-size: 16px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: 46px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+/* -----------------------------------------导航------------------------------------------ */
+/* -----------------------------------------banner------------------------------------------ */
+.main_body {
+  position: relative;
+  width: 1190px;
+}
+.wrap {
+  margin: 0 auto;
+  width: 1190px;
+}
+.main-l {
+  width: 750px;
+  float: left;
+  display: inline;
+  margin-left: 180px;
+}
+.tsSlide {
+  position: relative;
+  overflow: hidden;
+}
+.y_slide_img {
+  position: absolute;
+}
+.tsSlide, .y_slide_img {
+  width: 750px;
+  height: 400px;
+}
+.tsSlideSwitch {
+  position: absolute;
+  bottom: 5px;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+.y_slide_a, .y_slide_on {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background-color: #3e535a;
+  opacity: .5;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* -----------------------------------------banner------------------------------------------ */
+
+/* -------------------------------------------广告------------------------------------------------ */
+.specialAds {
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.specialAds .limited_time {
+  width: 180px;
+  height: 150px;
+  float: left;
+  margin-right: 0;
+}
+.specialAds a {
+  margin-right: 3px;
+}
+.limited_time .clock-wrap {
+  position: relative;
+  width: 180px;
+  height: 150px;
+  background: url(//s.maiyaole.com/images/201306/img/clock01.png) no-repeat;
+}
+.limited_time .clock {
+  position: absolute;
+  left: 63px;
+  top: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+}
+.limited_time .clock .clock-h {
+  position: absolute;
+  top: 5px;
+  left: 19px;
+  height: 18px;
+  width: 5px;
+  background: url(//s.maiyaole.com/images/201306/img/clock_h.png) no-repeat;
+  transform: rotate(10deg);
+  -webkit-transform-origin: 2.5px 16.5px;
+  -moz-transform-origin: 2.5px 16.5px;
+  transform-origin: 2.5px 16.5px;
+}
+.limited_time .clock .clock-m {
+  position: absolute;
+  left: 5px;
+  top: 19px;
+  width: 19px;
+  height: 5px;
+}
+.limited_time .clock .clock-s {
+  position: absolute;
+  left: 17px;
+  top: -6px;
+  width: 5px;
+  height: 26px;
+  -webkit-transform-origin: bottom;
+  -webkit-animation: tick-tock 10s linear infinite;
+  -moz-transform-origin: bottom;
+  -moz-animation: tick-tock 10s linear infinite;
+  transform-origin: bottom;
+  animation: tick-tock 10s linear infinite;
+}
+.specialAds a {
+  margin-right: 3px;
+}
+.specialAds img{
+  width: 245px;
+  height: 150px;
+}
+/* -------------------------------------------广告------------------------------------------------ */
+
+/* -------------------------------------------楼层---------------------------------------------- */
+.index_floor {
+  margin-top: 30px;
+  border: 1px solid #F3F3F3;
+  font-family: "Microsoft Yahei";
+  color: #5e5e5e;
+  width: 1189px;
+  height: 485px;
+  border-top: none;
+  border-bottom: none;
+}
+.index_floor.floor_1 {
+  border-top: 2px solid #92c4ff;
+}
+.index_floor .in_floor_l {
+  float: left;
+  width: 180px;
+}
+.in_floor_l .floor_name_1.cur {
+  color: #fff;
+  background: #92c4ff;
+}
+.in_floor_l .floor_name_1 {
+  color: #92c4ff;
+}
+
+.in_floor_l .floor_name {
+  padding-left: 20px;
+  height: 85px;
+  line-height: 85px;
+  background: #F8F8F8;
+  font-size: 20px;
+}
+.in_floor_l li {
+  float: left;
+  width: 89px;
+  height: 49px;
+  border: 1px solid #F3F3F3;
+  border-left: none;
+  border-top: none;
+  text-align: center;
+  line-height: 49px;
+  font-size: 14px;
+}
+.in_floor_l li a {
+  color: #5e5e5e;
+}
+.in_floor_l li a:hover {
+  text-decoration: underline;
+}
+
+.in_floor_l li a:hover {
+  color: #ff5247;
+}
+.index_floor .in_floor_r {
+  float: right;
+  width: 1009px;
+}
+.in_floor_r .sale {
+  height: 284px;
+}
+.in_floor_r .sale .sale_slider {
+  width: 605px;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #f3f3f3;
+}
+.in_floor_r .sale .sale_slider img {
+  width: 605px;
+  height: 100%;
+  position: absolute;
+}
+
+.in_floor_r .sale .sale_ads {
+  height: 100%;
+  float: left;
+}
+.in_floor_r .sale .sale_ads img {
+  width: 201px;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #F3F3F3;
+}
+.in_floor_r .sale .sale_ads img.last {
+  border-right: 0;
+}
+.in_floor_r .sp_show {
+  height: 201px;
+}
+.in_floor_r .sp_show li {
+  float: left;
+  width: 161px;
+  padding: 20px 20px 10px 20px;
+  border-right: 1px solid #F3F3F3;
+  border-bottom: 1px solid #F3F3F3;
+  height: 170px;
+}
+.in_floor_r .sp_show li.last {
+  border-right: 0;
+}
+.in_floor_r .sp_show li a {
+  display: block;
+}
+.in_floor_r .sp_show li img {
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+}
+.in_floor_r .sp_show li a.tit {
+  font-size: 14px;
+  color: #333;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+  margin: 15px 0 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.in_floor_r .sp_show li a.tit:hover {
+  color: #ff5247;
+}
+.in_floor_r .sp_show li p {
+  color: #E72418;
+  font-size: 16px;
+  text-align: center;
+}
+.in_floor_r .sp_show li p i {
+  font-size: 12px;
+  padding-right: 5px;
+}
+
+/* -------------------------------------------楼层---------------------------------------------- */
 
 /* -----------------------------------------底部------------------------------------------ */
 #footer a {

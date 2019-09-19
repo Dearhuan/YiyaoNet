@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+  <script>
+    var floors = document.querySelectorAll('.index_floor');
+    floors = Array.from(floors).slice(0, 2);
+    console.log(floors)
+    var flist = [];
+    floors.forEach(ele => {
+      var arr = [];
+      var floor = ele.querySelector('.in_floor_l').children[0].innerText
+      var obj = {};
+      obj.floor = floor;
+      var ul1 = ele.querySelector('.in_floor_l').children[1].children;
+      obj.ulist1 = [];
+      ulist1 = Array.from(ul1).forEach(ele => {
+        obj.ulist1.push(ele.querySelector('a').innerText);
+      })
+      var ul2 = ele.querySelector('.in_floor_l').children[2].children;
+      obj.ulist2 = [];
+      ulist2 = Array.from(ul2).forEach(ele => {
+        obj.ulist2.push(ele.querySelector('a').innerText);
+      })
+      obj.simg = ele.querySelector('.y_slide_img').src;
+
+      var rimgs = Array.from(ele.querySelector('.sale_ads').children);
+      obj.rimglist = [];
+      rimglist = rimgs.forEach(ele => {
+        obj.rimglist.push(ele.querySelector('img').src);
+      })
+
+      var buls = ele.querySelector('.sp_show').children
+      obj.bulist = [];
+      bulist = Array.from(buls).forEach(ele => {
+        var o = {};
+        o.src = ele.querySelector('img').src;
+        o.title = ele.querySelector('.tit').innerText;
+        o.price = ele.querySelector('p').innerText;
+        obj.bulist.push(o);
+      })
+
+      arr.push(obj);
+      flist.push(arr);
+    })
+    console.log(flist);
+  </script>
+</body>
+
+</html>
