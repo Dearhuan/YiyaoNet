@@ -1,42 +1,42 @@
 [
   {
-      "icon":"icon-jiaonang",
+      "icon":"iconjiaonang",
       "title":"中西药品"
   },
   {
-      "icon":"icon-pingzi",
+      "icon":"iconpingzi",
       "title":"营养保健"
   },
   {
-      "icon":"icon-huluobo",
+      "icon":"iconhuluobo",
       "title":"维生素钙"
   },
   {
-      "icon":"icon-yanjing",
+      "icon":"iconyanjing",
       "title":"隐形眼镜"
   },
   {
-      "icon":"icon-tiwenji",
+      "icon":"icontiwenji",
       "title":"医疗器械、健康电器"
   },
   {
-      "icon":"icon-ximiannai",
+      "icon":"iconximiannai",
       "title":"美妆个护"
   },
   {
-      "icon":"icon-anquantao",
+      "icon":"iconanquantao",
       "title":"成人用品"
   },
   {
-      "icon":"icon-yunying",
+      "icon":"iconyunying",
       "title":"母婴专区"
   },
   {
-      "icon":"icon-renshen",
+      "icon":"iconrenshen",
       "title":"参茸花茶、休闲零食"
   },
   {
-      "icon":"icon-tingzhenqi",
+      "icon":"icontingzhenqi",
       "title":"体检、口腔诊疗"
   }
 ]

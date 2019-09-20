@@ -11,12 +11,21 @@
 
 <body>
   <script>
-    var floors = document.querySelectorAll('.index_floor');
+    var imgs = document.querySelector('#tsSlideid').querySelectorAll('img');
+    var imgs = Array.from(imgs);
+    // console.log(imgs);
+    var arr = [];
+    imgs.forEach((ele) => {
+      arr.push(ele.src);
+    })
+    console.log(arr);
+
+    /* var floors = document.querySelectorAll('.index_floor');
     floors = Array.from(floors).slice(0, 2);
     console.log(floors)
     var flist = [];
     floors.forEach(ele => {
-      var arr = [];
+      // var arr = [];
       var floor = ele.querySelector('.in_floor_l').children[0].innerText
       var obj = {};
       obj.floor = floor;
@@ -47,11 +56,92 @@
         o.price = ele.querySelector('p').innerText;
         obj.bulist.push(o);
       })
+      flist.push(obj);
+    })
+    console.log(flist); */
 
-      arr.push(obj);
-      flist.push(arr);
+    var floors = document.querySelectorAll('.index_floor');
+    floors = Array.from(floors).slice(2);
+    console.log(floors)
+    var flist = [];
+    floors.forEach(ele => {
+      // var arr = [];
+      var floor = ele.querySelector('.in_floor_l').children[0].innerText
+      var obj = {};
+      obj.floor = floor;
+      var ul1 = ele.querySelector('.in_floor_l').children[1].children;
+      obj.ulist1 = [];
+      ulist1 = Array.from(ul1).forEach(ele => {
+        obj.ulist1.push(ele.querySelector('a').innerText);
+      })
+      var ul2 = ele.querySelector('.in_floor_l').children[2].children;
+      obj.ulist2 = [];
+      ulist2 = Array.from(ul2).forEach(ele => {
+        obj.ulist2.push(ele.querySelector('img').src);
+      })
+      obj.simg = ele.querySelector('.y_slide_img').src;
+
+      var rimgs = Array.from(ele.querySelector('.sale_ads').children);
+      obj.rimglist = [];
+      rimglist = rimgs.forEach(ele => {
+        obj.rimglist.push(ele.querySelector('img').src);
+      })
+
+      var buls = ele.querySelector('.sp_show').children
+      obj.bulist = [];
+      bulist = Array.from(buls).forEach(ele => {
+        var o = {};
+        o.src = ele.querySelector('img').src;
+        o.title = ele.querySelector('.tit').innerText;
+        o.price = ele.querySelector('p').innerText;
+        obj.bulist.push(o);
+      })
+      flist.push(obj);
     })
     console.log(flist);
+
+    /* tabs */
+    var tabs = document.querySelector('.ft_friendlylink')
+    var arr = [];
+    var obj = {};
+
+    var otitles = tabs.querySelector('.fri_tit').children
+    console.log(otitles)
+    obj.titles = [];
+    Array.from(otitles).forEach(ele => {
+      obj.titles.push(ele.innerText)
+    })
+
+    var brands = document.querySelector('.flagship_store').children
+    obj.brands = [];
+    Array.from(brands).forEach(ele => {
+      var o = {};
+      o.attr = ele.getAttribute('class');
+      o.text = ele.innerText;
+      obj.brands.push(o);
+    })
+    var frinends = document.querySelector('.friendly').children;
+    obj.friends = [];
+    Array.from(frinends).forEach(ele => {
+      obj.friends.push(ele.innerText)
+    })
+    arr.push(obj);
+    console.log(arr)
+
+    var ls = Array.from(document.querySelector('#itemSearchList').children);
+    var arr = []; 
+
+    ls.forEach(ele=>{
+      var obj = {};
+      obj.src = ele.querySelector('img').src;
+      obj.price = ele.querySelector('.price').innerText.trim();
+      obj.title = ele.querySelector('.titleBox').innerText.trim();
+      obj.store = ele.querySelector('.goldseller_name').innerText;
+      arr.push(obj);
+    })
+    console.log(arr);
+
+
   </script>
 </body>
 

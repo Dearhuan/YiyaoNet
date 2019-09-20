@@ -76,26 +76,42 @@
   float: right;
 }
 
-.urt li {
+.urt >li {
   float: left;
   /* padding: 0 10px; */
 }
 
-.urt li a {
+.urt >li a {
   border-right: 1px solid #ccc;
   padding: 0 10px;
 }
 
-.urt li .red {
+.urt >li .red {
   color: #e54948
 }
 
-.urt li:nth-child(1) a {
+.urt >li:nth-child(1) a {
   padding-left: 0;
 }
 
 .urt .last a {
   border: none;
+  padding: 0;
+}
+.iyao{
+  position: relative;
+}
+
+.myyaowang{
+  position: absolute;
+  display: none;
+  top: 38px;
+  right: 0px;
+  z-index: 99999;
+}
+.myyaowang li a{
+  border: none;
+  line-height: 16px;
   padding: 0;
 }
 
@@ -452,6 +468,240 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.swiper-pagination-bullet{
+  width: 100px;
+  height: 6px;
+  border-radius: 0%;
+}
+.main-r {
+  width: 259px;
+  height: 398px;
+  background: #fff;
+  float: left;
+}
+.main-r {
+  width: 259px;
+  height: 398px;
+  height: 399px;
+  border-right: 1px solid #d2b994;
+  overflow: hidden;
+  border-bottom: 1px solid #d2b994;
+}
+.doctor_box {
+  position: relative;
+  width: 260px;
+}
+.consult_tabMenu {
+  line-height: 32px;
+  padding-left: 13px;
+}
+.consult_tabMenu .tabMenu_cur {
+  border-bottom: 1px solid #f00;
+  color: #000;
+  font-weight: bold;
+}
+.consult_tabMenu .consult_tt {
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 22px;
+  color: #707070;
+  cursor: pointer;
+}
+
+.consult_div .consult_tt {
+  line-height: 32px;
+  text-align: center;
+  color: #c7a774;
+  padding-top: 5px;
+  font-size: 12px;
+}
+.consult_div .consult_text {
+  padding-left: 23px;
+  padding-bottom: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+.consult_div .consult_text a {
+  width: 72px;
+  display: inline-block;
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  color: #707070;
+}
+.index_ico {
+  background: url(//s.maiyaole.com/images/201306/images/just_index.png) no-repeat;
+  display: inline-block;
+}
+.arrow_ico {
+  background-position: -15px -452px;
+  width: 6px;
+  height: 10px;
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}
+.consult_tabBox .hide {
+  display: none;
+}
+.consult_tabBox .consult_text .consult_text_dep {
+  display: inline-block;
+  width: 72px;
+  height: auto;
+  margin: 15px 10px 4px 20px;
+}
+.consult_tabBox .hide {
+  display: none;
+}
+.consult_tabBox .consult_text_dep_4 .consult_img {
+  background: url(//s.maiyaole.com/images/201612/icon_4.png) no-repeat;
+}.consult_tabBox .consult_text_dep_3 .consult_img {
+  background: url(//s.maiyaole.com/images/201612/icon_3.png) no-repeat;
+}
+
+.consult_tabBox .consult_text_dep .consult_img {
+  width: 72px;
+  height: 72px;
+  display: inline-block;
+}
+.consult_tabBox .consult_text_dep p {
+  font-size: 14px;
+  color: #666;
+  line-height: 26px;
+  text-align: center;
+}
+.server_banner {
+  text-align: center;
+  overflow: hidden;
+  margin: 0 13px;
+}
+.server_banner img {
+  width: 100%;
+}
+.company_member {
+  clear: both;
+  margin-left: 20px;
+  padding-top: 10px;
+  clear: both;
+}
+.company_member .company_member_title {
+  font-weight: bold;
+  color: #000;
+  padding-bottom: 5px;
+  display: block;
+  font-size: 12px;
+}
+.company_member_ul li {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.company_member_ul .company_icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+}
+.company_member_ul .company_code_img {
+  position: absolute;
+  width: 88px;
+  height: 84px;
+  border: 1px solid #cccccc;
+  top: -98px;
+  margin-left: -20px;
+  z-index: 9999;
+  display: none;
+}
+.server_announce {
+  height: 174px;
+  clear: both;
+}
+.server_tt {
+  height: 24px;
+  padding-top: 10px;
+}
+.server_tab {
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.server_tab .on {
+  color: #000;
+  border-bottom: 1px solid #f00;
+  font-weight: bold;
+}
+
+.server_tab li {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.tab_con {
+  display: none;
+}
+.service_div {
+  overflow: hidden;
+  padding: 0 0 0 10px;
+  height: 71px;
+}
+.service_div a {
+  width: 60px;
+  float: left;
+  display: block;
+  text-align: center;
+}
+.service_ico {
+  background: url(//s.maiyaole.com/images/201306/images/icon_gonggao.png) no-repeat;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+}
+.service_zheng {
+	background-position: -42px -44px
+}
+
+.service_shou {
+	background-position: -100px -44px
+}
+
+.service_jian {
+	background-position: -156px -44px
+}
+
+.service_mian {
+	background-position: -214px -44px
+}
+.service_div a span {
+  display: block;
+  color: #333;
+  height: 16px;
+  font-size: 12px;
+}
+.news_ul {
+  padding-left: 18px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+.news_ul li {
+  line-height: 23px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  zoom: 1;
+}
+.news_ul a {
+  color: #707070;
+}
+.news_ul a .mark {
+  color: #333;
+}
 /* -----------------------------------------banner------------------------------------------ */
 
 /* -------------------------------------------广告------------------------------------------------ */
@@ -544,12 +794,89 @@
   float: left;
   width: 180px;
 }
+.in_floor_l .floor_name_1 {
+  color: #92c4ff;
+}
+.in_floor_l .floor_name_2 {
+  color: #ffa27a;
+}
 .in_floor_l .floor_name_1.cur {
   color: #fff;
   background: #92c4ff;
 }
-.in_floor_l .floor_name_1 {
-  color: #92c4ff;
+.in_floor_l .floor_name_2.cur {
+  color: #fff;
+  background: #ffa27a;
+}
+.in_floor_l .floor_name_3.cur {
+  color: #fff;
+  background: #ff6b6b;
+}
+.in_floor_l .floor_name_4.cur {
+  color: #fff;
+  background: #f6c89e;
+}
+.in_floor_l .floor_name_5.cur {
+  color: #fff;
+  background: #aee177;
+}
+.in_floor_l .floor_name_6.cur {
+  color: #fff;
+  background: #ffacd0;
+}
+.in_floor_l .floor_name_7.cur {
+  color: #fff;
+  background: #cac3f2;
+}
+.in_floor_l .floor_name_8.cur {
+  color: #fff;
+  background: #fcb0c0;
+}
+.in_floor_l .floor_name_9.cur {
+  color: #fff;
+  background: #cac3f2;
+}
+.in_floor_l .floor_name_4 {
+  color: #f6c89e;
+}
+.in_floor_l .floor_name_5 {
+  color: #aee177;
+}
+.in_floor_l .floor_name_6 {
+  color: #ffacd0;
+}
+.in_floor_l .floor_name_7 {
+  color: #cac3f2;
+}
+.in_floor_l .floor_name_8 {
+  color: #fcb0c0;
+}
+.in_floor_l .floor_name_9 {
+  color: #cac3f2;
+}
+.index_floor.floor_2 {
+  border-top: 2px solid #ffa27a;
+}
+.index_floor.floor_3 {
+  border-top: 2px solid #ff6b6b;
+}
+.index_floor.floor_4 {
+  border-top: 2px solid #f6c89e;
+}
+.index_floor.floor_5 {
+  border-top: 2px solid #aee177;
+}
+.index_floor.floor_6 {
+  border-top: 2px solid #ffacd0;
+}
+.index_floor.floor_7 {
+  border-top: 2px solid #cac3f2;
+}
+.index_floor.floor_8 {
+  border-top: 2px solid #fcb0c0;
+}
+.index_floor.floor_9 {
+  border-top: 2px solid #cac3f2;
 }
 
 .in_floor_l .floor_name {
@@ -635,7 +962,20 @@
   width: 100px;
   height: 100px;
   margin-left: 30px;
+  transition: all 300ms ease;
 }
+.sp_show li:hover img{
+  transform: translate(-20px,0px);
+}
+.sp_show li:hover{
+  background: #3333;
+}
+
+.in_floor_l li img {
+  width: 89px;
+  height: 49px;
+}
+
 .in_floor_r .sp_show li a.tit {
   font-size: 14px;
   color: #333;
@@ -660,6 +1000,365 @@
 }
 
 /* -------------------------------------------楼层---------------------------------------------- */
+
+/* -------------------------------------------底部广告----------------------------------------------- */
+.y_foot {
+  color: #5E5E5E;
+  margin-top: 20px;
+}
+.ft_friendlylink {
+  border: 1px solid #E6E6E6;
+  height: 168px;
+  overflow: hidden;
+  width: 1188px;
+}
+.fri_tit {
+  background: #F8F8F8;
+  border-bottom: 1px solid #E6E6E6;
+}
+.fri_tit li.cur {
+  background: #fff;
+  font-weight: 700;
+  height: 34px;
+  margin-bottom: -1px;
+}
+.fri_tit li {
+  display: inline;
+  float: left;
+  width: 178px;
+  height: 33px;
+  border-right: 1px solid #E6E6E6;
+  font-size: 12px;
+  line-height: 33px;
+  text-align: center;
+  cursor: pointer;
+}
+.flagship_store {
+  padding: 8px 0 15px 8px;
+}
+.flagship_store .btm_logo01 {
+	background-position: 0 top
+}
+
+.flagship_store .btm_logo02 {
+	background-position: -118px top
+}
+
+.flagship_store .btm_logo03 {
+	background-position: -236px top
+}
+
+.flagship_store .btm_logo04 {
+	background-position: -354px top
+}
+
+.flagship_store .btm_logo05 {
+	background-position: -472px top
+}
+
+.flagship_store .btm_logo06 {
+	background-position: -590px top
+}
+
+.flagship_store .btm_logo07 {
+	background-position: -708px top
+}
+
+.flagship_store .btm_logo08 {
+	background-position: -826px top
+}
+
+.flagship_store .btm_logo09 {
+	background-position: -944px top
+}
+
+.flagship_store .btm_logo10 {
+	background-position: -1062px top;
+	margin-right: 0
+}
+
+.flagship_store .btm_logo11 {
+	background-position: 0 -53px
+}
+
+.flagship_store .btm_logo12 {
+	background-position: -118px -53px
+}
+
+.flagship_store .btm_logo13 {
+	background-position: -236px -53px
+}
+
+.flagship_store .btm_logo14 {
+	background-position: -354px -53px
+}
+
+.flagship_store .btm_logo15 {
+	background-position: -472px -53px
+}
+
+.flagship_store .btm_logo16 {
+	background-position: -590px -53px
+}
+
+.flagship_store .btm_logo17 {
+	background-position: -708px -53px
+}
+
+.flagship_store .btm_logo18 {
+	background-position: -826px -53px
+}
+
+.flagship_store .btm_logo19 {
+	background-position: -944px -53px
+}
+
+.flagship_store .btm_logo20 {
+	background-position: -1062px -53px;
+	margin-right: 0
+}
+.flagship_store a {
+  float: left;
+  display: block;
+  background: url(//s.maiyaole.com/images/201306/images/img_btm_logo.png) no-repeat;
+  width: 110px;
+  height: 46px;
+  text-indent: -9999px;
+  margin: 7px 8px 0 0;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+.flagship_store a:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.friendly {
+  padding-top: 20px;
+  margin-left: 30px;
+}
+
+.fri_ct {
+  padding: 10px 0;
+}
+.friendly a {
+  display: block;
+  width: 128px;
+  height: 26px;
+  float: left;
+  font: 12px/26px;
+  color: #666;
+  margin: 0;
+}
+a:hover {
+  text-decoration: underline;
+  color: #d00;
+}
+/* -------------------------------------------底部广告----------------------------------------------- */
+
+/* -------------------------------------------楼层导航------------------------------------------------- */
+.elevator_n {
+  position: fixed;
+  z-index: 99;
+  right: 50%;
+  top: 80px;
+  display: none;
+  margin-right: 600px;
+}
+.elevator_n .last {
+  border-bottom: 1px solid #E6E6E6;
+}
+.elevator_n .xsg {
+  display: block;
+  width: 48px;
+  font-size: 12px;
+  border: 1px solid #E6E6E6;
+  border-bottom: none;
+  text-align: center;
+  color: #157CDB;
+  padding: 5px 0;
+  text-decoration: none;
+  font-family: "Microsoft YaHei";
+}
+.elevator_n ul {
+  overflow: hidden;
+}
+.elevator_n li {
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  text-align: center;
+  width: 48px;
+  border: 1px solid #E6E6E6;
+  border-bottom: none;
+  background-color: #fff;
+}
+.elevator_n li.current a, .elevator_n li.hover a {
+  display: none;
+}
+
+.elevator_n li a {
+  color: #5e5e5e;
+  display: block;
+  font-family: Arial;
+  font-size: 12px;
+  text-decoration: none;
+}
+.elevator_n li:nth-of-type(1) a{
+  font-size: 12px;
+}
+
+.elevator_n li.current .etitle, .elevator_n li.hover .etitle {
+  color: #fff;
+  display: block;
+  background: #157CDB;
+}
+
+.elevator_n li.two_line .etitle {
+  line-height: 17px;
+  padding: 3px 5px;
+}
+#itop{
+  width: 48px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+/* -------------------------------------------楼层导航------------------------------------------------- */
+
+/* ------------------------------------------float_box-------------------------------------------- */
+.float_box {
+  position: fixed;
+  right: 28px;
+  bottom: 10px;
+  z-index: 100;
+  width: 52px;
+  /* height: 256px; */
+  height: auto;
+}
+.float_box .doctor_icon {
+  width: 52px;
+  cursor: pointer;
+}
+.f_back, .f_coupon, .f_home, .f_top, .f_wei, .f_demand {
+  overflow: hidden;
+  display: inline-block;
+  zoom: 1;
+  width: 52px;
+  height: 52px;
+  text-indent: -9999px;
+  float: left;
+  background: url(//s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+}
+.f_demand {
+	background-position: -52px -725px;
+	height:51px;
+	position:relative;	
+}
+.f_home {
+	background-position: 0 -622px
+}
+
+.f_coupon {
+	background-position: 0 -725px
+}
+
+.f_wei {
+	background-position: 0 -674px;
+	height: 51px;
+	text-indent: 0;
+	line-height: 52px;
+	font-weight: 700;
+	color: #e72519;
+	text-align: center;
+	width: 52px;
+	position: relative
+}
+
+.f_back {
+	background-position: 0 -777px;
+	height: 50px
+}
+
+.f_top {
+	background-position: 0 -827px;
+	height: 51px
+}
+.f_demand .demand_num {
+  z-index: 100;
+  font-weight: bold;
+}
+.f_wei i, .f_demand i {
+  position: absolute;
+  color: #fff;
+  right: 11px;
+  top: 8px;
+  height: 12px;
+  width: auto;
+  min-width: 12px;
+  border-radius: 16px;
+  background: red;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 2px;
+  text-indent: 0;
+  text-align: center;
+}
+.float_box .showConsult {
+  left: -362px;
+  top: 0;
+  width: 360px;
+  height: 203px;
+  border: #e72419 1px solid;
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+}
+.float_box .consult {
+  position: relative;
+  width: 360px;
+}
+.consult {
+  width: 258px;
+  border: 1px solid #e6e6e6;
+  border-top: 0;
+  clear: both;
+  position: relative;
+}
+.float_box .d_txt {
+  margin: 0;
+  border: 0;
+  width: 360px;
+  height: 203px;
+  overflow: hidden;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-color: #fff;
+}
+.float_box .d_txt a.b_consultCol, .float_box .d_txt a.b_consultCol:hover {
+  color: #e72419;
+}
+.float_box .d_txt a {
+  padding: 9px 0 9px 25px;
+  width: 64px;
+  font-size: 12px;
+  color: #5e5e5e;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-bottom: 0;
+  display: inline-block;
+  float: left;
+  margin-left: -1px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.float_box .d_txt a, .float_box .d_txt a:hover {
+  background: url(//s.maiyaole.com/images/201306/img/yw_talk.gif) no-repeat 6px center;
+}
+
+/* ------------------------------------------float_box-------------------------------------------- */
 
 /* -----------------------------------------底部------------------------------------------ */
 #footer a {

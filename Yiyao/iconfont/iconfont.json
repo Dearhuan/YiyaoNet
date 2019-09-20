@@ -41,11 +41,25 @@
       "unicode_decimal": 58954
     },
     {
+      "icon_id": "606608",
+      "name": "听诊器",
+      "font_class": "tingzhenqi",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
       "icon_id": "1206010",
       "name": "local-2",
       "font_class": "local2",
       "unicode": "e63b",
       "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "1554198",
+      "name": "洗面奶",
+      "font_class": "ximiannai",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
     },
     {
       "icon_id": "1622274",
@@ -62,11 +76,25 @@
       "unicode_decimal": 58937
     },
     {
+      "icon_id": "1840103",
+      "name": "胶囊",
+      "font_class": "jiaonang",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
       "icon_id": "2407266",
       "name": "客服  选中",
       "font_class": "kefu",
       "unicode": "e656",
       "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "2466320",
+      "name": "母婴",
+      "font_class": "yunying",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
     },
     {
       "icon_id": "2668386",
@@ -83,11 +111,25 @@
       "unicode_decimal": 58917
     },
     {
+      "icon_id": "2906066",
+      "name": "瓶子",
+      "font_class": "pingzi",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
       "icon_id": "3174139",
       "name": "照相机 (1)",
       "font_class": "zhaoxiangji",
       "unicode": "e623",
       "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "3313401",
+      "name": "体温计",
+      "font_class": "tiwenji",
+      "unicode": "e657",
+      "unicode_decimal": 58967
     },
     {
       "icon_id": "4568474",
@@ -97,11 +139,32 @@
       "unicode_decimal": 58891
     },
     {
+      "icon_id": "5157887",
+      "name": "安全套",
+      "font_class": "anquantao",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "5216224",
+      "name": "胡萝卜",
+      "font_class": "huluobo",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
       "icon_id": "6401231",
       "name": "二维码",
       "font_class": "code",
       "unicode": "e626",
       "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "6443036",
+      "name": "眼睛",
+      "font_class": "yanjing",
+      "unicode": "e605",
+      "unicode_decimal": 58885
     },
     {
       "icon_id": "6822916",
@@ -151,6 +214,13 @@
       "font_class": "headset",
       "unicode": "e603",
       "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "10178803",
+      "name": "人参",
+      "font_class": "renshen",
+      "unicode": "e7e1",
+      "unicode_decimal": 59361
     }
   ]
 }
