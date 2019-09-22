@@ -308,7 +308,7 @@ textarea {
 
 .itemSearchResult li {
   float: left;
-  margin: 16px 11px 10px 0;
+  margin: 16px 14px 10px 3px;
   height: 430px;
   position: relative;
   box-sizing: border-box;

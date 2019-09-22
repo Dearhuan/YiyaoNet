@@ -1,6 +1,6 @@
 $.ajax({ //banner图渲染
   type: "get",
-  url: "./api/swiper.php",
+  url: "../api/swiper.php",
   dataType: "json",
   success: function (data) {
     // console.log(data);
@@ -40,7 +40,7 @@ $.ajax({ //banner图渲染
 
 $.ajax({ //hotKeys渲染
   type: "get",
-  url: "./api/hotKeys.php",
+  url: "../api/hotKeys.php",
   dataType: "json",
   success: function (data) {
     // console.log(data);
@@ -54,7 +54,7 @@ $.ajax({ //hotKeys渲染
 
 $.ajax({ //tab_ul
   type: "get",
-  url: "./api/sortul.php",
+  url: "../api/sortul.php",
   dataType: "json",
   success: function (data) {
     // console.log(data);
@@ -67,13 +67,15 @@ $.ajax({ //tab_ul
               </li>`
     }).join(''));
     $('#sortul').find('i').addClass('iconfont');
+    // console.log($('#sortul li a').eq(0));
+    $('#sortul li a').eq(0).attr('href','./goodlist.html')
   }
 });
 
 new Promise(function (resolve, reject) {
   $.ajax({ //floor1_2
     type: "get",
-    url: "./api/floor1_2.php",
+    url: "../api/floor1_2.php",
     dataType: "json",
     success: function (data) {
       // console.log(data);
@@ -97,8 +99,8 @@ new Promise(function (resolve, reject) {
               <a href=""><img class="last" src="${ele.rimglist[1]}" alt=""></a></div>
           </div>
           <ul class="sp_show clearfix">${ele.bulist.map(item=>{
-            return `<li data-ywpoint="F1001_0_null_null_I1019_0">
-                      <a href=""><img alt="${item.title}" src="${item.src}" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+            return `<li>
+                      <a href=""><img alt="${item.title}" src="${item.src}"></a>
                       <a href="" class="tit" title="${item.title}">${item.title}</a>
                       <p>${item.price}</p>
                     </li>`
@@ -116,7 +118,7 @@ new Promise(function (resolve, reject) {
   return new Promise(function (resolve, reject) {
     $.ajax({ //floor3_9
       type: "get",
-      url: "./api/floor3_9.php",
+      url: "../api/floor3_9.php",
       dataType: "json",
       success: function (data) {
         // console.log(data);
@@ -159,7 +161,7 @@ new Promise(function (resolve, reject) {
     return new Promise(function (resolve, reject) {
       $.ajax({ //brands
         type: "get",
-        url: "./api/brands.php",
+        url: "../api/brands.php",
         dataType: "json",
         success: function (data) {
           // console.log(data);

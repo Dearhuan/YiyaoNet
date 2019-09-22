@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商品详情</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/base_px.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/jquery.exzoom.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/jquery.exzoom.js"></script>
+  <script src="../js/Cookie.js"></script>
+</head>
+
+<body>
+  <!--  ----------------------------头部---------------------------------------- -->
+  <script>
+    $('body').append('<div id="head"></head>');
+    $('#head').load('./head.html');
+  </script>
+
+  <!-- -------------------------------nav--------------------------------------- -->
+  <script>
+    $('body').append('<div id="nav">');
+    $('#nav').load('./nav.html');
+  </script>
+
+  <!-- -------------------------------head_wrap------------------------------------------ -->
+  <div class="head_wrap clearfix">
+    <div class="headerNavMain">
+      <div class="allSort">
+        <a href="" class="more" id="allSortOuterbox" style="display:block">所有商品分类</a>
+        <!-- <div class="sortbox w1190" id="allCategoryHeader">
+          <ul id="sortul"></ul>
+        </div> -->
+      </div>
+      <ul class="sitenav" id="sideNav">
+        <li class="s_m home"><a href="./index.html" class="nav_link cur" target="_self">首页</a></li>
+        <li class="s_m"><a href="" class="nav_link" data-rel="navHover1">家庭常备药</a></li>
+        <li class="s_m"><a href="" class="nav_link" data-rel="navHover2">乙肝</a></li>
+        <li class="s_m"><a href="" class="nav_link red" data-rel="navHover3">传统滋补</a></li>
+        <li class="s_m"><a href="" class="nav_link" data-rel="navHover4">男性早泄</a></li>
+        <li class="s_m"><a href="" class="nav_link">控制三高</a></li>
+        <li class="s_m"><a href="" class="nav_link red">中药抓药</a></li>
+        <li class="s_m"><a href="" class="nav_link">投资者关系</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ------------------------------- 详情页头部------------------------------------------------ -->
+  <div class="wrap clearfix">
+    <div class="detailnav">
+      <span class="linkhome"><a href="./index.html">首页</a></span>
+      <span class="arrow">&gt;</span>
+      <span><a href="./goodlist.html">中西药品</a></span>
+      <span class="arrow">&gt;</span>
+      <span><a href="">消化系统疾病</a></span>
+      <span class="arrow">&gt;</span>
+      <span><a href="">消化不良</a></span>
+      <span class="arrow">&gt;</span>
+      <span>
+        江中 健胃消食片 0.8g*32片家庭装 消化不...
+      </span>
+    </div>
+  </div>
+  <!-- ------------------------------- 详情页头部------------------------------------------------ -->
+
+  <!-- ----------------------------------商品详情---------------------------------- -->
+  <div class="wrap_detail">
+    <div class="detail_top clearfix">
+      <div class="sideleft fl" id="gallery_view">
+        <div class="exzoom" id="exzoom">
+          <!--大图区域-->
+          <div class="exzoom_img_box">
+            <ul class='exzoom_img_ul'>
+              <li><img src="https://p2.maiyaole.com/img/item/201909/02/380_20190902190454372.jpg" /></li>
+              <li><img src="https://p1.maiyaole.com/img/item/201903/21/380_20190321120049899.jpg" /></li>
+              <li><img src="https://p3.maiyaole.com/img/item/201908/09/380_20190809171309478.jpg" /></li>
+              <li><img src="https://p1.maiyaole.com/img/item/201908/09/380_20190809171308679.jpg" /></li>
+              <li><img src="https://p1.maiyaole.com/img/item/201908/09/380_20190809171306740.jpg" /></li>
+              <li><img src="https://p2.maiyaole.com/img/item/201908/09/380_20190809171305411.jpg" /></li>
+            </ul>
+          </div>
+          <!--缩略图导航-->
+          <div class="exzoom_nav"></div>
+          <!--控制按钮-->
+          <p class="exzoom_btn">
+            <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a>
+            <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a>
+          </p>
+        </div>
+        <ul class="shareCollectBox">
+          <li class="item_number">商品编码：0009725499</li>
+          <li class="collect">
+            <a href="javascript:void(0);" id="addFavorite"><i></i>收藏</a>
+          </li>
+          <li class="fenxiang">
+            <span class="fenicon"><i></i>分享<em></em></span>
+            <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_1" data-bd-bind="1569126882761">
+              <a class="bds_qzone" data-cmd="qzone" href="#" title="分享到QQ空间"></a>
+              <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+              <a class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+              <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="middle_property">
+        <span class=" detail_self ">自营</span>
+        <h1>【套餐低至105元/盒】优思明 口服短效避孕药屈螺酮炔雌醇片 21片 </h1>
+        <span class="red giftRed"> 3盒套餐低至105元/盒</span>
+        <a class="red" style="text-decoration: underline;" target="_blank" href=""></a>
+        <div class="shangpin_info">
+          <div id="coupon"></div>
+          <!-- 普通价格-->
+          <dl class="clearfix">
+            <dt class="price_dt">药网价：</dt>
+            <dd>
+              <span class="good_price">￥118.00</span>
+              <span style=" float: left;line-height: 19px;margin: 7px 40px 0 0;"></span>
+              <span id="fristReviewCount" class="commentsBox">累计评论：
+                <span class="numComments">
+                  <a href="#itemComments" name="reviewCount">1439</a>
+                </span>
+              </span>
+            </dd>
+          </dl>
+          <!-- 限时购 -->
+          <div class="xianshigou_part"></div>
+
+          <!-- 促销信息 -->
+          <div id="newpromotion2">
+          </div>
+
+          <!-- 系列品 -->
+          <div class="xiliping" a="1"></div>
+          <!-- 套餐 -->
+          <dl class="clearfix taocanBox">
+            <dt>套餐：</dt>
+            <dd id="tc_attribute_list">
+              <ul class="taocan">
+                <li class="select-pro"><a href=""><span class="fl fb num">1件</span><em class="fl"><i
+                        class="qian">¥</i>118/1件</em><span class="iconSelect"></span></a></li>
+                <li><a href=""><span class="ptext">优思明口服避孕药3盒+排卵试纸5支</span><span class="iconSelect"></span></a></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <!-- 数量 -->
+          <div class="shuliang">
+            <dl class="clearfix">
+              <dt>数 量：</dt>
+              <dd>
+                <div class="num_section clearfix">
+                  <div class="num_box">
+                    <input type="text" value="1" class="num" name="product_amount" id="product_amount" limit="5" moq="0"
+                      itemid="2336217">
+                    <input type="button" class="num_pre">
+                    <input type="button" class="num_next">
+                  </div>
+                  <p name="showLimit">（每人限购5件）</p>
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <!-- 立即扫码 -->
+          <div class="mobPrice" id="mobPrice" style="display: block;">
+            <i></i>
+            <span><em class="text">手机扫扫更方便</em>&nbsp;<em class="mobNum" id="mobNum"></em>，&nbsp;<a
+                href="javaScript:void(0)" class="mobBuy" id="mobBuyA">立即扫码</a>&gt;</span>
+            <div class="erdCode" id="erdCodeD">
+              <img src="https://s.maiyaole.com/mpTdCode/50703005.png" alt="扫二维码，专享手机价" width="150" height="150">
+            </div>
+          </div>
+
+
+          <dl class="clearfix btnCartDl">
+            <!-- 普通购物车 -->
+            <dd>
+              <input  class="btn_shopping_cart" id="seriesCartButton" type="button" value="加入购物车">
+            </dd>
+            <!-- 发货信息 -->
+            <dd>
+              <p class="proTips">
+                本商品由1药网销售和发货
+                <br>
+                18:00前下单预计当天出库，部分城市支持次日达。
+                <a target="_blank" href="" rel="nofollow">运费详情
+                  &gt;&gt;</a>
+              </p>
+            </dd>
+          </dl>
+
+          <div class="promise">
+            <span class="fl m0">支持</span>
+            <span class="zhengping_100">
+              <a rel="nofollow" target="_blank" href=""><i></i>100%正品</a>
+            </span>
+            <span class="men_100">
+              <a rel="nofollow" target="_blank" href=""><i></i>满69包邮</a>
+            </span>
+            <span class="yaojian"><a rel="nofollow" target="_blank" href=""><i></i>药监认证</a></span>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="right_property right_property01">
+        <!-- 放心购买 -->
+        <h3 class="h3blue">
+          <span>放心购买</span>
+          <a href="" target="_blank" rel="nofollow">
+            互联网药品交易资格证：粤C20150007</a>
+        </h3>
+        <!-- 药网二维码 -->
+        <div class="fixed_property">
+          <div class="erweima">
+            <div class="d_app"><a href="javascript:" title="用1药网APP下单 享更多优惠" target="_blank">用1药网APP下单 享更多优惠</a></div>
+            <div class="erwei_img"><img id="tdcodeimg" alt="" width="120" height="120"
+                src="https://s.maiyaole.com/images/product/app_code.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ----------------------------------商品详情---------------------------------- -->
+
+  <!-- ---------------------------------详情页中部--------------------------------- -->
+  <div class="wrap_detail clearfix">
+    <div class="detail_left" id="top">
+      <div id="detialMenu" class="" top="true">
+        <div class="detail_menu clearfix">
+          <ul class="navList clearfix">
+            <li class="on">
+              <a href="javascript:;">商品详情</a>
+            </li>
+            <li class="">
+              <a href="javascript:;" id="itemComments">
+                商品评价(<span name="reviewCount">17498</span>)
+              </a>
+            </li>
+            <li class="">
+              <a id="itemquestion" href="javascript:;">
+                商品问答(<span name="questionCount">100</span>)
+              </a>
+            </li>
+            <li id="details_about_yaowang" class="">
+              <a href="javascript:;">1药网介绍</a>
+            </li>
+          </ul>
+
+          <div id="goods_cart2" class="goods_cart">
+            <a id="seriesCartButton2" href="">加入购物车</a>
+          </div>
+        </div>
+      </div>
+      <div id="tabCon" class="tabConTop50">
+        <div class="detail_tab" style="display: block;">
+          <!-- 规格详情 -->
+          <div class="goods_intro">
+            <table>
+              <colgroup>
+                <col width="10%">
+                <col width="31%">
+                <col width="10%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>商品名称：</th>
+                  <td colspan="3">三九/999 感冒灵颗粒 10g*9袋 感冒发烧 </td>
+                </tr>
+                <tr>
+                  <th>品　　牌：</th>
+                  <td>三九/999</td>
+                  <th>规　　格：</th>
+                  <td>10g*9包</td>
+                </tr>
+                <tr>
+                  <th>重　　量：</th>
+                  <td>0.118kg</td>
+                  <th>生产厂商:</th>
+                  <td>华润三九医药股份有限公司委托惠州市九惠制药股份有限公司</td>
+                </tr>
+                <tr>
+                  <th>批准文号：</th>
+                  <td>
+                    国药准字Z44021940(<a style="color:#0083ce" href="" target="_blank">国家食药局查询</a>)
+                  </td>
+                  <th>产品类型：</th>
+                  <td>
+                    OTC（非处方药）
+                  </td>
+                </tr>
+                <tr>
+                  <th>温馨提示：</th>
+                  <td colspan="3">部分商品包装更换频繁，如货品与图片 不完全一致，请以收到的商品实物为准</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 文描 -->
+          <div id="prodDetailCotentDiv" style="display:block" class="detail_wrapper self_goods clearfix">
+            <h1><br></h1>
+            <p><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 9119"
+                src="https://img.alicdn.com/imgextra/i1/2928278102/TB2qRP7cW8lpuFjy0FpXXaGrpXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 8383"
+                src="https://img.alicdn.com/imgextra/i1/2928278102/TB2GDY2cYXlpuFjy1zbXXb_qpXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 4306"
+                src="https://img.alicdn.com/imgextra/i3/2928278102/TB26dn7cYRkpuFjSspmXXc.9XXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 0927"
+                src="https://img.alicdn.com/imgextra/i4/2928278102/TB2s4fJc3JkpuFjSszcXXXfsFXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 4506"
+                src="https://img.alicdn.com/imgextra/i2/2928278102/TB2rk6HdOpnpuFjSZFIXXXh2VXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 9181"
+                src="https://img.alicdn.com/imgextra/i4/2928278102/TB2pb6odJBopuFjSZPcXXc9EpXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 0571"
+                src="https://img.alicdn.com/imgextra/i1/2928278102/TB2AMDJdJRopuFjSZFtXXcanpXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 8202"
+                src="https://img.alicdn.com/imgextra/i1/2928278102/TB2IrvNdHBmpuFjSZFuXXaG_XXa-2928278102.jpg"
+                class="img-ks-lazyload"
+                style="margin:0px;padding:0px;border:0px;animation-duration:350ms;-webkit-animation:ks-fadein 350ms linear 0ms 1 normal both;animation-timing-function:linear;animation-delay:0ms;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;animation-play-state:initial;-webkit-animation-play-state:initial;animation-name:ks-fadein;opacity:1;vertical-align:top;float:none;color:#404040;font-family:tahoma, arial, 宋体, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:19.6000003814697px;orphans:auto;text-align:start;text-indent:0px;text-transform:none;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;background-color:#ffffff;"
+                align="absmiddle"><br></p>
+            <p><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 6508" title="图片展?"
+                src="https://p2.maiyaole.com/img/201311/28/20131128142223819.jpg" hspace="0" border="0"></p>
+            <p><img alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 1753"
+                src="https://p2.maiyaole.com/img/972/972419/330_330.jpg?a=1973274717" border="0"><img
+                alt="三九/999 感冒灵颗粒 10g*9袋 感冒发烧 0448"
+                src="https://p2.maiyaole.com/img/201403/18/330_20140318165606494.jpg" border="0"></p>
+            <p><br></p>
+            <h2 class="imgClass"><img border="0" hspace="0" src="https://p1.maiyaole.com/img/cmsPage/2014092502/790.png"
+                title="产品详细"></h2>
+            <table class="specificationBox" cellspacing="1" cellpadding="3" width="100%">
+              <tbody>
+                <tr>
+                  <th colspan="2" class="titleName">三九/999 感冒灵颗粒 10g*9袋 感冒发烧 说明书</th>
+                </tr>
+                <tr>
+                  <th colspan="2" class="titleP">请仔细阅读说明书并按说明使用或在药师指导下购买和使用</th>
+                </tr>
+                <tr>
+                  <th>通用名称 : </th>
+                  <td>感冒灵颗粒</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>汉语拼音 : </th>
+                  <td>GanMaoLingKeLi</td>
+                </tr>
+                <tr>
+                  <th>商品名称 : </th>
+                  <td>999牌</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>成份 : </th>
+                  <td>岗梅、三叉苦、金盏银盘、野菊花、薄荷油、咖啡因、马来酸氯苯那敏、对乙酰氨基酚。辅料为滑石粉。</td>
+                </tr>
+                <tr>
+                  <th>性状 : </th>
+                  <td>本品为胶囊剂，内容物为棕褐色的颗粒；味苦。</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>功能主治 : </th>
+                  <td>解热镇痛。用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。</td>
+                </tr>
+                <tr>
+                  <th>规格 : </th>
+                  <td>10g*9包/盒</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>用法用量 : </th>
+                  <td>开水冲服，一次10克（1袋），一日3次。</td>
+                </tr>
+                <tr>
+                  <th>不良反应 : </th>
+                  <td>偶见皮疹、荨麻疹、药热及粒细胞减少；可见困倦、嗜睡、口渴、虚弱感；长期大量用药会导致肝肾功能异常。</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>禁忌 : </th>
+                  <td>严重肝肾功能不全者禁用。</td>
+                </tr>
+                <tr>
+                  <th>注意事项 : </th>
+                  <td>
+                    1.忌烟、酒及辛辣、生冷、油腻食物。2.不宜在服药期间同时服用滋补性中成药。3.本品含对乙酰氨基酚、马来酸氯苯那敏、咖啡因。服用本品期间不得饮酒或含有酒精的饮料；不能同时服用与本品成份相似的其他抗感冒药；肝、肾功能不全者慎用；膀胱颈梗阻、甲状腺功能亢进、青光眼、高血压和前列腺肥大者慎用；孕妇及哺乳期妇女慎用；服药期间不得驾驶机、车、船、从事高空作业、机械作业及操作精密仪器。4.脾胃虚寒，症见腹痛、喜暖、泄泻者慎用。5.心脏病、糖尿病等慢性病严重者应在医师指导下服用。6.儿童、年老体弱者应在医师指导下服用。7.服药3天后症状无改善，或症状加重，或出现新的严重症状如胸闷、心悸等应立即停药，并去医院就诊。8.对本品过敏者禁用，过敏体质者慎用。9.本品性状发生改变时禁止使用。10.儿童必须在成人监护下使用。11.请将本品放在儿童不能接触的地方。12.如正在使用其他药品，使用本品前请咨询医师或药师。
+                  </td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>药物相互作用 : </th>
+                  <td>1.与其他解热镇痛药并用，有增加肾毒性的危险。2.如与其他药物同时使用可能会发生药物相互作用，详情请咨询医师或药师</td>
+                </tr>
+                <tr>
+                  <th>贮藏 : </th>
+                  <td>密封。</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>包装 : </th>
+                  <td>复合膜；每盒装9袋。</td>
+                </tr>
+                <tr>
+                  <th>有效期 : </th>
+                  <td>24个月</td>
+                </tr>
+                <tr class="colorWhite">
+                  <th>批准文号 : </th>
+                  <td>国药准字Z44021940</td>
+                </tr>
+                <tr>
+                  <th>企业名称 : </th>
+                  <td>三九医药股份有限公司</td>
+                </tr>
+                <tr class="colorWhite">
+                  <td colspan="2" style="text-align:center">*如有问题可与生产企业联系</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="detail_tab" style="display: none;">
+          <div class="tab " name="productExperience" id="productExperience" lzdata="loadReviewList1();">
+            <input type="hidden" value="1" id="currSiteId">
+            <input type="hidden" value="1" id="currSiteType">
+            <input type="hidden" value="74" id="productExperienceTotalCount">
+            <div class="goods_club_comment">
+              <!-- 评价满意度  -->
+              <div class="evaluation_goods" id="review_head_count">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>
+                        <div class="satisfaction">
+                          <span class="num" name="reviewSatisfaction">100</span>
+                          <span>%</span>
+                          <p>满意度</p>
+                        </div>
+                      </th>
+                      <td class="td_wid01">
+                        <ul class="clearfix">
+                          <li id="review_B_hao">
+                            <span class="text">好评</span>
+                            <span class="span_bar"><i style="width: 100%;"></i></span>
+                            <span class="percentage">100%</span>
+                          </li>
+                          <li id="review_B_zhong">
+                            <span class="text">中评</span>
+                            <span class="span_bar"><i style="width: 0%;"></i></span>
+                            <span class="percentage">0%</span>
+                          </li>
+                          <li id="review_B_cha">
+                            <span class="text">差评</span>
+                            <span class="span_bar"><i style="width: 0%;"></i></span>
+                            <span class="percentage">0%</span>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- 评价数量 -->
+              <ul class="eval_tab clearfix">
+                <li class="on">
+                  <a href="javascript:;">全部(<span name="reviewCount">17498</span>)</a>
+                </li>
+                <li>
+                  <a href="javascript:;">好评(<span name="reviewHao">17358</span>)</a>
+                </li>
+                <li>
+                  <a href="javascript:;">中评(<span name="reviewZhong">90</span>)</a>
+                </li>
+                <li>
+                  <a href="javascript:;">差评(<span name="reviewCha">50</span>)</a>
+                </li>
+                <li style="float: right; line-height: 38px;">
+                  <input type="checkbox" style="vertical-align:middle;margin-right:3px;" checked="checked" id="dr">
+                  <label for="dr">有内容的评价</label>
+                </li>
+              </ul>
+              <!-- 评价列表 -->
+              <div class="evaluate_mian" id="review_divlist" pid="P972419" iid="844162">
+                <div class="eval_list">
+                  <div class="eval_box">
+                    <table style="display: block;">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p>对商品非常满意</p>
+                            <p class="eval_date">2019-09-22</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">201***</p>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>对商品非常满意</p>
+                            <p class="eval_date">2019-09-22</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="on_***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">on_***</p>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>对商品非常满意</p>
+                            <p class="eval_date">2019-09-22</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="35c***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">35c***</p>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>对商品非常满意</p>
+                            <p class="eval_date">2019-09-21</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">201***</p>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>对商品非常满意</p>
+                            <p class="eval_date">2019-09-21</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">201***</p>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>对商品非常满意</p>
+                            <p class="eval_date">2019-09-20</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="ali***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">ali***</p>
+                            </div>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>很好很满意</p>
+                            <p class="eval_date">2019-09-20</p>
+                          </td>
+                          <th>
+                            <div class="person_box clearfix">
+                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <p class="name">201***</p>
+                            </div>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <ul class="pageNavi clearfix">
+                  <li><span class="page-cur">1</span></li>
+                  <li><a href="javascript:;">2</a></li>
+                  <li><a href="javascript:;">3</a></li>
+                  <li><a href="javascript:;">4</a></li>
+                  <li><a href="javascript:;">5</a></li>
+                  <li><a href="javascript:;">6</a></li>
+                  <li><a href="javascript:;">7</a></li>
+                  <li><a class="page-next" href="javascript:;">下一页</a></li>
+                  <li>共2500页</li>
+                </ul>
+                <div class="clear"></div>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail_tab" style="display: none;">
+          <div class="tips_box clearfix">
+            <textarea cols="2" rows="2" id="question_content" placeholder="输入您要咨询的内容，数万名医生免费解答!"
+              style="color: gray;"></textarea>
+            <div class="clearfix"><a href="javascript:;" class="com_btn" id="experienceSubmit">我要提问</a></div>
+          </div>
+          <dl class="question_txt">
+            <dl>
+              <dt><span class="q_txt">Q</span>买了几次吃了感觉都没有什么效果是怎么回事？<span class="q_people">提问者：<i
+                    class="name">2***3</i><i>2018-06-06</i></span></dt>
+              <dd><span class="a_txt">A</span>您好，感冒灵颗粒 功能主治 : 解热镇痛。用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。<p>回答者：<i
+                    class="name">1药网药师</i><i>2018-06-08</i></p>
+              </dd>
+              <dt><span class="q_txt">Q</span>你家有三九感冒口服液吗？<span class="q_people">提问者：<i
+                    class="name">2***0</i><i>2018-03-21</i></span></dt>
+              <dd><span
+                  class="a_txt">A</span>您好，如需了解具体商品是否有实际库存，请您在8:00~10:00期间点击在线药师咨询或者拨打400-007-0958咨询电话药师，感谢您对1药网的支持。<p>
+                  回答者：<i class="name">壹号大药房</i><i>2018-03-22</i></p>
+              </dd>
+              <dt><span class="q_txt">Q</span>你好！我现在下单，到佛山需要多久<span class="q_people">提问者：<i
+                    class="name">t***6</i><i>2017-05-12</i></span></dt>
+              <dd><span
+                  class="a_txt">A</span>您好一般是二到四天的。如需详细咨询请8:00-22:00您可点击在线咨询或拨打药师服务热线400-007-0958进行咨询，感谢您对壹药网的关注与支持，祝您购物愉快！
+                <p>回答者：<i class="name">壹号大药房药师</i><i>2017-05-15</i></p>
+              </dd>
+              <dt><span class="q_txt">Q</span>感冒了，头昏，咳嗽有浓痰，打喷嚏，流清鼻涕，喉咙疼 吃那种感冒药合适<span class="q_people">提问者：<i
+                    class="name">t***6</i><i>2017-03-08</i></span></dt>
+              <dd><span
+                  class="a_txt">A</span>可以看看氨酚黄那敏药品的，如需详细咨询请8:00-22:00您可点击在线咨询或拨打药师服务热线400-007-0958进行咨询，感谢您对壹药网的关注与支持，祝您购物愉快！
+                <p>回答者：<i class="name">壹号大药房药师</i><i>2017-03-09</i></p>
+              </dd>
+              <dt><span class="q_txt">Q</span>你好，请问这种999感冒灵苦的还是甜的？<span class="q_people">提问者：<i
+                    class="name">t***7</i><i>2017-02-24</i></span></dt>
+              <dd><span class="a_txt">A</span>颗粒剂辅料为蔗糖，所以是甜的，但是药物成分本身带有一些微苦。<p>回答者：<i
+                    class="name">壹号大药房药师</i><i>2017-02-27</i></p>
+              </dd>
+              <dt><span class="q_txt">Q</span>昨天我淋了雨，今天起床后一直流鼻涕，喉咙痛，现在头晕晕的，这样能吃999牌感冒灵颗粒吗？<span class="q_people">提问者：<i
+                    class="name">阳***沫</i><i>2014-05-15</i></span></dt>
+              <dd><span
+                  class="a_txt">A</span>你好，999牌感冒颗粒内含岗梅、三叉苦、金盏银盘、野菊花、薄荷油、咖啡因、马来酸氯苯那敏、对乙酰氨基酚等成分，具有解热镇痛的强大作用。可用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。针对您的症状，服用此药是合适的。
+                <p>回答者：<i class="name">壹药网药师</i><i>2014-05-15</i></p>
+              </dd>
+              <dt><span class="q_txt">Q</span>神经性偏头疼，医生可以推荐款药给我吃吗？<span class="q_people">提问者：<i
+                    class="name">爱***戏</i><i>2014-04-30</i></span></dt>
+              <dd><span
+                  class="a_txt">A</span>你这情况可能是神经性头痛，这可考虑吃些调理脑神经功能的药物，如养血清脑颗粒，养血清脑颗粒养血平肝、活血通络。用于血虚肝亢所致各种头痛、创伤性脑神经综合症、眩晕眼花、心烦易怒、失眠多梦。肝病、肾病、糖尿病等慢性病严重者应在医师指导下服用。儿童、孕妇、哺乳期妇女、年老体弱者应在医师指导下服用。.忌烟、酒及辛辣、油腻食物。
+                <p>回答者：<i class="name">壹药网药师</i><i>2014-04-30</i></p>
+              </dd>
+            </dl>
+            <ul class="pageNavi clearfix">
+              <li><span class="page-cur">1</span></li>
+              <li><a onclick="javascript:loadQuestion(2);" href="#q_itemCount">2</a></li>
+              <li><a onclick="javascript:loadQuestion(3);" href="#q_itemCount">3</a></li>
+              <li><a onclick="javascript:loadQuestion(4);" href="#q_itemCount">4</a></li>
+              <li><a onclick="javascript:loadQuestion(5);" href="#q_itemCount">5</a></li>
+              <li><a onclick="javascript:loadQuestion(6);" href="#q_itemCount">6</a></li>
+              <li><a onclick="javascript:loadQuestion(7);" href="#q_itemCount">7</a></li>
+              <li><a class="page-next" onclick="javascript:loadQuestion(2);" href="#q_itemCount">下一页</a></li>
+              <li>共15页</li>
+            </ul>
+            <div class="clear"></div>&nbsp;&nbsp;
+          </dl>
+        </div>
+        <div class="detail_tab" style="display: none;">
+          <img src="//p2.maiyaole.com/img/cmsPage/2015050405/1424934890452122.png">
+          <img src="//p3.maiyaole.com/img/cmsPage/2018b038e59b0919163622/1-1.jpg">
+          <img src="//p2.maiyaole.com/img/cmsPage/2018b038e59b0919163622/2.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="detail_right">
+      <!-- 相关分类 -->
+      <div class="info_box">
+        <h2>相关分类</h2>
+        <ul class="info_list01 clearfix">
+          <li><a title="哮喘" href="//www.111.com.cn/categories/965179-j1" target="_blank">哮喘</a></li>
+          <li><a title="咳嗽" href="//www.111.com.cn/categories/965181-j1" target="_blank">咳嗽</a></li>
+          <li><a title="感冒发烧" href="//www.111.com.cn/categories/965184-j1" target="_blank">感冒发烧</a></li>
+          <li><a title="上火" href="//www.111.com.cn/categories/965185-j1" target="_blank">上火</a></li>
+          <li><a title="小儿感冒" href="//www.111.com.cn/categories/969596-j1" target="_blank">小儿感冒</a></li>
+          <li><a title="支气管炎" href="//www.111.com.cn/categories/971542-j1" target="_blank">支气管炎</a></li>
+          <li><a title="慢性阻塞性肺疾病" href="//www.111.com.cn/categories/971543-j1" target="_blank">慢性阻塞性肺疾病</a></li>
+        </ul>
+      </div>
+      <!-- 同类其他品牌 -->
+      <div class="info_box">
+        <h2>同类其他品牌</h2>
+        <ul class="info_list01 clearfix">
+          <li><a title="杰士邦" href="//www.111.com.cn/categories/965184-a26-b0-c0-d0-e0-f0-j1" target="_blank">杰士邦</a>
+          </li>
+          <li><a title="三精" href="//www.111.com.cn/categories/965184-a458-b0-c0-d0-e0-f0-j1" target="_blank">三精</a></li>
+          <li><a title="王老吉" href="//www.111.com.cn/categories/965184-a635-b0-c0-d0-e0-f0-j1" target="_blank">王老吉</a>
+          </li>
+          <li><a title="都乐" href="//www.111.com.cn/categories/965184-a1299-b0-c0-d0-e0-f0-j1" target="_blank">都乐</a>
+          </li>
+          <li><a title="华佗" href="//www.111.com.cn/categories/965184-a1304-b0-c0-d0-e0-f0-j1" target="_blank">华佗</a>
+          </li>
+          <li><a title="太平" href="//www.111.com.cn/categories/965184-a1352-b0-c0-d0-e0-f0-j1" target="_blank">太平</a>
+          </li>
+          <li><a title="海天" href="//www.111.com.cn/categories/965184-a1500-b0-c0-d0-e0-f0-j1" target="_blank">海天</a>
+          </li>
+          <li><a title="幸福" href="//www.111.com.cn/categories/965184-a1697-b0-c0-d0-e0-f0-j1" target="_blank">幸福</a>
+          </li>
+          <li><a title="利华" href="//www.111.com.cn/categories/965184-a1749-b0-c0-d0-e0-f0-j1" target="_blank">利华</a>
+          </li>
+          <li><a title="娃哈哈" href="//www.111.com.cn/categories/965184-a1806-b0-c0-d0-e0-f0-j1" target="_blank">娃哈哈</a>
+          </li>
+        </ul>
+      </div>
+      <!-- 浏览记录 -->
+      <div class="info_box">
+        <h2>浏览记录</h2>
+        <ul class="info_list02" id="historyList"></ul>
+      </div>
+      <!-- 浏览了还浏览 -->
+      <div class="info_box">
+        <h2>浏览了还浏览</h2>
+        <ul id="recommendList" class="recommend_ul">
+          <li data-sjtj="mgkg" data-algorithmid="10" id="mgkg"><a href="//www.111.com.cn/product/50082506.html"
+              title="诺邦 克拉霉素缓释片 0.5g*3片"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/50082/50082506/120_120.jpg?a=329408478" alt="诺邦 克拉霉素缓释片 0.5g*3片">
+              <p class="intro">诺邦 克拉霉素缓释片 0.5g*3片</p>
+            </a><span class="price_part"><span class="price">￥18.00</span></span></li>
+          <li data-sjtj="mgkg" data-algorithmid="10" id="mgkg"><a href="//www.111.com.cn/product/987812.html"
+              title="克拉仙 克拉霉素片 0.25g*8片"><img class="pro_img"
+                src="https://p2.maiyaole.com/img/987/987812/120_120.jpg?a=1550737125" alt="克拉仙 克拉霉素片 0.25g*8片">
+              <p class="intro">克拉仙 克拉霉素片 0.25g*8片</p>
+            </a><span class="price_part"><span class="price">￥60.80</span></span></li>
+          <li data-sjtj="mgkg" data-algorithmid="10" id="mgkg"><a href="//www.111.com.cn/product/50311994.html"
+              title="强力阿莫仙 阿莫西林克拉维酸钾片 0.457g*6片"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/50311/50311994/120_120.jpg" alt="强力阿莫仙 阿莫西林克拉维酸钾片 0.457g*6片">
+              <p class="intro">强力阿莫仙 阿莫西林克拉维酸钾片 0.457g*6片</p>
+            </a><span class="price_part"><span class="price">￥11.00</span></span></li>
+          <li data-sjtj="mgkg" data-algorithmid="10" id="mgkg"><a href="//www.111.com.cn/product/50258951.html"
+              title="华南牌 诺氟沙星胶囊 0.1g*10粒"><img class="pro_img"
+                src="https://p1.maiyaole.com/img/item/201905/13/200_20190513105140413.jpg" alt="华南牌 诺氟沙星胶囊 0.1g*10粒">
+              <p class="intro">华南牌 诺氟沙星胶囊 0.1g*10粒</p>
+            </a><span class="price_part"><span class="price">￥6.00</span></span></li>
+          <li data-sjtj="mgkg" data-algorithmid="10" id="mgkg"><a href="//www.111.com.cn/product/50088965.html"
+              title="莎普爱思 头孢克肟分散片 100mg*10片"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/item/201805/02/200_20180502144354230.jpg" alt="莎普爱思 头孢克肟分散片 100mg*10片">
+              <p class="intro">莎普爱思 头孢克肟分散片 100mg*10片</p>
+            </a><span class="price_part"><span class="price">￥9.80</span></span></li>
+          <li data-sjtj="mgkg" data-algorithmid="10" id="mgkg"><a href="//www.111.com.cn/product/50808085.html"
+              title="汇仁 肾宝合剂 200ml"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/item/201707/06/200_20170706122109358.jpg" alt="汇仁 肾宝合剂 200ml">
+              <p class="intro">汇仁 肾宝合剂 200ml</p>
+            </a><span class="price_part"><span class="price">￥69.00</span></span></li>
+        </ul>
+      </div>
+      <div id="bfd_coll"></div>
+      <!-- 药网广告, 左侧 -->
+      <div class="left_ad" id="all_left_page" style="display: block;"><a
+          href="http://www.111.com.cn/cmsPage/2016091202/index.html" target="_blank" id="yyw_left_1"><img
+            src="https://p1.maiyaole.com/img/item/1568875185112447.jpg" width="180" height="250" alt="神经"></a><a
+          href="http://www.111.com.cn/cmsPage/20176bf471910614174014/index.html" target="_blank" id="yyw_left_2"><img
+            src="https://p3.maiyaole.com/img/item/1562815745422203.jpg" width="180" height="250" alt="糖尿病"></a><a
+          href="http://www.111.com.cn/cmsPage/20188664d90f0514141253/index.html" target="_blank" id="yyw_left_3"><img
+            src="https://p1.maiyaole.com/img/item/1534905602163929.jpg" width="180" height="250" alt="男科"></a><a
+          href="http://www.111.com.cn/cmsPage/20190be3ec2f0108112403/index.html" target="_blank" id="yyw_left_4"><img
+            src="https://p1.maiyaole.com/img/item/1562815405956199.jpg" width="180" height="250" alt="肝胆"></a></div>
+    </div>
+  </div>
+  <!-- ---------------------------------详情页中部--------------------------------- -->
+
+  <!-- ------------------------------底部------------------------------------------------- -->
+  <script>
+    $('body').append('<div id="footer"></head>');
+    $('#footer').load('./footer.html');
+    $('body').append('<div class="float_box" id="rightFloat">');
+    $('#rightFloat').load('./float_box.html');
+  </script>
+
+  <script>
+    $(function () {
+      let lis = console.log($('.navList').children('li'))
+      $('.navList li').click(function () {
+        console.log(this, $(this).index());
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.detail_tab').eq($(this).index()).css('display', 'block').siblings().css('display', 'none');
+      });
+      $('#exzoom').exzoom({   //放大镜
+        autoPlay:false,
+      })
+    });
+  </script>
+</body>
+
+</html>

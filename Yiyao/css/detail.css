@@ -1,0 +1,1121 @@
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+  color: #5E5E5E;
+}
+
+.wrap,.wrap_detail,.head_wrap,.nav,.head{
+  margin: 0 auto;
+  width: 990px;
+  height: 100%;
+}
+#erDCode{
+  display: none;
+}
+.detailnav {
+  border-bottom: 0;
+  padding: 10px 0 18px;
+  position: relative;
+}
+.detailnav .linkhome {
+  background: url(https://s.maiyaole.com/images/201306/img/yw_home.png) no-repeat scroll 0 -2px transparent;
+  display: inline-block;
+  padding-left: 25px;
+}
+.detailnav a {
+  color: #333;
+}
+.detailnav .arrow {
+  font-family: "宋体";
+  margin: 0 8px;
+}
+.detail_top {
+  margin-bottom: 10px;
+}
+#gallery_view {
+  padding-bottom: 10px;
+}
+/* 放大镜 */
+#exzoom {    
+  width: 300px;  
+  /*height: 400px;*/
+  margin: 20px auto;
+}
+.detail_top .sideleft {
+  float: left;
+  width: 300px;
+  position: relative;
+  z-index: 12;
+}
+.detail_top .sideleft {
+  margin-right: 18px;
+}
+#gallery_view {
+  padding-bottom: 10px;
+}
+
+.detail_top .sideleft {
+  float: left;
+  width: 300px;
+  position: relative;
+  z-index: 12;
+}
+.detail_top .sideleft {
+  margin-right: 18px;
+}
+.detail_top a {
+  color: #505050;
+}
+
+.jqzoom {
+  text-decoration: none;
+  float: left;
+}
+.zoomPad {
+  position: relative;
+  float: left;
+  z-index: 90;
+  cursor: crosshair;
+}
+.detail_top .sideleft #productImg {
+  height: 298px;
+  width: 298px;
+}
+.zoomPup {
+  overflow: hidden;
+  background-color: #FFF;
+  -moz-opacity: .6;
+  opacity: .6;
+  filter: alpha(opacity = 60);
+  z-index: 120;
+  position: absolute;
+  border: 1px solid #CCC;
+  z-index: 101;
+  cursor: crosshair;
+}
+.zoomWindow {
+  position: absolute;
+  left: 300px !important;
+  top: 40px;
+  background: #FFF;
+  z-index: 6000;
+  height: auto;
+  z-index: 10000;
+  z-index: 110;
+}
+.zoomWrapper {
+  position: relative;
+  border: 1px solid #999;
+  z-index: 110;
+}
+.zoomWrapperTitle {
+  display: block;
+  background: #999;
+  color: #FFF;
+  height: 18px;
+  line-height: 18px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  -moz-opacity: .6;
+  opacity: .6;
+  filter: alpha(opacity = 60);
+}
+.zoomWrapperImage {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 9999;
+}
+.zoomPreload {
+  -moz-opacity: .8;
+  opacity: .8;
+  filter: alpha(opacity = 80);
+  color: #333;
+  font-size: 12px;
+  font-family: Tahoma;
+  text-decoration: none;
+  border: 1px solid #CCC;
+  background-color: white;
+  padding: 8px;
+  text-align: center;
+  background-image: url(https://p1.maiyaole.com/images/201306/images/zoomloader.gif);
+  background-repeat: no-repeat;
+  background-position: 43px 30px;
+  z-index: 110;
+  width: 90px;
+  /* height: 43px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  *width: 100px;
+  *height: 49px;
+}
+.detail_top .sideleft .picbox {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 280px;
+}
+.detail_menu .goods_cart a, .detail_top .add_shopping_cart, .detail_top .btn_disabled, .detail_top .btn_disabled:hover, .detail_top .btn_shopping_cart, .detail_top .btn_shopping_cart2, .detail_top .btn_shopping_cart2:hover, .detail_top .btn_shopping_dinggou, .detail_top .btn_zhixu, .detail_top .huansuanbox .huansuan a, .detail_top .imgnext, .detail_top .imgpreview, .detail_top .input_sellout, .detail_top .liuyanzhixu, .detail_top .num_box .num_next, .detail_top .num_box .num_pre, .detail_top .selectBox, .detail_top .shangpin_info dd .icon_meng, .detail_top .shareCollectBox .collect i, .detail_top .shareCollectBox .fenxiang .fenicon em, .detail_top .shareCollectBox .fenxiang .fenicon i, .detail_top .tel_call .subBtn, .detail_top .tel_call .subBtn:hover, .detail_top .zaixiankefu, .detail_top .zaixiankefu:hover, .detail_top a.btn_zaixian, .detail_top dd span.moreList, .detail_top dd span.moreListDown, .detail_top li.select-pro a .iconSelect, .gouwuBtn .dinggou, .gouwuBtn .jiaru, .gouwuBtn .shouwan, .gouwuBtn .zaixian, .promise .day_30 i, .promise .day_7 i, .promise .icon_baoyou i, .promise .men_100 i, .promise .yaojian i, .coupon_flag i, .promise .zhengping_100 i {
+  background-image: url(https://s.maiyaole.com/images/product/icon_detail.png?t==20141219);
+  background-repeat: no-repeat;
+  font-family: 'microsoft yahei';
+  outline: 0;
+}
+.detail_top .imgpreview ,.detail_top .imgnext {
+  cursor: pointer;
+  height: 45px;
+  width: 12px;
+}
+.detail_top .imgpreview{
+  float: left;
+  background-position: -3px -500px;
+}
+.detail_top .imgnext {
+  background-position: -125px -500px;
+  float: right;
+}
+.detail_top .dt_scrollable {
+  width: 251px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+.detail_top #sliderImgs {
+  margin-top: 0;
+}
+ul#thumblist {
+  display: block;
+  width: 1000px;
+}
+.detail_top .sideleft .pic {
+  border: none;
+  height: 298px;
+  text-align: center;
+  width: 298px;
+}
+.detail_top .sideleft .picbox ul {
+  padding-left: 1px;
+}
+ul#thumblist li {
+  float: left;
+  margin-right: 0px;
+  list-style: none;
+}
+
+.detail_top .sideleft .picbox ul li {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+ul#thumblist li a {
+  display: block;
+}
+
+.detail_top .sideleft .picbox ul li a {
+  display: block;
+  float: left;
+}
+.detail_top a {
+  color: #505050;
+}
+.detail_top .sideleft .picbox ul li a img {
+  border: 1px solid #e6e6e6;
+  margin-left: -1px;
+  position: relative;
+}
+
+.detail_top .dt_scrollable img {
+  width: 49px;
+  height: 49px;
+  display: block;
+}
+.detail_top .shareCollectBox {
+  text-align: left;
+  width: 280px;
+  margin-left: 10px;
+}
+.detail_top .shareCollectBox .item_number {
+  margin-right: 10px;
+  color: #999;
+}
+
+.detail_top .shareCollectBox li {
+  line-height: 28px;
+  float: left;
+}
+.detail_top .shareCollectBox .collect {
+  margin: 0 10px 0 0;
+  color: #999;
+  text-align: center;
+}
+.detail_top .shareCollectBox .collect a {
+  color: #999;
+}
+.detail_top .shareCollectBox .collect i {
+  padding-left: 25px;
+  background-position: -107px -1142px;
+}
+.detail_top .shareCollectBox .fenxiang {
+  position: relative;
+}
+.detail_top .shareCollectBox .fenxiang .fenicon {
+  width: 70px;
+  padding-left: 5px;
+  position: absolute;
+  color: #999;
+  left: 0;
+}
+.detail_top .shareCollectBox .fenxiang .fenicon i {
+  background-position: -133px -1141px;
+  padding-left: 25px;
+}
+.detail_top .shareCollectBox .fenxiang .fenicon em {
+  background-position: -75px -1203px;
+  margin-left: 7px;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+}
+.detail_top .shareCollectBox .fenxiang .bdsharebuttonbox {
+  border: 1px solid #e6e6e6;
+  padding-left: 10px;
+  position: absolute;
+  top: 26px;
+  width: 95px;
+  display: none;
+  z-index: 3;
+}
+
+.bdshare-button-style0-16 {
+  zoom: 1;
+}
+.bdshare-button-style0-16 a, .bdshare-button-style0-16 .bds_more {
+  float: left;
+  font-size: 12px;
+  padding-left: 17px;
+  line-height: 16px;
+  height: 16px;
+  background-image: url(../img/share/icons_0_16.png?v=ba7acbd3.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 6px 6px 6px 0;
+}
+.bdshare-button-style0-16 .bds_qzone {
+  background-position: 0 -52px;
+}
+.bdshare-button-style0-16 .bds_tsina {
+  background-position: 0 -104px;
+}
+.bdshare-button-style0-16 .bds_tqq {
+  background-position: 0 -260px;
+}
+.bdshare-button-style0-16 .bds_weixin {
+  background-position: 0 -1612px;
+}
+
+.detail_top .middle_property {
+  float: left;
+  width: 465px;
+}
+.detail_self {
+  float: left;
+  margin-right: 6px;
+  margin-top: 2px;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+  width: 39px;
+  height: 21px;
+  background-image: url(https://s.maiyaole.com/images/common/activity/detail_saleSelf.png);
+  color: #0193e8;
+}
+.detail_top .middle_property h1 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'microsoft yahei';
+}
+.red {
+  color: #e54948!important;
+}
+.detail_top .shangpin_info {
+  line-height: 1.2;
+  vertical-align: bottom;
+}
+.detail_top .shangpin_info dl {
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+.detail_top .shangpin_info dt.price_dt {
+  padding-top: 12px;
+  line-height: 22px;
+}
+
+.detail_top .shangpin_info dt {
+  float: left;
+  width: 55px;
+  clear: left;
+  text-align: right;
+  line-height: 36px;
+}
+.detail_top .shangpin_info dd {
+  padding: 0 0 0 6px;
+}
+.detail_top .shangpin_info .good_price {
+  margin-right: 0;
+  color: #e72418;
+  font-weight: 400;
+  display: block;
+  float: left;
+  line-height: 22px;
+  padding-top: 6px;
+  padding-right: 6px;
+  font-size: 24px;
+}
+.detail_top .shangpin_info .commentsBox {
+  float: left;
+  padding-top: 8px;
+  line-height: 22px;
+  margin-left: 40px;
+}
+.detail_top .numComments {
+  color: #0083ce;
+  font-size: 18px;
+}
+.xianshigou_part {
+  overflow: hidden;
+}
+.detail_top .shangpin_info .xiliping {
+  padding-bottom: 5px;
+}
+.detail_top .shangpin_info dl.taocanBox {
+  padding-bottom: 12px;
+}
+.detail_top .taocan li {
+  margin: 0 10px 0 0;
+  padding: 2px 0 9px;
+  display: block;
+  float: left;
+  min-width: 45px;
+  line-height: 1.2;
+}
+.detail_top .taocan li.select-pro a {
+  border: 1px solid #e72418;
+  color: #e72418;
+}
+
+.detail_top .taocan li a {
+  padding: 0;
+  line-height: 30px;
+  height: 30px;
+  border: 1px solid #e6e6e6;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  color: #5e5e5e;
+  min-width: 43px;
+  white-space: nowrap;
+  overflow: hidden;
+  zoom: 1;
+}
+.detail_top .taocan li a span.num {
+  padding: 0 6px;
+  font-weight: 400;
+  color: #5e5e5e;
+}
+.detail_top .taocan li a em {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  background-color: #f8f8f8;
+  border-left: 1px solid #ccc;
+  color: #5e5e5e;
+  padding: 0 9px;
+}
+.qian {
+  font-family: Arial;
+  font-style: normal;
+}
+.detail_top li.select-pro a .iconSelect {
+  display: block;
+  background-position: 0 -602px;
+  width: 18px;
+  height: 15px;
+}
+
+.detail_top .taocan li a .iconSelect {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.detail_top .taocan li a .ptext {
+  padding: 0 4px;
+  display: block;
+  cursor: pointer;
+}
+.detail_top .taocan li a .iconSelect {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.num_section {
+  position: relative;
+}
+.detail_top .num_box {
+  position: relative;
+  width: 106px;
+  float: left;
+  z-index: 10;
+}
+.detail_top .shangpin_info dd input.num {
+  width: 73px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 5px;
+  border: 1px solid #e6e6e6;
+  font-size: 14px;
+}
+.detail_top .num_box .num_pre,.detail_top .num_box .num_next {
+  height: 19px;
+  width: 19px;
+  display: block;
+  position: absolute;
+  right: 0;
+  border: none;
+  cursor: pointer;
+}
+.detail_top .num_box .num_pre {
+  background-position: -131px -842px;
+  top: 0;
+}
+.detail_top .num_box .num_next {
+  background-position: -131px -863px;
+  bottom: 0;
+}
+.detail_top .shangpin_info dd p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.detail_top .num_section p {
+  padding-top: 10px;
+}
+.mobPrice {
+  width: 240px;
+  height: 28px;
+  border: 1px solid #e6e6e6;
+  background-color: #f8f8f8;
+  position: relative;
+  text-indent: 4px;
+  display: none;
+  margin-bottom: 14px;
+}
+.mobPrice i {
+  display: block;
+  width: 15px;
+  height: 19px;
+  line-height: 28px;
+  background: url(https://s.maiyaole.com/images/201306/images/mobPrice.png) 0 0 no-repeat;
+  margin: 5px;
+  float: left;
+}
+.mobPrice span {
+  font-family: 'Microsoft Yahei';
+  font-size: 12px;
+  color: #5e5e5e;
+  line-height: 28px;
+}
+.mobPrice em {
+  font-style: normal;
+}
+.mobPrice .mobNum {
+  font-family: Arial;
+  color: #e72418;
+  font-weight: 700;
+}
+.mobPrice em {
+  font-style: normal;
+}
+.mobPrice .mobBuy {
+  font-family: 'Microsoft Yahei';
+  color: #e72418;
+  text-decoration: none;
+}
+.mobPrice .erdCode {
+  position: absolute;
+  top: -200px;
+  right: -36px;
+  width: 156px;
+  height: 156px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 1px 2px 2px #e6e6e6;
+  background-color: #fff;
+  z-index: 12;
+  display: none;
+}
+.detail_top .shangpin_info .btnCartDl dd {
+  padding: 0;
+}
+.detail_top input.add_shopping_cart, .detail_top input.btn_shopping_cart {
+  height: 53px;
+  vertical-align: top;
+}
+
+.detail_top .add_shopping_cart, .detail_top .btn_shopping_cart {
+  background-color: #e72418;
+  background-position: 50px -763px;
+  background-repeat: no-repeat;
+  border: none;
+  border: 0 solid #9a0900;
+  height: 50px;
+  padding: 0 60px 0 90px;
+  border-bottom: 3px solid #9a0900;
+  /* color: #fff; */
+  font-size: 18px;
+  cursor: pointer;
+}
+.detail_top .shangpin_info dd p.proTips {
+  margin-top: 20px;
+  color: #999;
+}
+
+.detail_top .shangpin_info dd p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.detail_top .shangpin_info dd p.proTips {
+  margin-top: 20px;
+  color: #999;
+}
+
+.detail_top .shangpin_info dd p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.promise .day_30, .promise .day_7, .promise .icon_baoyou, .promise .men_100, .promise .yaojian, .promise .zhengping_100, .coupon_flag {
+  margin-right: 10px;
+}
+
+.promise span.fl {
+  font-weight: 700;
+  display: none;
+}
+
+.promise span {
+  float: left;
+}
+.promise span {
+  float: left;
+}
+.m0 {
+  margin: 0!important;
+}
+.promise span a {
+  color: #5e5e5e;
+}
+.promise i {
+  float: left;
+  height: 19px;
+  width: 17px;
+}
+.promise .day_30 i, .promise .day_7 i, .promise .icon_baoyou i, .promise .men_100 i, .promise .yaojian i, .promise .zhengping_100 i {
+  background-position: 0 -1142px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.detail_top .right_property {
+  float: right;
+  width: 189px;
+  border: 1px solid #e6e6e6;
+}
+.detail_top .right_property01 h3.h3blue {
+  padding: 9px 13px;
+  line-height: 1.5;
+  background-color: #0083ce;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  margin: -1px -1px 0;
+}
+
+.detail_top .right_property h3 {
+  padding: 14px 15px;
+  line-height: 1.5;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #5e5e5e;
+}
+.detail_top .right_property01 h3.h3blue span {
+  font-weight: 700;
+  display: block;
+}
+.detail_top .right_property01 h3.h3blue a {
+  color: #fff;
+}
+.detail_top .erweima {
+  padding: 13px 10px;
+  overflow: hidden;
+  zoom: 1;
+}
+.d_app {
+  text-align: center;
+  font-weight: 700;
+}
+.d_app a {
+  color: #333;
+}
+.detail_top .erweima .erwei_img {
+  text-align: center;
+}
+.detail_top .erweima .erwei_img img {
+  width: 120px!important;
+  height: 120px!important;
+}
+
+.detail_left {
+  float: right;
+  width: 790px;
+}
+#detialMenu {
+  margin-bottom: 10px;
+}
+.detail_menu {
+  border: 1px solid #e6e6e6;
+  border-top: 2px solid #0083ce;
+  background-color: #f7f7f7;
+  width: 788px;
+  zoom: 1;
+}
+.detail_menu ul {
+  font-size: 14px;
+  float: left;
+}
+.detail_menu ul li {
+  float: left;
+}
+.detail_menu ul li a {
+  color: #5e5e5e;
+  display: block;
+  width: 119px;
+  text-align: center;
+  line-height: 37px;
+  height: 37px;
+  background: url(https://s.maiyaole.com/images/product/line01.png) no-repeat right 13px;
+  zoom: 1;
+}
+.detail_menu ul .on a {
+  color: #0083ce;
+  font-weight: 700;
+  text-decoration: none;
+  background: #fff;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  width: 118px;
+  height: 38px;
+  margin: 0 0 -1px -1px;
+  position: relative;
+}
+.detail_menu .goods_cart {
+  float: right;
+  width: 150px;
+  padding: 0;
+  display: none;
+}
+.detail_menu .goods_cart a {
+  background-color: #e72418;
+  background-position: 15px -768px;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 37px;
+  padding: 0 0 0 60px;
+}
+
+.goods_intro {
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  padding: 17px 30px;
+  margin-bottom: 10px;
+}
+.goods_intro {
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  padding: 17px 30px;
+  margin-bottom: 10px;
+}
+.goods_intro table td, .goods_intro table th {
+  text-align: left;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 12px;
+  color: #818181;
+  padding: 5px 0;
+}
+.specificationBox {
+  border: #ddd 1px solid;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.specificationBox th.titleName {
+  font-family: "宋体";
+  color: #ec000e;
+  font-size: 18px;
+  /* font-size: 18px; */
+  color: red;
+  text-align: center;
+  background-color: #f5fafa;
+  font-weight: 400;
+}
+
+.specificationBox td, .specificationBox th {
+  border: 1px solid #a9c6c9;
+  background: #f5fafa;
+  text-align: left;
+  padding: 3px 5px;
+  font-size: 12px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.specificationBox th {
+  width: 120px;
+}
+.specificationBox th.titleP {
+  text-align: center;
+  font-weight: 400;
+  background-color: #fff;
+}
+.specificationBox .colorWhite td, .specificationBox .colorWhite th {
+    background-color: #fff;
+}
+.evaluation_goods {
+  margin-bottom: 5px;
+}
+.evaluation_goods table {
+  width: 100%;
+  color: #5e5e5e;
+  border-collapse: collapse;
+}
+.evaluation_goods table td, .evaluation_goods table th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 400;
+  background-color: #fafafa;
+  padding: 18px 0 21px;
+}
+.evaluation_goods table th {
+  border-right: 2px solid #fff;
+  width: 179px;
+  vertical-align: top;
+}
+.evaluation_goods .satisfaction .num {
+  font-size: 60px;
+}
+
+.evaluation_goods .satisfaction span {
+  color: #f68a00;
+  font-size: 24px;
+  font-family: Arial;
+}
+.evaluation_goods table .td_wid01 {
+  width: 428px;
+}
+.evaluation_goods ul {
+  width: 260px;
+  padding: 4px 0 0 120px;
+}
+.evaluation_goods ul li {
+  float: left;
+  overflow: hidden;
+  zoom: 1;
+  width: 260px;
+  padding: 6px 0;
+}
+.evaluation_goods ul li span {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.evaluation_goods ul li .span_bar {
+  width: 132px;
+  height: 10px;
+  background-color: #dbdbdb;
+  margin-top: 4px;
+}
+.evaluation_goods ul li .span_bar i {
+  background-color: #f68a00;
+  display: block;
+  height: 10px;
+}
+.eval_tab {
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: -1px;
+}
+.eval_tab li {
+  float: left;
+  line-height: 1.5;
+}
+.eval_tab li a {
+  display: block;
+  width: 110px;
+  text-align: center;
+  color: #5e5e5e;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.eval_tab .on a, .eval_tab li a:hover {
+  color: #e72418;
+  border-bottom: 2px solid #e72418;
+  text-decoration: none;
+  margin-bottom: -1px;
+  padding-bottom: 9px;
+  position: relative;
+}
+.evaluate_mian {
+  clear: both;
+}
+.eval_list table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #5e5e5e;
+  font-size: 12px;
+  line-height: 24px;
+}
+.eval_list table td, .eval_list table th {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 400;
+  border-top: 1px solid #e6e6e6;
+  padding: 32px 0 34px;
+}
+.eval_list table td {
+  width: 542px;
+  padding-left: 5px;
+  padding-right: 100px;
+}
+.eval_list .eval_date {
+  color: #999;
+  margin-top: 5px;
+}
+.eval_list .person_box .photo {
+  width: 42px;
+  height: 42px;
+  background-color: #e6e6e6;
+  border-radius: 21px;
+  float: left;
+  position: relative;
+  z-index: 2;
+  behavior: url(https://s.maiyaole.com/images/201306/images/private/pie.htc);
+  overflow: hidden;
+  text-align: center;
+}
+.eval_list .person_box .photo img {
+  margin: 0;
+}
+.eval_list .person_box .name {
+  float: left;
+  color: #999;
+  padding: 6px 0 0 10px;
+  word-wrap: break-word;
+  width: 88px;
+}
+.pageNavi {
+  clear: both;
+  margin-top: 40px;
+  text-align: center;
+}
+.pageNavi li {
+  display: inline;
+  color: #333;
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 26px;
+  padding: 0 2px;
+}
+.pageNavi li .page-next {
+  margin-right: 5px;
+}
+
+.pageNavi li .page-next, .pageNavi li .page-prev {
+  width: 60px;
+}
+.pageNavi li .page-cur, .pageNavi li a {
+  display: inline-block;
+  width: 31px;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+.pageNavi li .page-cur, .pageNavi li a:hover {
+  font-weight: 700;
+  color: #fff;
+  background-color: #0083ce;
+  border: 1px solid #0083ce;
+  text-decoration: none;
+}
+.tips_box textarea {
+  width: 768px;
+  height: 50px;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  background: 0 0;
+  margin-bottom: 15px;
+  resize: none;
+  overflow-y: scroll;
+}
+.tips_box .com_btn {
+  float: right;
+}
+.detail_tab .com_btn {
+  display: block;
+  width: 133px;
+  margin: 0 auto;
+  background-color: #e72418;
+  color: #fff;
+  padding: 5px 0 7px;
+  font-size: 14px;
+  text-align: center;
+}
+.question_txt {
+  line-height: 24px;
+  color: #999;
+}
+.question_txt dt {
+  position: relative;
+  padding: 0 15px 0 31px;
+  margin: 27px 0 4px;
+  color: #5e5e5e;
+}
+.question_txt dd .a_txt, .question_txt dt .q_txt {
+  display: block;
+  background-color: #6d6d6d;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0;
+  font-family: Arial;
+}
+.question_txt dt .q_people {
+  color: #999;
+  display: block;
+  text-align: right;
+}
+.question_txt .name {
+  margin-right: 8px;
+}
+.question_txt dd {
+  position: relative;
+  padding: 0 15px 6px 31px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.question_txt dd .a_txt {
+  background-color: #fa0;
+}
+.question_txt dd p {
+  text-align: right;
+  margin: 25px 0 0 0;
+}
+
+.detail_right {
+  float: left;
+  width: 180px;
+}
+.detail_right a{
+  color: #333;
+}
+.detail_right a:hover{
+  color: #d00;
+}
+.info_box {
+  border: 1px solid #e6e6e6;
+  color: #5e5e5e;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.info_box h2 {
+  background-color: #f7f7f7;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 9px 9px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.info_box .info_list01 {
+  padding: 10px 0 20px;
+}
+.info_box .info_list01 li {
+  float: left;
+  padding: 7px 0 0 9px;
+  width: 80px;
+  height: 20px;
+  overflow: hidden;
+  zoom: 1;
+}
+.info_box .info_list02 {
+  overflow: hidden;
+  zoom: 1;
+  font-size: 12px;
+}
+.recommend_ul {
+  padding-bottom: 10px;
+  overflow: hidden;
+  margin-left: 15px;
+}
+.recommend_ul li {
+  width: 145px;
+  margin-top: 8px;
+}
+.recommend_ul .pro_img {
+  width: 145px;
+  height: 145px;
+  margin-bottom: 8px;
+}
+.recommend_ul .intro {
+  text-align: left;
+  margin-bottom: 5px;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+}
+.recommend_ul .price_part {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d00;
+}
+.left_ad {
+  width: 180px;
+  margin-top: 10px;
+}
+.left_ad a {
+  float: left;
+  line-height: 250px;
+  font-size: 0;
+  width: 180px;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.bottom_ad {
+  width: 990px;
+  height: 90px;
+  overflow: hidden;
+  padding: 10px 0;
+}

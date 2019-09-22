@@ -133,6 +133,9 @@
   height: 121px;
   /* background: cyan; */
 }
+.nav{
+  position: relative;
+}
 
 .logo {
   width: 180px;
@@ -222,7 +225,7 @@
 .erDCode {
   position: absolute;
   right: 230px;
-  top: 45px;
+  top: 8px;
   width: 123px;
   height: 115px;
 }
@@ -230,9 +233,9 @@
 .mod_minicart {
   width: 140px;
   font-size: 12px;
-  position: relative;
+  position: absolute;
   top: 34px;
-  right: -1050px;
+  right: 0px;
   margin-bottom: -41px;
   z-index: 99;
   border: 1px solid #eee;
