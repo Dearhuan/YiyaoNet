@@ -12,10 +12,8 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/iconfont.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-  <!-- <script src="./js/jquery-1.8.3.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
   <script src="./js/swiper.js"></script>
-
   <script src="./js/index.js"></script>
   <script src="./js/Cookie.js"></script>
 
@@ -23,12 +21,18 @@
 
 <body>
 
+  <!--  ----------------------------头部---------------------------------------- -->
   <script>
     $('body').append('<div id="head"></head>');
     $('#head').load('./html/head.html');
   </script>
 
-  <div id="nav">
+  <!-- -------------------------------nav--------------------------------------- -->
+  <script>
+    $('body').append('<div id="nav">');
+    $('#nav').load('./html/nav.html');
+  </script>
+  <!-- <div id="nav">
     <div class="nav con">
       <div class="logo">
         <a href="./index.html"></a>
@@ -55,8 +59,9 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 
+  <!-- -------------------------------head_wrap------------------------------------------ -->
   <div class="head_wrap clearfix">
     <div class="headerNavMain">
       <div class="allSort">
@@ -67,26 +72,19 @@
         </div>
       </div>
       <ul class="sitenav" id="sideNav">
-        <li class="s_m home"><a href="./index.html" data-ywpoint="null_null_null_null_I1010_0" class="nav_link cur"
-            target="_self">首页</a></li>
-        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/2015061908/index.html?tp=9-2"
-            data-ywpoint="null_null_null_null_I1010_1" class="nav_link" data-rel="navHover1">家庭常备药</a></li>
-        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/20184ee7ab470926100714/index.html?tp=8-4&amp;tp=9-3"
-            data-ywpoint="null_null_null_null_I1010_2" class="nav_link" data-rel="navHover2">乙肝</a></li>
-        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/2017e7cbee3a1211161537/index.html?tp=9-4"
-            class="nav_link red" data-ywpoint="null_null_null_null_I1010_3" data-rel="navHover3">传统滋补</a></li>
-        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/20188664d90f0514141253/index.html?tp=9-5"
-            data-ywpoint="null_null_null_null_I1010_4" class="nav_link" data-rel="navHover4">男性早泄</a></li>
-        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/20181d6642160426113758/index.html?tp=9-6"
-            data-ywpoint="null_null_null_null_I1010_5" class="nav_link">控制三高</a></li>
-        <li class="s_m"><a href="https://www.111.com.cn/cmsPage/201732ed342b0118160705/index.html?tp=9-7"
-            data-ywpoint="null_null_null_null_I1010_6" class="nav_link red">中药抓药</a></li>
-        <li class="s_m"><a href="http://ir.111.com.cn/?tp=9-8" data-ywpoint="null_null_null_null_I1010_7"
-            class="nav_link">投资者关系</a></li>
+        <li class="s_m home"><a href="./index.html" data-ywpoint="null_null_null_null_I1010_0" class="nav_link cur" target="_self">首页</a></li>
+        <li class="s_m"><a href="" data-ywpoint="null_null_null_null_I1010_1" class="nav_link" data-rel="navHover1">家庭常备药</a></li>
+        <li class="s_m"><a href="" data-ywpoint="null_null_null_null_I1010_2" class="nav_link" data-rel="navHover2">乙肝</a></li>
+        <li class="s_m"><a href="" class="nav_link red" data-ywpoint="null_null_null_null_I1010_3" data-rel="navHover3">传统滋补</a></li>
+        <li class="s_m"><a href="" data-ywpoint="null_null_null_null_I1010_4" class="nav_link" data-rel="navHover4">男性早泄</a></li>
+        <li class="s_m"><a href="" data-ywpoint="null_null_null_null_I1010_5" class="nav_link">控制三高</a></li>
+        <li class="s_m"><a href="" data-ywpoint="null_null_null_null_I1010_6" class="nav_link red">中药抓药</a></li>
+        <li class="s_m"><a href="" data-ywpoint="null_null_null_null_I1010_7" class="nav_link">投资者关系</a></li>
       </ul>
     </div>
   </div>
 
+    <!-- ------------------------------主体------------------------------------------- -->
   <div class="wrap main_body clearfix">
     <div class="main-l">
       <div class="tsSlide" id="tsSlideid" data-ywpoint="null_null_null_null_I1011_0"></div>
@@ -223,12 +221,14 @@
           alt="妇炎洁 植物本草抑菌洗液 380ml"></a>
     </div>
 
+    <!-- ------------------------------底部------------------------------------------------- -->
     <script>
       $('body').append('<div id="footer"></head>');
       $('#footer').load('./html/footer.html')
     </script>
 
-    <div class="elevator_n" id="elevator_n">  <!-- 楼层导航 -->
+    <div class="elevator_n" id="elevator_n">
+      <!-- 楼层导航 -->
       <a href="#specialAds" class="xsg">今日<br>限时购</a>
       <ul>
         <li class="two_line current"><a href="javascript:;" target="_self">1F</a><a class="etitle" href="javascript:;"
@@ -252,19 +252,18 @@
       </ul>
       <button id="itop">Top</button>
     </div>
-
+    <!-- ------------------------------float_box-------------------------------------------------- -->
     <script>
       $('body').append('<div class="float_box" id="rightFloat">');
       $('#rightFloat').load('./html/float_box.html');
     </script>
     <script>
-      $('.iyao').hover(function(){
-        $(this).children('.myyaowang').css('display','block');
+      $('.iyao').hover(function () {
+        $(this).children('.myyaowang').css('display', 'block');
         console.log(this);
-      },function(){
-        $(this).children('.myyaowang').css('display','none');
+      }, function () {
+        $(this).children('.myyaowang').css('display', 'none');
       })
-      
     </script>
 </body>
 

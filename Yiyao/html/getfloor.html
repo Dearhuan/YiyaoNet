@@ -128,13 +128,14 @@
     arr.push(obj);
     console.log(arr)
 
+    //goodlist
     var ls = Array.from(document.querySelector('#itemSearchList').children);
     var arr = []; 
-
+ 
     ls.forEach(ele=>{
       var obj = {};
       obj.src = ele.querySelector('img').src;
-      obj.price = ele.querySelector('.price').innerText.trim();
+      obj.price = Number(ele.querySelector('.price').innerText.trim());
       obj.title = ele.querySelector('.titleBox').innerText.trim();
       obj.store = ele.querySelector('.goldseller_name').innerText;
       arr.push(obj);

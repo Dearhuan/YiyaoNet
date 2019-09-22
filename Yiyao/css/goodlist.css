@@ -1,0 +1,559 @@
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+  color: #5E5E5E;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 1190px;
+}
+
+.searchColSub {
+  width: 180px;
+}
+.itemChoose {
+  overflow: hidden;
+  margin: 10px 0;
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+}
+.itemChoose h2 {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px 9px;
+  background-color: #ddd;
+  border-top: 1px solid #dbdbdb;
+}
+.itemChoose h2 a, .itemChoose h3 a, .itemChoose li a {
+  color: #5e5e5e;
+}
+.itemChoose h3 {
+  height: 36px;
+  overflow: hidden;
+  padding: 0 5px 0 15px;
+  font-size: 12px;
+  line-height: 36px;
+  border-top: 1px solid #e6e6e6;
+  background-color: #f5f5f5;
+}
+.itemChoose .icon_btn{
+  background: url(//s.maiyaole.com/images/201306/images/global/search_sprite.png) no-repeat 0px 0px;
+}
+.itemChoose h3 .icon_btn {
+  height: 38px;
+}
+
+.itemChoose .icon_btn {
+  float: left;
+  width: 18px;
+  height: 24px;
+  outline: none;
+  background-position: -53px 13px;
+}
+.itemChoose h3 .icon_btn.open {
+  background-position: -15px 13px;
+}
+
+.itemChoose h3 a:hover, .itemChoose li a:hover {
+  color: #e54948;
+}
+.itemChoose ul {
+  padding: 7px 0;
+  overflow: hidden;
+}
+.itemChoose li {
+  line-height: 25px;
+  white-space: nowrap;
+  padding: 0 5px 0 34px;
+}
+.itemChoose li a span {
+  color: #999;
+  font-weight: normal;
+}
+
+.searchColMain {
+  width: 1000px;
+}
+
+.searchCrumb {
+  position: relative;
+  z-index: 13;
+  padding: 10px 0;
+  zoom: 1;
+}
+
+.searchCrumb .resultNum {
+  float: right;
+  padding-right: 15px;
+}
+
+.searchCrumb ul {
+  float: left;
+  line-height: 21px;
+  width: 750px;
+}
+
+.searchCrumb ul li {
+  float: left;
+  margin-right: 8px;
+  height: 30px;
+  position: relative;
+}
+
+.searchCrumb .lastOne .linkOne {
+  padding: 0 8px 0 13px;
+  color: #e54948;
+}
+
+.searchCrumb ul li a {
+  display: inline-block;
+  margin-right: 5px;
+  color: #5e5e5e;
+  padding: 1px 5px;
+}
+
+.seachListBox {
+  margin-bottom: 10px;
+}
+
+.rankOp {
+  height: 30px;
+  border: 1px solid #dbdbdb;
+  background: #f5f5f5;
+  line-height: 30px;
+}
+
+.rankOp ul,
+.rankOp li {
+  float: left;
+}
+
+.rankOp ul.rank li.up a,
+.rankOp ul.rank li.down a
+{
+  background: #fff;
+  color: #e54948;
+  font-weight: bold;
+}
+
+.rankOp ul.rank li {
+  border-right: 1px solid #dbdbdb;
+}
+.rankOp ul.rank li.cur{
+  background: #fff;
+}
+
+.rankOp ul.rank li.normal a {
+  color: #e54948;
+}
+
+.rankOp ul.rank li a {
+  padding: 0 20px;
+  display: block;
+  font-size: 12px;
+  padding: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.rankOp ul.rank li span,
+.price_range_btn button,
+.rankOp ul.page a.prev,
+.rankOp ul.page a.next {
+  background: url(//s.maiyaole.com/images/201306/images/global/search_sprite.png) no-repeat 0px 0px;
+}
+
+.rankOp ul.rank li.default span {
+  background-position: right -419px;
+}
+
+.rankOp ul.rank li.defaultPrice span {
+  background-position: right -440px;
+}
+
+.rankOp ul.rank li span {
+  display: block;
+  padding: 0 10px 0 0;
+  background-position: 0 0;
+}
+
+.price_range {
+  width: 96px;
+  height: 30px;
+  border-right: 0;
+}
+
+.price_range div {
+  width: 86px;
+  padding: 0 4px 0 6px;
+  position: relative;
+  z-index: 10;
+}
+
+.price_range p {
+  line-height: 18px;
+  padding-top: 6px;
+}
+
+.price_range input {
+  width: 31px;
+  height: 16px;
+  margin: 0 2px;
+  padding-left: 1px;
+  border: 1px solid #ccc;
+  color: #999;
+  vertical-align: middle;
+}
+
+.price_range_btn {
+  display: none;
+  padding: 6px 2px 5px 3px;
+}
+
+.price_range_btn button {
+  float: right;
+  width: 40px;
+  height: 22px;
+  border: none;
+  background-position: 0 -80px;
+  cursor: pointer;
+}
+
+.price_range_btn cite {
+  color: #06c;
+  font-style: normal;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.rankOp ul.select {
+  padding-left: 10px;
+  border-right: 1px solid #DBDBDB;
+}
+
+.rank_select {
+  margin-right: 12px;
+}
+
+.rank_select input {
+  margin: 0 5px 0 4px;
+  _margin: -3px 0 0 0;
+  vertical-align: middle;
+}
+
+.rank_select label {
+  cursor: pointer;
+}
+
+.rankOp ul.page {
+  float: right;
+  margin-right: 5px;
+}
+
+.rankOp ul.page .pageNum {
+  padding-right: 7px;
+  color: #333;
+}
+
+.brand dl dd a:hover,
+.rankOp ul.page .pageNum span {
+  color: #e54948;
+}
+
+.rankOp ul.page .pageNum span {
+  color: #e54948;
+}
+
+.rankOp ul.page a.prev,
+.rankOp ul.page a.next {
+  display: inline;
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin: 6px 5px 0 0;
+  padding: 0;
+  border: none;
+  background-position: 0 0;
+  text-indent: -999em;
+}
+
+.rankOp ul.page a.prevNo {
+  background-position: -36px -310px;
+}
+
+.rankOp ul.page a.prev {
+  background-position: 0 -310px;
+}
+
+.rankOp ul.page a.next {
+  background-position: -18px -310px;
+}
+
+.itemSearchResult {
+  font-family: arial;
+}
+
+.itemSearchList {
+  margin-right: -13px;
+  position: relative;
+}
+
+.itemSearchList li {
+  padding: 0px 4px;
+}
+
+.itemSearchResult li {
+  float: left;
+  margin: 16px 11px 10px 0;
+  height: 430px;
+  position: relative;
+  box-sizing: border-box;
+  width: 230px;
+  border: 2px solid #fff;
+}
+
+.itemSearchResult li .itemSearchResultCon {
+  position: relative;
+  z-index: 0;
+  width: 190px;
+  padding: 7px 14px 10px 14px;
+  border: 2px solid #fff;
+  background-color: #fff;
+}
+
+.itemSearchResult li .pro_img {
+  display: block;
+  position: relative;
+  width: 190px;
+  height: 200px;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.itemSearchResult li .pro_img img {
+  display: block;
+  margin: 0 auto;
+  width: 190px;
+  height: 200px;
+}
+
+.itemSearchResult li p.price {
+  position: relative;
+  padding: 5px 0;
+}
+
+.itemSearchResult li p.price {
+  margin-top: 5px;
+}
+
+.itemSearchResult li p {
+  height: 100%;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.itemSearchResult li p.price span {
+  float: left;
+  height: 22px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f00;
+  line-height: 22px;
+}
+
+u {
+  text-decoration: none;
+  line-height: 20px;
+  margin-left: 15px;
+}
+
+.productName {
+  display: block;
+  height: 20px;
+  color: #333333;
+  line-height: 20px;
+  /* overflow: hidden; */
+}
+
+.backOn .productName {
+  height: auto;
+  white-space: normal;
+}
+
+.list_lable_self {
+  float: left;
+  margin-right: 6px;
+  font-family: 华文黑体;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  width: 32px;
+  height: 18px;
+  background:
+    /*#5dc3f1*/
+    url(//s.maiyaole.com/images/common/activity/sale_self_ico.png);
+  color: #fff;
+  border-radius: 1px;
+  background-size: 32px 18px;
+}
+
+.promoTitle {
+  display: block;
+  height: 20px;
+  line-height: 16px;
+  overflow: hidden;
+  color: #e54948;
+}
+
+.sell_type_div {
+  padding-bottom: 0px;
+  overflow: hidden;
+  clear: both;
+}
+
+.itemSearchList .comment_right {
+  float: right;
+  margin-top: 5px;
+}
+
+.itemSearchList .comment {
+  color: #5e5e5e;
+  height: 20px;
+  line-height: 20px;
+  clear: both;
+}
+
+.itemSearchList .self_name {
+  background: url(//s.maiyaole.com/images/201306/images/searchList/search_zan.png) no-repeat 0 50%;
+  padding-left: 18px;
+  width: auto;
+}
+
+.goldseller_name {
+  height: 20px;
+  width: 110px;
+  color: #5E5E5E;
+  display: inline-block;
+  line-height: 20px;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  margin-left: 0;
+  top: 5px;
+}
+
+.itemSearchResult li .browse {
+  width: 82px;
+  text-align: center;
+  height: 14px;
+  margin-top: 6px;
+}
+
+.search_list_op {
+  height: 28px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 0 5px;
+  outline: none;
+}
+
+.itemSearchResult li .search_list_op .consult_btn {
+  background-image: url(//s.maiyaole.com/images/201306/images/searchList/search_consult_on.png);
+  background-position: 15px 50%;
+  background-size: 14px auto;
+}
+
+.itemSearchResult li .search_list_op .border_left {
+  border-left: 1px solid #e5e5e5;
+}
+
+.itemSearchResult li .search_list_op .op_right_btn {
+  padding-left: 26px;
+  width: 88px;
+  float: right;
+  height: 28px;
+  background: #fff;
+  color: #ff6666;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+}
+
+.itemSearchResult li .buy {
+  background: #e62418 none;
+  font-size: 12px;
+  color: #fff;
+}
+
+.itemSearchResult li button {
+  width: 78px;
+  height: 26px;
+  margin-right: 5px;
+  border: 0;
+  background-position: 0 0;
+  line-height: 1.2;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.itemSearchResult li .search_list_op .look_detail_btn {
+  width: 175px;
+  color: #888888;
+  padding-left: 25px;
+  padding-right: 10px;
+  height: 28px;
+  line-height: 28px;
+  background-image: url(//s.maiyaole.com/images/201306/images/searchList/search_detail_ico.png);
+  background-repeat: no-repeat;
+  background-position: 3px 50%;
+  background-size: 14px 14px;
+}
+
+.itemSearchResult li:hover {
+  border: 2px solid #ccc;
+}
+
+.ipage {
+  /* position: fixed; */
+  /* bottom: 0px; */
+  width: 1000px;
+  margin: 40px auto;
+  /* margin-top: 100px; */
+  /* background: #195; */
+  text-align: center;
+  /* font-size: 13px; */
+  font-family: Verdana;
+  padding: 10px 16px
+}
+
+.ipage a {
+  display: inline-block;
+  height: 31px;
+  width: 31px;
+  line-height: 31px;
+  padding: 0 0px;
+  border: #CCC solid 1px;
+  /* font: 12px/20px Verdana; */
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: 5px;
+  background: #FFF
+}
+
+.ipage a:hover {
+  background: #09F;
+  color: #FFF;
+  /* border-color: #09F */
+}
+
+.ipage .active {
+  background: #CCC
+}
+
+.ipage a:active {
+  opacity: .8
+}
