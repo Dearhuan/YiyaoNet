@@ -1,0 +1,29 @@
+/* -----------------------------------底部-------------------------------------------- */
+
+.common_footer_simple {
+  padding: 30px 0 20px 0;
+  line-height: 26px;
+  text-align: center;
+  color: #a5a5a5;
+}
+.common_footer_simple a {
+  display: inline-block;
+  margin: 0 5px;
+  color: #a5a5a5;
+  font-size: 12px;
+}
+.common_footer_simple p{
+  font-size: 12px;
+}
+.common_footer_simple .copy_ico:before {
+  background: url(//s.maiyaole.com/images/201306/images/copy_ico.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 3px;
+  position: relative;
+  top: 5px;
+  content: "";
+}
+/* -----------------------------------底部-------------------------------------------- */

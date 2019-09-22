@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的购物车</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/base_px.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/foot_simple.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <!-- <script src="../js/index.js"></script> -->
+  <script src="../js/Cookie.js"></script>
+</head>
+
+<body>
+  <!--  ----------------------------头部---------------------------------------- -->
+  <script>
+    $('body').append('<div id="head"></head>');
+    $('#head').load('./head.html');
+  </script>
+
+  <!-- ------------------------------底部------------------------------------------------- -->
+  <!-- <script>
+    $('body').append('<div id="footer"></head>');
+    $('#footer').load('./footer.html');
+  </script> -->
+
+  <script>
+    $('body').append('<div class="common_footer_simple">');
+    $('.common_footer_simple').load('./footer_simple.html');
+  </script>
+</body>
+
+</html>

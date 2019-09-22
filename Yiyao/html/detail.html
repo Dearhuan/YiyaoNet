@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/detail.css">
   <link rel="stylesheet" href="../css/jquery.exzoom.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-  <script src="../js/index.js"></script>
+  <!-- <script src="../js/index.js"></script> -->
   <script src="../js/jquery.exzoom.js"></script>
   <script src="../js/Cookie.js"></script>
 </head>
@@ -788,6 +788,10 @@
       });
       $('#exzoom').exzoom({   //放大镜
         autoPlay:false,
+      })
+      $('#seriesCartButton').click(function(){  //加入购物车
+        console.log(this);
+        window.location.href = './cart.html';
       })
     });
   </script>

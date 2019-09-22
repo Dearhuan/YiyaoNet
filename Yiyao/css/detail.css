@@ -568,11 +568,6 @@ ul#thumblist li a {
 .detail_top .shangpin_info .btnCartDl dd {
   padding: 0;
 }
-.detail_top input.add_shopping_cart, .detail_top input.btn_shopping_cart {
-  height: 53px;
-  vertical-align: top;
-}
-
 .detail_top .add_shopping_cart, .detail_top .btn_shopping_cart {
   background-color: #e72418;
   background-position: 50px -763px;
@@ -582,9 +577,13 @@ ul#thumblist li a {
   height: 50px;
   padding: 0 60px 0 90px;
   border-bottom: 3px solid #9a0900;
-  /* color: #fff; */
+  color: #fff;
   font-size: 18px;
   cursor: pointer;
+}
+.detail_top input.add_shopping_cart, .detail_top input.btn_shopping_cart {
+  height: 53px;
+  vertical-align: top;
 }
 .detail_top .shangpin_info dd p.proTips {
   margin-top: 20px;
