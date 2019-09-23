@@ -337,14 +337,19 @@
   background-position: right -438px;
   font-weight: 700;
 }
+#allCategoryHeader .active{
+  display: block;
+}
 .sortbox {
     position: absolute;
+    display: none;
     z-index: 99;
     width: 180px;
     height: auto;
     margin-top: 48px;
     border-bottom: #e6e6e6 1px solid;
 }
+
 #sortul{
   width: 180px;
   height: 400px;
@@ -363,6 +368,11 @@
   background-color: #314349;
   text-decoration: none;
 }
+.stitle>a:hover {
+	color: #314349;
+  background-color: #fff;
+  text-decoration: none;
+}
 .stitle i {
   float: left;
   font-size: 24px;
@@ -376,6 +386,9 @@
   overflow: hidden;
   z-index: 103;
 }
+.sortbox ul li:hover i {
+  color: #314349;
+}
 .stitle h4 {
   margin-left: 47px;
   font-size: 14px;
@@ -383,6 +396,94 @@
   line-height: 40px;
   font-weight: 400;
   font-family: "Microsoft YaHei",tahoma,arial,\5b8b\4f53;
+}
+.stitle_hover {
+  padding-left: 5px;
+  -webkit-transition: padding-left .2s linear;
+  -moz-transition: padding-left .2s linear;
+  -o-transition: padding-left .2s linear;
+  transition: padding-left .2s linear;
+}
+.category {
+  width: 1009px;
+}
+
+.category {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  height: 400px;
+  z-index: 101;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e7;
+  border-right: 1px solid #e8e8e7;
+  clear: both;
+}
+.category .mode-bd {
+  font: 12px/18px Arial,tahoma,\5b8b\4f53;
+  background: #fff;
+  vertical-align: middle;
+  width: 252px;
+  height: 399px;
+  overflow: hidden;
+  float: left;
+}
+.category .mode-bd dl {
+  display: block;
+  font: 12px/18px Arial,tahoma,\5b8b\4f53;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.category .mode-bd dt {
+  margin: 6px 0 0 23px;
+  padding: 0;
+  line-height: 20px;
+  height: 20px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.category .mode-bd dd {
+  color: #999;
+  line-height: 1.6;
+  width: 220x;
+  margin: 0 0 0 23px;
+  padding: 0 0 2px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.category .mode-bd dd em {
+  margin: 8px 6px 0 -8px;
+  padding: 1px 6px 0 7px;
+  display: inline-block;
+  font-style: normal;
+  border-left: #ddd 1px solid;
+  font-weight: 400;
+  line-height: 1;
+}
+.category .mode-bd dd em a {
+  color: #424242;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.red {
+  color: #e54948!important;
+}
+.mode-bd.ads {
+  height: 399px;
+  width: 252px;
+  float: left;
+}
+.mode-bd.ads img.bodb {
+  border-bottom: 1px solid #e8e8e7;
+}
+
+.mode-bd.ads img {
+  display: block;
+  border-left: 1px solid #e8e8e7;
+  width: 252px;
 }
 
 .sitenav {

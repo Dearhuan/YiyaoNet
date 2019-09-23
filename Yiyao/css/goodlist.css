@@ -81,7 +81,7 @@ textarea {
 
 .searchCrumb {
   position: relative;
-  z-index: 13;
+  z-index: 0;
   padding: 10px 0;
   zoom: 1;
 }
@@ -191,7 +191,7 @@ textarea {
   width: 86px;
   padding: 0 4px 0 6px;
   position: relative;
-  z-index: 10;
+  z-index: 0;
 }
 
 .price_range p {

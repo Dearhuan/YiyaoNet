@@ -112,6 +112,7 @@
       obj.titles.push(ele.innerText)
     })
 
+    /* brands */
     var brands = document.querySelector('.flagship_store').children
     obj.brands = [];
     Array.from(brands).forEach(ele => {
@@ -130,9 +131,9 @@
 
     //goodlist
     var ls = Array.from(document.querySelector('#itemSearchList').children);
-    var arr = []; 
- 
-    ls.forEach(ele=>{
+    var arr = [];
+
+    ls.forEach(ele => {
       var obj = {};
       obj.src = ele.querySelector('img').src;
       obj.price = Number(ele.querySelector('.price').innerText.trim());
@@ -142,7 +143,58 @@
     })
     console.log(arr);
 
-
+    //big tabs
+    var lis = Array.from(document.querySelectorAll('.stitle'));
+    var arr = [];
+    lis.forEach(ele => {
+      var obj = {};
+      obj.title = ele.querySelector('h4').innerText;
+      obj.icon = ele.querySelector('i').getAttribute('class');
+      obj.ulist1 = [];
+      var list1 = Array.from(ele.querySelectorAll('[class="mode-bd"]'));
+      list1.forEach(item => {
+        var uarr = [];
+        var ualist = (Array.from(item.querySelectorAll('dl')));
+        // console.log(uarr);
+        // console.log(ualist)
+        ualist.forEach(dl => {
+          var o = {};
+          o.name = dl.querySelector('dt').innerText;
+          o.emlist = [];
+          var elist = Array.from(dl.querySelectorAll('em'));
+          //  console.log(elist)
+          elist.forEach(em => {
+            // console.log(em)
+            if(em.length!=0){
+            o.emlist.push(em.innerText)}
+          })
+          uarr.push(o);
+        })
+        obj.ulist1.push(uarr);
+      });
+      obj.ulist2 = [];
+      var list2 = Array.from(ele.querySelectorAll('div .mode-bd.ads'));
+      list2.forEach(item => {
+        var uarr = [];
+        // uarr.push(Array.from(item.querySelectorAll('img')));
+        Array.from(item.querySelectorAll('img')).forEach(ele=>{
+          if(!ele.src){
+            return;
+          }
+          uarr.push(ele.src);
+        });
+        obj.ulist2.push(uarr);
+      })
+      arr.push(obj);
+    })
+    console.log(arr);
+    arr.forEach((ele,index)=>{
+      console.log(ele.ulist2.length)
+      if(ele.ulist2.length == 0){
+        console.log(ele)
+        delete ele.ulist2;
+      }
+    })
   </script>
 </body>
 

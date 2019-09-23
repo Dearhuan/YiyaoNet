@@ -52,23 +52,40 @@ $.ajax({ //hotKeys渲染
   }
 });
 
-$.ajax({ //tab_ul
+$.ajax({
   type: "get",
-  url: "../api/sortul.php",
+  url: "../api/tabs.php",
   dataType: "json",
   success: function (data) {
-    // console.log(data);
-    $('#sortul').html(data.map(ele => {
+    console.log(data);
+    $('#sortul').html(data.map(li => {
       return `<li class="stitle">
                 <a href="#">
-                  <i class=${ele.icon}></i>
-                  <h4>${ele.title}</h4>
+                  <i class=${li.icon}></i>
+                  <h4>${li.title}</h4>
                 </a>
+                <div class="category" style="display:none">
+                  ${li.ulist1.map((div)=>{
+                    return `<div class="mode-bd">${div.map(dl=>{
+                      return `<dl>
+                                <dt>${dl.name}</dt>
+                                <dd>${dl.emlist.map(em=>{
+                                  return `<em><a href="">${em}</a></em>`
+                                }).join('')}</dd>
+                              </dl>`
+                    }).join('')}   
+                            </div>`
+                  }).join('')}
+                  ${li.ulist2.map((div)=>{
+                    return `<div class="mode-bd ads">${div.map(src=>{
+                      return `<a href=""><img src=${src}></a>`
+                    }).join('')}</div>`
+                  }).join('')}
+                </div>
               </li>`
-    }).join(''));
+    }));
     $('#sortul').find('i').addClass('iconfont');
-    // console.log($('#sortul li a').eq(0));
-    $('#sortul li a').eq(0).attr('href','./goodlist.html')
+    $('#sortul li a').eq(0).attr('href','./goodlist.html');
   }
 });
 
@@ -195,13 +212,21 @@ new Promise(function (resolve, reject) {
 
 
 window.onload = function () { //brand切换
-  
+
 
   $('.y_foot .fri_tit').on('mouseenter', 'li', function () {
     console.log(this, $(this).index());
     $(this).stop().animate().addClass('cur').siblings().removeClass('cur');
     $('.ft_friendlylink').children('div').eq($(this).index()).css('display', 'block').siblings('div').css('display', 'none');
   });
+
+  $('#sortul li').hover(function(){
+    $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
+    $(this).children('div').css('display','block');
+  },function(){
+    $(this).removeClass('stitle_hover');
+    $(this).children('div').css('display','none');
+  })
 
   $('.f_top').click(() => { //回到顶部
     $('html,body').animate({

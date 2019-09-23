@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/base_px.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/goodlist.css">
+  <link rel="stylesheet" href="../css/iconfont.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script src="../js/index.js"></script>
   <script src="../js/Cookie.js"></script>
@@ -33,9 +34,9 @@
     <div class="headerNavMain">
       <div class="allSort">
         <a href="" class="more" id="allSortOuterbox" style="display:block">所有商品分类</a>
-        <!-- <div class="sortbox w1190" id="allCategoryHeader">
+        <div class="sortbox w1190" id="allCategoryHeader" >
           <ul id="sortul"></ul>
-        </div> -->
+        </div>
       </div>
       <ul class="sitenav" id="sideNav">
         <li class="s_m home"><a href="./index.html" class="nav_link cur" target="_self">首页</a></li>
@@ -102,7 +103,7 @@
               </a>
             </li>
             <li>
-              <a href=" cid="965181">
+              <a href=" cid=" 965181">
                 咳嗽<span>(5088)</span>
               </a>
             </li>
@@ -951,6 +952,23 @@
 
   <script>
     $(function () {
+      $('#allSortOuterbox').on('mouseenter',function(){
+        $('#allCategoryHeader').stop().show();
+      });
+      $('#allSortOuterbox').on('mouseleave',function(){
+        // $('#allCategoryHeader').stop().hide();
+      });
+
+      $('#sortul li').mouseenter(function(){
+        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
+        $(this).children('div').css('display','block');
+      });
+      $('#sortul li').mouseleave(function(){
+        $(this).removeClass('stitle_hover');
+        // $(this).parents('#allCategoryHeader').css('display','none');
+        $('#allCategoryHeader').css('display','none');
+        $(this).children('div').css('display','none');
+      });
       console.log("___");
       let currentType = 0;
       new Promise(function (resolve, reject) {
@@ -1057,12 +1075,12 @@
         $(this).parent().addClass('cur').siblings().removeClass('cur');
       })
 
-     $('.no_bd_b').click(function(e){
-       let index = $('.no_bd_b').index(this);
-       console.log(index);
-       $('.list_ul').eq(index).slideToggle();
-       $('.icon_btn').eq(index).toggleClass('open');
-     })
+      $('.no_bd_b').click(function (e) {
+        let index = $('.no_bd_b').index(this);
+        console.log(index);
+        $('.list_ul').eq(index).slideToggle();
+        $('.icon_btn').eq(index).toggleClass('open');
+      })
 
     });
   </script>

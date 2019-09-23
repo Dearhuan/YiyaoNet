@@ -183,7 +183,7 @@
           <dl class="clearfix btnCartDl">
             <!-- 普通购物车 -->
             <dd>
-              <input  class="btn_shopping_cart" id="seriesCartButton" type="button" value="加入购物车">
+              <input class="btn_shopping_cart" id="seriesCartButton" type="button" value="加入购物车">
             </dd>
             <!-- 发货信息 -->
             <dd>
@@ -508,7 +508,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="201***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">201***</p>
                             </div>
                           </th>
@@ -520,7 +521,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="on_***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="on_***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">on_***</p>
                             </div>
                           </th>
@@ -532,7 +534,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="35c***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="35c***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">35c***</p>
                             </div>
                           </th>
@@ -544,7 +547,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="201***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">201***</p>
                             </div>
                           </th>
@@ -556,7 +560,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="201***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">201***</p>
                             </div>
                           </th>
@@ -568,7 +573,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="ali***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="ali***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">ali***</p>
                             </div>
                           </th>
@@ -580,7 +586,8 @@
                           </td>
                           <th>
                             <div class="person_box clearfix">
-                              <div class="photo"><img alt="201***" src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
+                              <div class="photo"><img alt="201***"
+                                  src="http://s.maiyaole.com/images/201306/images/yige.png"></div>
                               <p class="name">201***</p>
                             </div>
                           </th>
@@ -786,13 +793,20 @@
         $(this).addClass('on').siblings().removeClass('on');
         $('.detail_tab').eq($(this).index()).css('display', 'block').siblings().css('display', 'none');
       });
-      $('#exzoom').exzoom({   //放大镜
-        autoPlay:false,
-      })
-      $('#seriesCartButton').click(function(){  //加入购物车
+      $('#exzoom').exzoom({ //放大镜
+        autoPlay: false,
+      });
+      $('#seriesCartButton').click(function () { //加入购物车
         console.log(this);
         window.location.href = './cart.html';
-      })
+      });
+      $('.f_top').click((e) => { //回到顶部
+        console.log('=======')
+        e.preventDefault();
+        $('html,body').animate({
+          scrollTop: 0
+        }, 1000);
+      });
     });
   </script>
 </body>
