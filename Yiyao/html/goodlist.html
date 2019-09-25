@@ -31,10 +31,10 @@
 
   <!-- -------------------------------head_wrap------------------------------------------ -->
   <div class="head_wrap clearfix">
-    <div class="headerNavMain">
+    <div class="headerNavMain clearfix">
       <div class="allSort">
         <a href="" class="more" id="allSortOuterbox" style="display:block">所有商品分类</a>
-        <div class="sortbox w1190" id="allCategoryHeader" >
+        <div class="sortbox w1190" id="allCategoryHeader" style="display:none">
           <ul id="sortul"></ul>
         </div>
       </div>
@@ -872,13 +872,13 @@
             <input type="hidden" id="sortPatternId" value=".html">
             <ul orderby="1" class="rank clearfix">
               <!-- 排序方式 -->
-              <li class="normal cur"><a rel="nofollow" class="typeBtn" href="">综合</a></li>
-              <li class="default"><a href="" rel="nofollow" sortid="21" id="list_sale_sort"><span>销量</span></a></li>
-              <li class="default"><a href="" rel="nofollow" sortid="31" id="list_answer_sort"><span>评论</span></a></li>
-              <li class="default"><a href="" rel="nofollow" sortid="61" id="list_hot_sort"><span>人气</span></a></li>
-              <li class="default"><a href="" rel="nofollow" sortid="41" class="typeBtn"
+              <li class="normal typeBtn cur"><a rel="nofollow" href="">综合</a></li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="21" id="list_sale_sort"><span>销量</span></a></li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="31" id="list_answer_sort"><span>评论</span></a></li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="61" id="list_hot_sort"><span>人气</span></a></li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="41"
                   id="list_newest_sort"><span>价格</span></a></li>
-              <li class="defaultPrice"><a href="" rel="nofollow" sortid="51" class="typeBtn"
+              <li class="defaultPrice typeBtn"><a href="" rel="nofollow" sortid="51"
                   id="list_priceDown_sort"><span>价格</span></a></li>
               <li class="price_range">
                 <div>
@@ -952,11 +952,18 @@
 
   <script>
     $(function () {
-      $('#allSortOuterbox').on('mouseenter',function(){
-        $('#allCategoryHeader').stop().show();
+      let iswitch = false;   //开关
+      let box = $('#allCategoryHeader');
+
+      $('.allSort').mouseenter(function(e){
+        e.preventDefault();
+        !iswitch ? box.show() : box.hide();
+        iswitch = false;
       });
-      $('#allSortOuterbox').on('mouseleave',function(){
-        // $('#allCategoryHeader').stop().hide();
+      $('.allSort').mouseleave(function(e){
+        e.preventDefault();
+        !iswitch ? box.hide() : box.show();
+        iswitch = false;
       });
 
       $('#sortul li').mouseenter(function(){
@@ -965,7 +972,6 @@
       });
       $('#sortul li').mouseleave(function(){
         $(this).removeClass('stitle_hover');
-        // $(this).parents('#allCategoryHeader').css('display','none');
         $('#allCategoryHeader').css('display','none');
         $(this).children('div').css('display','none');
       });
@@ -1015,11 +1021,11 @@
               // console.log(item);
               return `
               <li>
-                <div class="itemSearchResultCon">
+                <div class="itemSearchResultCon" gid=${ele.gid}>
                   <a href="" class="product_pic pro_img">
                     <img alt="${ele.title}" src="${ele.src}">
                   </a>
-                  <p class="price" id="promotionInfo_2313766">
+                  <p class="price">
                     <span>${ele.price}</span>
                   </p>
                   <p class="titleBox">
@@ -1028,7 +1034,9 @@
                       ${ele.title}</a>
                   </p>
                   <div class="sell_type_div">
-                    <span class="comment comment_right"></span>
+                    <span class="comment comment_right">
+                      <a href="">评价<em>${ele.comment}</em>条</a>  
+                    </span>
                     <span class="goldseller_name self_name">${ele.store}</span>
                     <div class="browse"></div>
                   </div>
@@ -1068,7 +1076,13 @@
       $('#itemSearchList').on('mouseleave', 'li', function () {
         $(this).children('.itemSearchResultCon').removeClass('backOn');
       });
-
+      
+      $('#itemSearchList').on('click','li',function(e){   //跳转商品详情页
+        e.preventDefault();
+        let gid = $(this).children('.itemSearchResultCon').attr('gid');
+        console.log(gid);
+        window.location.href = `./detail.html?product/${gid}`;
+      })
       $('.rank a').click(function (e) {
         e.preventDefault();
         // console.log(this)

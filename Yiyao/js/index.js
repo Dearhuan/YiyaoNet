@@ -52,12 +52,12 @@ $.ajax({ //hotKeys渲染
   }
 });
 
-$.ajax({
+$.ajax({ //tabs渲染
   type: "get",
   url: "../api/tabs.php",
   dataType: "json",
   success: function (data) {
-    console.log(data);
+    // console.log(data);
     $('#sortul').html(data.map(li => {
       return `<li class="stitle">
                 <a href="#">
@@ -212,8 +212,6 @@ new Promise(function (resolve, reject) {
 
 
 window.onload = function () { //brand切换
-
-
   $('.y_foot .fri_tit').on('mouseenter', 'li', function () {
     console.log(this, $(this).index());
     $(this).stop().animate().addClass('cur').siblings().removeClass('cur');
@@ -228,7 +226,8 @@ window.onload = function () { //brand切换
     $(this).children('div').css('display','none');
   })
 
-  $('.f_top').click(() => { //回到顶部
+  $('.f_top').click((e) => { //回到顶部
+    e.preventDefault();
     $('html,body').animate({
       scrollTop: 0
     }, 1000);

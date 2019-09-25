@@ -16,12 +16,17 @@ $db = mysqli_connect("localhost","root","","yiyao");
 # 004-遍历数组获取数组中每个元素
 for($i = 0;$i<count($arrData);$i++)
 {
+  $gid = $arrData[$i]["gid"];
   $src = $arrData[$i]["src"];
   $title = $arrData[$i]["title"];
+  $info = $arrData[$i]["info"];
   $price = $arrData[$i]["price"];
   $store = $arrData[$i]["store"];
-  $sql = "INSERT INTO `zhongyaolist` (`id`, `src`, `title`, `price`, `store`) 
-VALUES (NULL, '$src', '$title', $price, '$store');";
+  $comment = $arrData[$i]["comment"];
+  $sql = "INSERT INTO `zhongyaolist` (`id`,`gid`,`src`,`title`,`info`,`price`, `store`,`comment`) 
+VALUES (NULL, '$gid','$src', '$title', '$info', $price, '$store','$comment');";
+// echo $sql;
+// echo "<br>";
   mysqli_query($db, $sql);
 }
 

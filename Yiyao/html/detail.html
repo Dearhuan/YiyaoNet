@@ -10,9 +10,10 @@
   <link rel="stylesheet" href="../css/base_px.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/iconfont.css">
   <link rel="stylesheet" href="../css/jquery.exzoom.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-  <!-- <script src="../js/index.js"></script> -->
+  <script src="../js/index.js"></script>
   <script src="../js/jquery.exzoom.js"></script>
   <script src="../js/Cookie.js"></script>
 </head>
@@ -35,9 +36,9 @@
     <div class="headerNavMain">
       <div class="allSort">
         <a href="" class="more" id="allSortOuterbox" style="display:block">所有商品分类</a>
-        <!-- <div class="sortbox w1190" id="allCategoryHeader">
+        <div class="sortbox w1190" id="allCategoryHeader">
           <ul id="sortul"></ul>
-        </div> -->
+        </div>
       </div>
       <ul class="sitenav" id="sideNav">
         <li class="s_m home"><a href="./index.html" class="nav_link cur" target="_self">首页</a></li>
@@ -78,12 +79,6 @@
           <!--大图区域-->
           <div class="exzoom_img_box">
             <ul class='exzoom_img_ul'>
-              <li><img src="https://p2.maiyaole.com/img/item/201909/02/380_20190902190454372.jpg" /></li>
-              <li><img src="https://p1.maiyaole.com/img/item/201903/21/380_20190321120049899.jpg" /></li>
-              <li><img src="https://p3.maiyaole.com/img/item/201908/09/380_20190809171309478.jpg" /></li>
-              <li><img src="https://p1.maiyaole.com/img/item/201908/09/380_20190809171308679.jpg" /></li>
-              <li><img src="https://p1.maiyaole.com/img/item/201908/09/380_20190809171306740.jpg" /></li>
-              <li><img src="https://p2.maiyaole.com/img/item/201908/09/380_20190809171305411.jpg" /></li>
             </ul>
           </div>
           <!--缩略图导航-->
@@ -111,105 +106,6 @@
         </ul>
       </div>
       <div class="middle_property">
-        <span class=" detail_self ">自营</span>
-        <h1>【套餐低至105元/盒】优思明 口服短效避孕药屈螺酮炔雌醇片 21片 </h1>
-        <span class="red giftRed"> 3盒套餐低至105元/盒</span>
-        <a class="red" style="text-decoration: underline;" target="_blank" href=""></a>
-        <div class="shangpin_info">
-          <div id="coupon"></div>
-          <!-- 普通价格-->
-          <dl class="clearfix">
-            <dt class="price_dt">药网价：</dt>
-            <dd>
-              <span class="good_price">￥118.00</span>
-              <span style=" float: left;line-height: 19px;margin: 7px 40px 0 0;"></span>
-              <span id="fristReviewCount" class="commentsBox">累计评论：
-                <span class="numComments">
-                  <a href="#itemComments" name="reviewCount">1439</a>
-                </span>
-              </span>
-            </dd>
-          </dl>
-          <!-- 限时购 -->
-          <div class="xianshigou_part"></div>
-
-          <!-- 促销信息 -->
-          <div id="newpromotion2">
-          </div>
-
-          <!-- 系列品 -->
-          <div class="xiliping" a="1"></div>
-          <!-- 套餐 -->
-          <dl class="clearfix taocanBox">
-            <dt>套餐：</dt>
-            <dd id="tc_attribute_list">
-              <ul class="taocan">
-                <li class="select-pro"><a href=""><span class="fl fb num">1件</span><em class="fl"><i
-                        class="qian">¥</i>118/1件</em><span class="iconSelect"></span></a></li>
-                <li><a href=""><span class="ptext">优思明口服避孕药3盒+排卵试纸5支</span><span class="iconSelect"></span></a></li>
-              </ul>
-            </dd>
-          </dl>
-
-          <!-- 数量 -->
-          <div class="shuliang">
-            <dl class="clearfix">
-              <dt>数 量：</dt>
-              <dd>
-                <div class="num_section clearfix">
-                  <div class="num_box">
-                    <input type="text" value="1" class="num" name="product_amount" id="product_amount" limit="5" moq="0"
-                      itemid="2336217">
-                    <input type="button" class="num_pre">
-                    <input type="button" class="num_next">
-                  </div>
-                  <p name="showLimit">（每人限购5件）</p>
-                </div>
-              </dd>
-            </dl>
-          </div>
-
-          <!-- 立即扫码 -->
-          <div class="mobPrice" id="mobPrice" style="display: block;">
-            <i></i>
-            <span><em class="text">手机扫扫更方便</em>&nbsp;<em class="mobNum" id="mobNum"></em>，&nbsp;<a
-                href="javaScript:void(0)" class="mobBuy" id="mobBuyA">立即扫码</a>&gt;</span>
-            <div class="erdCode" id="erdCodeD">
-              <img src="https://s.maiyaole.com/mpTdCode/50703005.png" alt="扫二维码，专享手机价" width="150" height="150">
-            </div>
-          </div>
-
-
-          <dl class="clearfix btnCartDl">
-            <!-- 普通购物车 -->
-            <dd>
-              <input class="btn_shopping_cart" id="seriesCartButton" type="button" value="加入购物车">
-            </dd>
-            <!-- 发货信息 -->
-            <dd>
-              <p class="proTips">
-                本商品由1药网销售和发货
-                <br>
-                18:00前下单预计当天出库，部分城市支持次日达。
-                <a target="_blank" href="" rel="nofollow">运费详情
-                  &gt;&gt;</a>
-              </p>
-            </dd>
-          </dl>
-
-          <div class="promise">
-            <span class="fl m0">支持</span>
-            <span class="zhengping_100">
-              <a rel="nofollow" target="_blank" href=""><i></i>100%正品</a>
-            </span>
-            <span class="men_100">
-              <a rel="nofollow" target="_blank" href=""><i></i>满69包邮</a>
-            </span>
-            <span class="yaojian"><a rel="nofollow" target="_blank" href=""><i></i>药监认证</a></span>
-          </div>
-
-
-        </div>
       </div>
       <div class="right_property right_property01">
         <!-- 放心购买 -->
@@ -787,27 +683,191 @@
 
   <script>
     $(function () {
+      /* 获取详情页传过来的商品id，根据gid向后端发请求拿当前商品数据 */
+      let url = location.href;
+      let gid = Number(decodeURI(location.search.slice(1)).split('product/')[1]);
+      console.log(gid);
+      $.ajax({ //获取商品gid
+        type: "get",
+        url: "../api/getProductDetail.php",
+        data: `gid=${gid}`,
+        dataType: "json",
+        success: function (res) {
+          let data = res.data;
+          console.log(data);
+          $('.middle_property').html(data.map(ele => {
+            return `<span class=" detail_self ">自营</span>
+        <h1>${ele.title}</h1>
+        <span class="red giftRed">${ele.info}</span>
+        <a class="red" style="text-decoration: underline;" target="_blank" href=""></a>
+        <div class="shangpin_info">
+          <div id="coupon"></div>
+          <dl class="clearfix">
+            <dt class="price_dt">药网价：</dt>
+            <dd>
+              <span class="good_price">￥${ele.price}</span>
+              <span style=" float: left;line-height: 19px;margin: 7px 40px 0 0;"></span>
+              <span id="fristReviewCount" class="commentsBox">累计评论：
+                <span class="numComments">
+                  <a href="#itemComments" name="reviewCount">${ele.comment}</a>
+                </span>
+              </span>
+            </dd>
+          </dl>
+          <div class="xianshigou_part"></div>
+
+          <div id="newpromotion2">
+          </div>
+
+          <div class="xiliping" a="1"></div>
+          <dl class="clearfix taocanBox">
+            <dt>套餐：</dt>
+            <dd id="tc_attribute_list">
+              <ul class="taocan">
+                <li class="select-pro"><a href=""><span class="fl fb num">1件</span><em class="fl"><i
+                        class="qian">¥</i>${ele.price}/1件</em><span class="iconSelect"></span></a></li>
+                <li><a href=""><span class="ptext">${ele.title}</span><span class="iconSelect"></span></a></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <div class="shuliang">
+            <dl class="clearfix">
+              <dt>数 量：</dt>
+              <dd>
+                <div class="num_section clearfix">
+                  <div class="num_box">
+                    <input type="text" value="1" class="num" name="product_amount" id="product_amount" limit="5" moq="0"
+                      itemid="${ele.gid}">
+                    <input type="button" class="num_pre">
+                    <input type="button" class="num_next">
+                  </div>
+                  <p name="showLimit">（每人限购5件）</p>
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="mobPrice" id="mobPrice" style="display: block;">
+            <i></i>
+            <span><em class="text">手机扫扫更方便</em>&nbsp;<em class="mobNum" id="mobNum"></em>，&nbsp;<a
+                href="javaScript:void(0)" class="mobBuy" id="mobBuyA">立即扫码</a>&gt;</span>
+            <div class="erdCode" id="erdCodeD">
+              <img src="https://s.maiyaole.com/mpTdCode/50703005.png" alt="扫二维码，专享手机价" width="150" height="150">
+            </div>
+          </div>
+
+          <dl class="clearfix btnCartDl">
+            <dd>
+              <input class="btn_shopping_cart" id="seriesCartButton" type="button" value="加入购物车">
+            </dd>
+            <dd>
+              <p class="proTips">
+                本商品由1药网销售和发货
+                <br>
+                18:00前下单预计当天出库，部分城市支持次日达。
+                <a target="_blank" href="" rel="nofollow">运费详情
+                  &gt;&gt;</a>
+              </p>
+            </dd>
+          </dl>
+
+          <div class="promise">
+            <span class="fl m0">支持</span>
+            <span class="zhengping_100">
+              <a rel="nofollow" target="_blank" href=""><i></i>100%正品</a>
+            </span>
+            <span class="men_100">
+              <a rel="nofollow" target="_blank" href=""><i></i>满69包邮</a>
+            </span>
+            <span class="yaojian"><a rel="nofollow" target="_blank" href=""><i></i>药监认证</a></span>
+          </div>
+        </div>`
+          }).join(''));
+        }
+      });
+      new Promise(function (resolve, reject) {
+        $.ajax({ //获取放大镜图片资源
+          type: "get",
+          url: "../api/bigmirror.php",
+          data: `gid=${gid}`,
+          dataType: "json",
+          success: function (res) {
+            let data = res.data;
+            console.log(data);
+            $('.exzoom_img_ul').html(data.map(li => {
+              return `<li style="width: 300px;"><img style="margin-top: 0px; width: 300px;" src=${li.bimg} /></li>`
+            }));
+            resolve();
+          }
+        });
+      }).then(function () {
+        return new Promise(function (resolve, reject) {
+          $('#exzoom').exzoom({ //放大镜
+            autoPlay: false,
+          });
+        })
+      }).then(function () {
+        return new Promise(function (resolve, reject) {
+          console.log($('.btnCartDl'))
+          $('#seriesCartButton').click(function () { 
+            console.log(this);
+            window.location.href = './cart.html';
+          });
+        })
+      })
+
+
+      /* -------------------tab菜单切换------------------- */
+      let iswitch = false; //开关
+      let box = $('#allCategoryHeader');
+
+      $('.allSort').mouseenter(function (e) {
+        e.preventDefault();
+        !iswitch ? box.show() : box.hide();
+        iswitch = false;
+      });
+      $('.allSort').mouseleave(function (e) {
+        e.preventDefault();
+        !iswitch ? box.hide() : box.show();
+        iswitch = false;
+      });
+
+      $('#sortul li').mouseenter(function () {
+        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
+        $(this).children('div').css('display', 'block');
+      });
+      $('#sortul li').mouseleave(function () {
+        $(this).removeClass('stitle_hover');
+        $('#allCategoryHeader').css('display', 'none');
+        $(this).children('div').css('display', 'none');
+      });
+      /* -------------------tab菜单切换------------------- */
+
       let lis = console.log($('.navList').children('li'))
       $('.navList li').click(function () {
         console.log(this, $(this).index());
         $(this).addClass('on').siblings().removeClass('on');
         $('.detail_tab').eq($(this).index()).css('display', 'block').siblings().css('display', 'none');
       });
-      $('#exzoom').exzoom({ //放大镜
-        autoPlay: false,
-      });
-      $('#seriesCartButton').click(function () { //加入购物车
-        console.log(this);
-        window.location.href = './cart.html';
-      });
-      $('.f_top').click((e) => { //回到顶部
+
+
+      /* $('.f_top').click((e) => { //回到顶部
         console.log('=======')
         e.preventDefault();
         $('html,body').animate({
           scrollTop: 0
         }, 1000);
-      });
+      }); */
     });
+
+
+    window.onload = function(){   //加入购物车
+      $('#seriesCartButton').click(function(){
+        console.log(this);
+        location.href = './cart.html';
+      })
+    }
   </script>
 </body>
 

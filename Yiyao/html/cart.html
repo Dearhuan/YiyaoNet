@@ -9,7 +9,8 @@
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/base_px.css">
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/carts.css">
   <link rel="stylesheet" href="../css/foot_simple.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <!-- <script src="../js/index.js"></script> -->
@@ -23,12 +24,349 @@
     $('#head').load('./head.html');
   </script>
 
-  <!-- ------------------------------底部------------------------------------------------- -->
-  <!-- <script>
-    $('body').append('<div id="footer"></head>');
-    $('#footer').load('./footer.html');
-  </script> -->
+  <section class="cartMain">
+    <div class="cartMain_hd">
+      <ul class="order_lists cartTop">
+        <li class="list_chk">
+          <!--所有商品全选-->
+          <input type="checkbox" id="all" class="whole_check">
+          <label for="all"></label>
+          全选
+        </li>
+        <li class="list_con">商品信息</li>
+        <li class="list_info">商品参数</li>
+        <li class="list_price">单价</li>
+        <li class="list_amount">数量</li>
+        <li class="list_sum">金额</li>
+        <li class="list_op">操作</li>
+      </ul>
+    </div>
 
+    <div class="cartBox">
+      <div class="shop_info">
+        <div class="all_check">
+          <!--店铺全选-->
+          <input type="checkbox" id="shop_a" class="shopChoice">
+          <label for="shop_a" class="shop"></label>
+        </div>
+        <div class="shop_name">
+          店铺：<a href="javascript:;">搜猎人艺术生活</a>
+        </div>
+      </div>
+      <div class="order_content">
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_2" class="son_check">
+            <label for="checkbox_2"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//1.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥980</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥980</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_3" class="son_check">
+            <label for="checkbox_3"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//2.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥780</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥780</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_6" class="son_check">
+            <label for="checkbox_6"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//3.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥180</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥180</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cartBox">
+      <div class="shop_info">
+        <div class="all_check">
+          <!--店铺全选-->
+          <input type="checkbox" id="shop_b" class="shopChoice">
+          <label for="shop_b" class="shop"></label>
+        </div>
+        <div class="shop_name">
+          店铺：<a href="javascript:;">卷卷旗舰店</a>
+        </div>
+      </div>
+      <div class="order_content">
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_4" class="son_check">
+            <label for="checkbox_4"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//4.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥1980</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥1980</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_5" class="son_check">
+            <label for="checkbox_5"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//5.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥480</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥480</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cartBox">
+      <div class="shop_info">
+        <div class="all_check">
+          <!--店铺全选-->
+          <input type="checkbox" id="shop_c" class="shopChoice">
+          <label for="shop_c" class="shop"></label>
+        </div>
+        <div class="shop_name">
+          店铺：<a href="javascript:;">卷卷旗舰店</a>
+        </div>
+      </div>
+      <div class="order_content">
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_8" class="son_check">
+            <label for="checkbox_8"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//1.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥1980</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥1980</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+        <ul class="order_lists">
+          <li class="list_chk">
+            <input type="checkbox" id="checkbox_9" class="son_check">
+            <label for="checkbox_9"></label>
+          </li>
+          <li class="list_con">
+            <div class="list_img"><a href="javascript:;"><img src="../images//1.png" alt=""></a></div>
+            <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+          </li>
+          <li class="list_info">
+            <p>规格：默认</p>
+            <p>尺寸：16*16*3(cm)</p>
+          </li>
+          <li class="list_price">
+            <p class="price">￥480</p>
+          </li>
+          <li class="list_amount">
+            <div class="amount_box">
+              <a href="javascript:;" class="reduce reSty">-</a>
+              <input type="text" value="1" class="sum">
+              <a href="javascript:;" class="plus">+</a>
+            </div>
+          </li>
+          <li class="list_sum">
+            <p class="sum_price">￥480</p>
+          </li>
+          <li class="list_op">
+            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--底部-->
+    <div class="bar-wrapper">
+      <div class="bar-right">
+        <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+        <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+        <div class="calBtn"><a href="javascript:;">结算</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="model_bg"></section>
+  <section class="my_model">
+    <p class="title">删除宝贝<span class="closeModel">X</span></p>
+    <p>您确认要删除该宝贝吗？</p>
+    <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
+        class="dialog-close">关闭</a></div>
+  </section>
+
+  <script src="../js/carts.js"></script>
+
+  <!-- ------------------------------猜你喜欢------------------------------------------- -->
+  <div class="recommend_cart">
+    <div class="recom_tt">您可能还需要</div>
+    <div class="recom_cart_con">
+      <ul class="recommend_ul">
+        <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
+          id="syhh">
+          <p><a href="//www.111.com.cn/product/50258970.html" title="松树 诺氟沙星片 0.1g*24片"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/50258/50258970/120_120.jpg" alt="松树 诺氟沙星片 0.1g*24片"><span>松树 诺氟沙星片
+                0.1g*24片</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥5.00</span></p>
+        </li>
+        <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
+          id="syhh">
+          <p><a href="//www.111.com.cn/product/50522414.html" title="佳美舒 阿奇霉素肠溶胶囊 微丸型 0.25g*6粒"><img class="pro_img"
+                src="https://p1.maiyaole.com/img/item/201701/09/200_20170109164113850.jpg"
+                alt="佳美舒 阿奇霉素肠溶胶囊 微丸型 0.25g*6粒"><span>佳美舒 阿奇霉素肠溶胶囊 微丸型 0.25g*6粒</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥35.90</span></p>
+        </li>
+        <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
+          id="syhh">
+          <p><a href="//www.111.com.cn/product/50311989.html" title="联环 盐酸多西环素片 0.1g*100片"><img class="pro_img"
+                src="https://p1.maiyaole.com/img/50311/50311989/120_120.jpg" alt="联环 盐酸多西环素片 0.1g*100片"><span>联环 盐酸多西环素片
+                0.1g*100片</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥23.30</span></p>
+        </li>
+        <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
+          id="syhh">
+          <p><a href="//www.111.com.cn/product/50500600.html" title="亚邦 桑美克拉霉素胶囊 0.25g*6s"><img class="pro_img"
+                src="https://p1.maiyaole.com/img/item/201609/23/200_20160923130934308.jpg"
+                alt="亚邦 桑美克拉霉素胶囊 0.25g*6s"><span>亚邦 桑美克拉霉素胶囊 0.25g*6s</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥9.30</span></p>
+        </li>
+        <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
+          id="syhh">
+          <p><a href="//www.111.com.cn/product/50080492.html" title="申洛 头孢克洛缓释胶囊 0.1875g*12粒"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/201411/05/120_2014110513551696.jpg"
+                alt="申洛 头孢克洛缓释胶囊 0.1875g*12粒"><span>申洛 头孢克洛缓释胶囊 0.1875g*12粒</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥28.80</span></p>
+        </li>
+        <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
+          id="syhh">
+          <p><a href="//www.111.com.cn/product/987812.html" title="克拉仙 克拉霉素片 0.25g*8片"><img class="pro_img"
+                src="https://p2.maiyaole.com/img/987/987812/120_120.jpg?a=1550737125" alt="克拉仙 克拉霉素片 0.25g*8片"><span>克拉仙
+                克拉霉素片 0.25g*8片</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥60.80</span></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ------------------------------底部------------------------------------------------- -->
   <script>
     $('body').append('<div class="common_footer_simple">');
     $('.common_footer_simple').load('./footer_simple.html');

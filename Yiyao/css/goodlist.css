@@ -12,6 +12,10 @@ textarea {
   width: 1190px;
 }
 
+.sortbox{
+  display: none;
+}
+
 .searchColSub {
   width: 180px;
 }
@@ -426,6 +430,18 @@ u {
   height: 20px;
   line-height: 20px;
   clear: both;
+}
+.itemSearchList .comment a {
+  /* color: #0083ce; */
+  float: left;
+  padding-right: 20px;
+}
+.itemSearchList .comment_right a {
+  color: #9d9d9d;
+}
+.itemSearchList .comment_right a em {
+  font-style: normal;
+  color: #ff6666;
 }
 
 .itemSearchList .self_name {

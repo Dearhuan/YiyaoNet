@@ -135,10 +135,12 @@
 
     ls.forEach(ele => {
       var obj = {};
+      obj.gid = Number(ele.querySelector('.itemSearchResultCon').getAttribute('itemid'));
       obj.src = ele.querySelector('img').src;
       obj.price = Number(ele.querySelector('.price').innerText.trim());
       obj.title = ele.querySelector('.titleBox').innerText.trim();
       obj.store = ele.querySelector('.goldseller_name').innerText;
+      obj.comment = (ele.querySelector('.comment_right em'))?Number(ele.querySelector('.comment_right em').innerText):0;
       arr.push(obj);
     })
     console.log(arr);
@@ -194,6 +196,18 @@
         console.log(ele)
         delete ele.ulist2;
       }
+    })
+
+    // big mirror
+    var imgs = Array.from(document.querySelector('#thumblist').children);
+    var arr = [];
+    imgs.forEach(ele=>{
+      var obj = {};
+
+      var img = eval("("+ele.querySelector('a').getAttribute('rel')+")");
+      obj.simg = img.smallimage;
+      obj.bimg = img.largeimage;
+      arr.push(obj);
     })
   </script>
 </body>

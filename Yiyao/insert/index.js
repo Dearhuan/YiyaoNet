@@ -2,9 +2,9 @@ const config = {
     user: 'root',       // 数据库账号
     password: '',   // 数据库密码
     database: 'yiyao',   // 数据库名字
-    data: './floor1_2.json', // json数据相当于当前文件的路径
-    table: 'floor12',       // 需要插入数据的数据表名
-    arr: ['id', 'floor', 'ulist1', 'ulist2','simg','rimglist','bulist'] // 表单字段插入的顺序
+    data: './zhongyaolist.json', // json数据相当于当前文件的路径
+    table: 'zhongyaolist',       // 需要插入数据的数据表名
+    arr: ['id', 'gid', 'src', 'title','price','store','comment'] // 表单字段插入的顺序
 }
 
 

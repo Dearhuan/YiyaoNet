@@ -6,10 +6,19 @@ $type = $_REQUEST["type"];
 # 002-查询数据库得到所有的产品
 if($type == 0){
   $sql = "SELECT * FROM `zhongyaolist` limit $page , 20";
-}elseif($type ==1)
+}elseif($type == 1)
+{
+  $sql = "SELECT * FROM `zhongyaolist`  ORDER BY `zhongyaolist`.`comment` DESC limit $page , 20";
+}elseif($type == 2)
+{
+  $sql = "SELECT * FROM `zhongyaolist`  ORDER BY `zhongyaolist`.`comment` DESC limit $page , 20";
+}elseif($type == 3)
+{
+  $sql = "SELECT * FROM `zhongyaolist`  ORDER BY `zhongyaolist`.`comment` DESC limit $page , 20";
+}elseif($type ==4)
 {
   $sql = "SELECT * FROM `zhongyaolist`  ORDER BY `zhongyaolist`.`price` DESC limit $page , 20";
-}elseif($type == 2)
+}elseif($type == 5)
 {
   $sql = "SELECT * FROM `zhongyaolist`  ORDER BY `zhongyaolist`.`price` ASC limit $page , 20";
 }

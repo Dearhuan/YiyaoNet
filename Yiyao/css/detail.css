@@ -6,11 +6,20 @@ textarea {
   font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
   color: #5E5E5E;
 }
+body{
+  overflow-x: hidden;
+}
 
 .wrap,.wrap_detail,.head_wrap,.nav,.head{
   margin: 0 auto;
   width: 990px;
   height: 100%;
+}
+.sortbox{
+  display: none;
+}
+.mode-bd.ads{
+  display: none;
 }
 #erDCode{
   display: none;
@@ -48,7 +57,7 @@ textarea {
   float: left;
   width: 300px;
   position: relative;
-  z-index: 12;
+  z-index: 5;
 }
 .detail_top .sideleft {
   margin-right: 18px;
@@ -57,15 +66,6 @@ textarea {
   padding-bottom: 10px;
 }
 
-.detail_top .sideleft {
-  float: left;
-  width: 300px;
-  position: relative;
-  z-index: 12;
-}
-.detail_top .sideleft {
-  margin-right: 18px;
-}
 .detail_top a {
   color: #505050;
 }
@@ -477,7 +477,7 @@ ul#thumblist li a {
   position: relative;
   width: 106px;
   float: left;
-  z-index: 10;
+  z-index: 3;
 }
 .detail_top .shangpin_info dd input.num {
   width: 73px;

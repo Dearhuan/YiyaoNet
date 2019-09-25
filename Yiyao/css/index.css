@@ -342,7 +342,7 @@
 }
 .sortbox {
     position: absolute;
-    display: none;
+    display: block;
     z-index: 99;
     width: 180px;
     height: auto;
