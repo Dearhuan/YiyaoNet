@@ -56,17 +56,7 @@
   <!-- ------------------------------- 详情页头部------------------------------------------------ -->
   <div class="wrap clearfix">
     <div class="detailnav">
-      <span class="linkhome"><a href="./index.html">首页</a></span>
-      <span class="arrow">&gt;</span>
-      <span><a href="./goodlist.html">中西药品</a></span>
-      <span class="arrow">&gt;</span>
-      <span><a href="">消化系统疾病</a></span>
-      <span class="arrow">&gt;</span>
-      <span><a href="">消化不良</a></span>
-      <span class="arrow">&gt;</span>
-      <span>
-        江中 健胃消食片 0.8g*32片家庭装 消化不...
-      </span>
+
     </div>
   </div>
   <!-- ------------------------------- 详情页头部------------------------------------------------ -->
@@ -681,6 +671,10 @@
     $('#rightFloat').load('./float_box.html');
   </script>
 
+  <div id="addCartInfo">
+
+  </div>
+
   <script>
     $(function () {
       /* 获取详情页传过来的商品id，根据gid向后端发请求拿当前商品数据 */
@@ -696,8 +690,9 @@
           let data = res.data;
           console.log(data);
           $('.middle_property').html(data.map(ele => {
-            return `<span class=" detail_self ">自营</span>
-        <h1>${ele.title}</h1>
+
+            return `<span class="detail_self" title=${ele.store}>自营</span>
+        <h1 data-src=${ele.src}>${ele.title}</h1>
         <span class="red giftRed">${ele.info}</span>
         <a class="red" style="text-decoration: underline;" target="_blank" href=""></a>
         <div class="shangpin_info">
@@ -742,7 +737,7 @@
                     <input type="button" class="num_pre">
                     <input type="button" class="num_next">
                   </div>
-                  <p name="showLimit">（每人限购5件）</p>
+                  <p name="showLimit"></p>
                 </div>
               </dd>
             </dl>
@@ -751,7 +746,7 @@
           <div class="mobPrice" id="mobPrice" style="display: block;">
             <i></i>
             <span><em class="text">手机扫扫更方便</em>&nbsp;<em class="mobNum" id="mobNum"></em>，&nbsp;<a
-                href="javaScript:void(0)" class="mobBuy" id="mobBuyA">立即扫码</a>&gt;</span>
+                href="" class="mobBuy" id="mobBuyA">立即扫码</a>&gt;</span>
             <div class="erdCode" id="erdCodeD">
               <img src="https://s.maiyaole.com/mpTdCode/50703005.png" alt="扫二维码，专享手机价" width="150" height="150">
             </div>
@@ -784,6 +779,14 @@
           </div>
         </div>`
           }).join(''));
+
+          $('.detailnav').html(data.map(ele => {
+            return `<span class="linkhome"><a href="./index.html">首页</a></span>
+                    <span class="arrow">&gt;</span>
+                    <span><a href="./goodlist.html">中西药品</a></span>
+                    <span class="arrow">&gt;</span>
+                    <span><a href="./detail.html?product/${ele.gid}">${ele.title}</span>`
+          }).join(''))
         }
       });
       new Promise(function (resolve, reject) {
@@ -810,7 +813,7 @@
       }).then(function () {
         return new Promise(function (resolve, reject) {
           console.log($('.btnCartDl'))
-          $('#seriesCartButton').click(function () { 
+          $('#seriesCartButton').click(function () {
             console.log(this);
             window.location.href = './cart.html';
           });
@@ -833,15 +836,6 @@
         iswitch = false;
       });
 
-      $('#sortul li').mouseenter(function () {
-        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
-        $(this).children('div').css('display', 'block');
-      });
-      $('#sortul li').mouseleave(function () {
-        $(this).removeClass('stitle_hover');
-        $('#allCategoryHeader').css('display', 'none');
-        $(this).children('div').css('display', 'none');
-      });
       /* -------------------tab菜单切换------------------- */
 
       let lis = console.log($('.navList').children('li'))
@@ -862,11 +856,103 @@
     });
 
 
-    window.onload = function(){   //加入购物车
-      $('#seriesCartButton').click(function(){
-        console.log(this);
-        location.href = './cart.html';
-      })
+    window.onload = function () {
+      $('#mobBuyA').hover(function () {
+        $('#erdCodeD').animate({
+          top: '-171px',
+        }, 300)
+      }, function () {
+        $('#erdCodeD').animate({
+          top: '-200px',
+        });
+      });
+
+      $('#mobBuyA').hover(function () {
+        $('#erdCodeD').css({
+          'display': 'block',
+        })
+      }, function () {
+        $('#erdCodeD').css({
+          'display': 'none',
+        })
+      });
+
+      let num = 1;
+      $('.num_pre').click(function (e) {
+        let inputVal = $(this).siblings('.num'),
+          count = parseInt(inputVal.val()) + 1;
+        inputVal.val(count);
+        num = count;
+      });
+      $('.num_next').click(function (e) {
+        let inputVal = $(this).siblings('.num'),
+          count = parseInt(inputVal.val()) - 1;
+        if (inputVal.val() > 1) {
+          inputVal.val(count);
+          num = count;
+        }
+      });
+
+      $('#seriesCartButton').click(function () { //加入购物车
+        let addCartInfo = $('#addCartInfo');
+        let gid = Number(decodeURI(location.search.slice(1)).split('product/')[1]);
+        let price = Number($('.good_price').text().slice(1));
+        let totalPrice = price * num;
+        let title = $('.middle_property h1').text();
+        let comment = Number($('.numComments').text());
+        let store = $('.detail_self').attr('title');
+        // let src = $('.exzoom_nav_inner').children().first().find('img').attr('src');
+        let src = $('.middle_property h1').attr('data-src');
+        console.log(gid, price, title, comment, store, src);
+        addCartInfo.html(`<input type="hidden" value="success" id="addProductResult">
+    <div class="spop" id="addCartWin">
+      <div class="spoptop">
+        <a class="popwinClose" onclick="jQuery('#addCartInfo').hide();" href="javascript:void(0);">关闭</a>
+        <font>${num}件商品加入购物车</font>
+      </div>
+      <div class="spopro">
+        <div class="spopimg"><img width="115" onerror="imgERROR(this,'no_pic_160_160.jpg');"
+            src=${src}></div>
+        <div class="spopbox">
+          <p class="spopstitle"></p>
+          <span>加入数量：${num}</span>
+          <span>总计金额：<span><i class="qian">¥</i>${totalPrice}</span></span>
+          <div class="spopbtn"><a class="red_btn" href="javascript:void(0)"
+              onclick="jQuery('#addCartInfo').hide();">继续购物</a><a
+              class="red_border_btn" href="./cart.html">去结算</a></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>`)
+        addCartInfo.stop().show();
+        $.ajax({
+          type: "post",
+          url: "../api/cart.php",
+          data: {
+            gid: gid,
+            title: title,
+            src: src,
+            price: price,
+            num: num,
+            comment: comment,
+            store, store
+          },
+          dataType: "json",
+          success: function (res) {
+            console.log(res);
+          }
+        });
+      });
+
+      $('#sortul li').mouseenter(function () {
+        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
+        $(this).children('div').css('display', 'block');
+      });
+      $('#sortul li').mouseleave(function () {
+        $(this).removeClass('stitle_hover');
+        // $('#allCategoryHeader').css('display', 'none');
+        $(this).children('div').css('display', 'none');
+      });
     }
   </script>
 </body>

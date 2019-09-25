@@ -20,6 +20,7 @@
   position: relative;
   background: #fff url(https://s.maiyaole.com/images/passport/l_bg_02.png) no-repeat left top;
   width: 988px;
+  height: 509px;
   min-height: 335px;
   color: #5e5e5e;
   border: #e6e6e6 1px solid;
@@ -245,6 +246,9 @@ body, button, input, select, textarea {
   color: #a5a5a5;
   text-indent: -9999px;
 }
+.hz_login a:hover {
+	color: #0083ce;
+}
 .a_yhd, .a_zfb, .a_qq, .a_sina, .a_wlt, .a_wy, .a_wx {
   background: url(https://s.maiyaole.com/images/201306/images/private/img_zhifu.png) no-repeat left top;
   display: block;
@@ -254,14 +258,52 @@ body, button, input, select, textarea {
   width: 39px;
   border: none;
 }
-.hz_login a.a_wx {
-  background-position: -294px 0;
-}
+
 .hz_login a.a_zfb {
-  background-position: -48px 0;
+	background-position: -48px 0;
 }
+
+.hz_login a.a_zfb:hover {
+	background-position: -48px -52px;
+}
+
 .hz_login a.a_qq {
-  background-position: -95px 0;
+	background-position: -95px 0;
+}
+
+.hz_login a.a_qq:hover {
+	background-position: -95px -52px;
+}
+
+.moreWebDiv a.a_sina {
+	background-position: -143px 0;
+}
+
+.moreWebDiv a.a_sina:hover {
+	background-position: -143px -52px;
+}
+
+.moreWebDiv a.a_wy {
+	background-position: -191px 0;
+}
+
+.moreWebDiv a.a_wy:hover {
+	background-position: -191px -52px;
+}
+
+.moreWebDiv a.a_wlt {
+	background-position: -241px 0;
+}
+
+.moreWebDiv a.a_wlt:hover {
+	background-position: -241px -52px;
+}
+.hz_login a.a_wx {
+	background-position: -294px 0;
+}
+
+.hz_login a.a_wx:hover {
+	background-position: -294px -52px;
 }
 .moreWebDiv {
   cursor: pointer;
@@ -290,6 +332,9 @@ body, button, input, select, textarea {
   background: url(https://s.maiyaole.com/images/201306/images/private/upanddown.png) no-repeat left top;
   background-position: -7px -7px;
 }
+.moreWebBtn:hover{
+  background-position: -37px -7px;
+}
 .moreTab {
   display: none;
   padding-top: 50px;
@@ -297,6 +342,9 @@ body, button, input, select, textarea {
 }
 .moreWebDiv a.a_yhd {
   background-position: 0 0;
+}
+.moreWebDiv a.a_yhd:hover {
+	background-position: 0 -52px;
 }
 .moreWebDiv a.a_sina {
   background-position: -143px 0;

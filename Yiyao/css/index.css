@@ -413,7 +413,7 @@
   top: 0;
   left: 180px;
   height: 400px;
-  z-index: 101;
+  z-index: 9999;
   background: #fff;
   border-bottom: 1px solid #e8e8e7;
   border-right: 1px solid #e8e8e7;

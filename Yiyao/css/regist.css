@@ -261,23 +261,53 @@ span.error {
   line-height: 24px;
   color: #5e5e5e;
 }
+.a_yhd, .a_zfb, .a_qq, .a_sina, .a_wlt, .a_wy {
+  background: url(https://s.maiyaole.com/images/201306/images/private/img_zhifu.png) no-repeat left top;
+  border: medium none;
+  display: block;
+  float: left;
+  height: 39px;
+  margin-right: 18px;
+  width: 39px;
+}
 .hz_login a.a_yhd {
   background-position: 0 0;
+}
+.hz_login a.a_yhd:hover {
+  background-position: 0 -52px;
 }
 .hz_login a.a_zfb {
   background-position: -48px 0;
 }
+.hz_login a.a_zfb:hover {
+  background-position: -48px -52px;
+}
 .hz_login a.a_qq {
   background-position: -95px 0;
+}
+.hz_login a.a_qq:hover {
+  background-position: -95px -52px;
 }
 .hz_login a.a_sina {
   background-position: -143px 0;
 }
-.hz_login a.a_wlt {
-  background-position: -241px 0;
+.hz_login a.a_sina:hover {
+  background-position: -143px -52px;
 }
 .hz_login a.a_wy {
-  background-position: -191px 0;
+background-position: -191px 0;
+}
+
+.hz_login a.a_wy:hover {
+background-position: -191px -52px;
+}
+
+.hz_login a.a_wlt {
+background-position: -241px 0;
+}
+
+.hz_login a.a_wlt:hover {
+background-position: -241px -52px;
 }
 
 .hz_login a.first {
@@ -288,14 +318,8 @@ span.error {
   color: #a5a5a5;
   text-indent: -9999px;
 }
-.a_yhd, .a_zfb, .a_qq, .a_sina, .a_wlt, .a_wy {
-  background: url(https://s.maiyaole.com/images/201306/images/private/img_zhifu.png) no-repeat left top;
-  border: medium none;
-  display: block;
-  float: left;
-  height: 39px;
-  margin-right: 18px;
-  width: 39px;
+.hz_login a:hover {
+  color: #0083ce;
 }
 
 /* -----------------------------------主体-------------------------------------------- */

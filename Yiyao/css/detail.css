@@ -472,6 +472,7 @@ ul#thumblist li a {
 }
 .num_section {
   position: relative;
+  float: left;
 }
 .detail_top .num_box {
   position: relative;
@@ -1118,3 +1119,126 @@ ul#thumblist li a {
   overflow: hidden;
   padding: 10px 0;
 }
+
+/* -----------购物弹窗----------- */
+#addCartInfo{
+  position: static;
+  width: 0px;
+  height: auto;
+  left: 711.5px;
+  top: 512px;
+  z-index: 10000;
+  display: none;
+}
+#addCartWin{
+  position: absolute;
+  margin-top: 0px;
+  z-index: 10000;
+  top: 512px;
+}
+.spop {
+  width: 496px;
+  background-color: #fff;
+  border: 1px solid #0083ce;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -248px;
+  margin-top: -125px;
+}
+.spoptop {
+  background-color: #0083ce;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 0 15px;
+  line-height: 35px;
+  width: auto;
+}
+.spoptop a {
+  float: right;
+  width: 30px;
+  background: url(//s.maiyaole.com/images/product/icon_detail.png) no-repeat 5px -383px;
+  text-decoration: none;
+  text-indent: -9999px;
+}
+.spopro {
+  padding: 15px 20px;
+}
+.spopimg {
+  float: left;
+}
+.spopimg img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.spopbox {
+  float: right;
+  width: 308px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.spopstitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+.spopro span {
+  display: block;
+  color: #666;
+  line-height: 1.7;
+}
+.spopro span span {
+  display: inline;
+  color: #c00;
+  font-size: 14px;
+  font-weight: bold;
+}
+.qian {
+  font-family: Arial;
+  font-style: normal;
+}
+.spopbtn {
+  padding-top: 8px;
+  overflow: hidden;
+  zoom: 1;
+}
+.spopbtn a {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.red_btn, .bule_btn, .yellow_btn, .grey_btn {
+  border: 0;
+  background-color: #e71a0f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 34px;
+  border-bottom: 2px solid #a00;
+  width: 116px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+.grey_border_btn, .red_border_btn {
+  border: 1px solid #d7d7d7;
+  width: 114px;
+  display: block;
+  line-height: 34px;
+  color: #868686;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.red_border_btn {
+  border: 1px solid #e71a0f;
+  color: #e71a0f;
+}
+.clear {
+  clear: both;
+}
+/* -----------购物弹窗----------- */
+

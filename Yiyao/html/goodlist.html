@@ -873,9 +873,12 @@
             <ul orderby="1" class="rank clearfix">
               <!-- 排序方式 -->
               <li class="normal typeBtn cur"><a rel="nofollow" href="">综合</a></li>
-              <li class="default typeBtn"><a href="" rel="nofollow" sortid="21" id="list_sale_sort"><span>销量</span></a></li>
-              <li class="default typeBtn"><a href="" rel="nofollow" sortid="31" id="list_answer_sort"><span>评论</span></a></li>
-              <li class="default typeBtn"><a href="" rel="nofollow" sortid="61" id="list_hot_sort"><span>人气</span></a></li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="21" id="list_sale_sort"><span>销量</span></a>
+              </li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="31"
+                  id="list_answer_sort"><span>评论</span></a></li>
+              <li class="default typeBtn"><a href="" rel="nofollow" sortid="61" id="list_hot_sort"><span>人气</span></a>
+              </li>
               <li class="default typeBtn"><a href="" rel="nofollow" sortid="41"
                   id="list_newest_sort"><span>价格</span></a></li>
               <li class="defaultPrice typeBtn"><a href="" rel="nofollow" sortid="51"
@@ -952,30 +955,20 @@
 
   <script>
     $(function () {
-      let iswitch = false;   //开关
+      let iswitch = false; //开关
       let box = $('#allCategoryHeader');
 
-      $('.allSort').mouseenter(function(e){
+      $('.allSort').mouseenter(function (e) {
         e.preventDefault();
         !iswitch ? box.show() : box.hide();
         iswitch = false;
       });
-      $('.allSort').mouseleave(function(e){
+      $('.allSort').mouseleave(function (e) {
         e.preventDefault();
         !iswitch ? box.hide() : box.show();
         iswitch = false;
       });
 
-      $('#sortul li').mouseenter(function(){
-        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
-        $(this).children('div').css('display','block');
-      });
-      $('#sortul li').mouseleave(function(){
-        $(this).removeClass('stitle_hover');
-        $('#allCategoryHeader').css('display','none');
-        $(this).children('div').css('display','none');
-      });
-      console.log("___");
       let currentType = 0;
       new Promise(function (resolve, reject) {
         $.ajax({
@@ -1022,14 +1015,14 @@
               return `
               <li>
                 <div class="itemSearchResultCon" gid=${ele.gid}>
-                  <a href="" class="product_pic pro_img">
+                  <a href="./detail.html?product/${ele.gid}" class="product_pic pro_img">
                     <img alt="${ele.title}" src="${ele.src}">
                   </a>
                   <p class="price">
                     <span>${ele.price}</span>
                   </p>
                   <p class="titleBox">
-                    <a class="productName" href="" target="_blank">
+                    <a class="productName" href="./detail.html?product/${ele.gid}" target="_blank">
                       <span class=" list_lable_self"></span>
                       ${ele.title}</a>
                   </p>
@@ -1040,12 +1033,11 @@
                     <span class="goldseller_name self_name">${ele.store}</span>
                     <div class="browse"></div>
                   </div>
-                  <div id="" class="search_list_op">
-                    <button class="buy op_right_btn consult_btn border_left" id="" index="0"
-                      specialtype="" productcode="" sellproductid="" merchantid="" inshop="0"
-                      pminfo="">咨询药师</button>
-                    <a class="look_detail_btn" id="" index="0" specialtype="" productcode=""
-                      sellproductid="" merchantid="" inshop="" pminfo="" href="">查看详情</a>
+                  <div id="buyInfo_844162" class="search_list_op">
+                    <a class="search_list_reduce_gray"></a>
+                    <input type="text" value="1" class="num" id="">
+                    <a class="search_list_plus"></a>
+                    <button class="buy op_right_btn add_cart_btn border_left">加入购物车</button>     
                   </div>
                   <u class="bg_border"></u>
                   </div>
@@ -1076,13 +1068,7 @@
       $('#itemSearchList').on('mouseleave', 'li', function () {
         $(this).children('.itemSearchResultCon').removeClass('backOn');
       });
-      
-      $('#itemSearchList').on('click','li',function(e){   //跳转商品详情页
-        e.preventDefault();
-        let gid = $(this).children('.itemSearchResultCon').attr('gid');
-        console.log(gid);
-        window.location.href = `./detail.html?product/${gid}`;
-      })
+
       $('.rank a').click(function (e) {
         e.preventDefault();
         // console.log(this)
@@ -1097,6 +1083,47 @@
       })
 
     });
+
+    window.onload = function () {
+      let plus = $('.search_list_plus'),
+          reduce = $('.search_list_reduce_gray'),
+          add_cart = $('.buy');
+      plus.click(function (e) {
+        e.preventDefault();
+        let inputVal = $(this).prev('input'),
+            count = parseInt(inputVal.val())+1;
+        inputVal.val(count);
+        if(inputVal.val()>1){
+          reduce.addClass('search_list_reduce').removeClass('search_list_reduce_gray')
+        }
+      });
+      reduce.click(function (e) {
+        e.preventDefault();
+        let inputVal = $(this).next('input'),
+            count = parseInt(inputVal.val())-1;
+        if(inputVal.val()>1){
+          inputVal.val(count);
+          $(this).addClass('search_list_reduce').removeClass('search_list_reduce_gray')
+        };
+        if(inputVal.val()==1){
+          $(this).addClass('search_list_reduce_gray').removeClass('search_list_reduce')
+        }
+      });
+      add_cart.click(function (e) {
+        e.preventDefault();
+
+      });
+
+      $('#sortul li').mouseenter(function () {
+        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
+        $(this).children('.category').css('display', 'block');
+      });
+      $('#sortul li').mouseleave(function () {
+        $(this).removeClass('stitle_hover');
+        // $('#allCategoryHeader').css('display', 'none');
+        $(this).children('.category').css('display', 'none');
+      });
+    }
   </script>
 </body>
 

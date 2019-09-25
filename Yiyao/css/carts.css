@@ -316,22 +316,38 @@ a:hover{
     margin-right: 10px;
     margin-left: 15px;
 }
-.bar-wrapper .bar-right .calBtn{
+.bar-wrapper .bar-right .calBtn,.bar-wrapper .bar-right .goshop{
     float: left;
 }
-.bar-wrapper .bar-right .calBtn a{
+.bar-wrapper .bar-right .calBtn a,.bar-wrapper .bar-right .goshop a{
     display: block;
+    box-sizing: border-box;
     width: 120px;
     height: 50px;
-    color: #fff;
-    background: #B0B0B0;
-    cursor: not-allowed;
     font-size: 22px;
+    font-family: "Microsoft YaHei",tahoma,arial,锟斤拷锟斤拷;
     letter-spacing: 5px;
     text-decoration: none;
     line-height: 50px;
     text-align: center;
     border-radius: 2px;
+}
+.bar-wrapper .bar-right .calBtn a{
+    color: #fff;
+    background: #B0B0B0;
+    cursor: not-allowed;
+    font-weight: bold;
+}
+.bar-wrapper .bar-right .goshop a{
+    color: #E41C0C;
+    border: 1px solid #E41C0C;
+    background: #fff;
+    cursor: pointer;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 5px 10px;
+    font-weight: normal;
 }
 .bar-wrapper .bar-right .calBtn a.btn_sty{
     background: #f40;
