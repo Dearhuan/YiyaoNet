@@ -48,6 +48,18 @@
         <li class="s_m"><a href="" class="nav_link red">中药抓药</a></li>
         <li class="s_m"><a href="" class="nav_link">投资者关系</a></li>
       </ul>
+      <div class="searchForm" style="display:none">
+        <label class="combobox-placeholder" id="combobox-placeholder2" for="fix_keyword"
+          style="display: none;">请输入商品名、症状、人群等</label>
+        <input maxlength="100" value="" name="kw" id="fix_keyword" type="text">
+        <button class="searchBtn">
+          <img src="//s.maiyaole.com/images/201306/images/search.png">
+        </button>
+        <div style="display: none;" class="search_tips_result_new" id="fix_searchSuggest">
+          <ul></ul>
+          <a href="" class="hd_clear_history_record" style="display: block;">清除近期搜索记录</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -988,17 +1000,17 @@
         });
       }).then(function () {
         getDatWithPage(currentType, 0);
-      })
+      });
 
       /* 002-当拿到数据后根据数据来渲染页面 */
+      // new Promise(function (resolve, reject) {
       $("#ipage").on("click", "a", function (e) {
         e.preventDefault();
         $(this).addClass("active").siblings().removeClass("active");
         /* 先获取当前是第几页 */
         let index = $(this).index();
-        // console.log(index);
         getDatWithPage(currentType, index);
-      })
+      });
 
       let getDatWithPage = (type, page) => {
         $.ajax({
@@ -1025,13 +1037,13 @@
                     <a class="productName" href="./detail.html?product/${ele.gid}" target="_blank">
                       <span class=" list_lable_self"></span>
                       ${ele.title}</a>
+                    <a class="productName" href="" target="_blank">${ele.info}</a>
                   </p>
                   <div class="sell_type_div">
                     <span class="comment comment_right">
                       <a href="">评价<em>${ele.comment}</em>条</a>  
                     </span>
                     <span class="goldseller_name self_name">${ele.store}</span>
-                    <div class="browse"></div>
                   </div>
                   <div id="buyInfo_844162" class="search_list_op">
                     <a class="search_list_reduce_gray"></a>
@@ -1045,6 +1057,7 @@
                   `
             }).join("");
             $("#itemSearchList").html(html);
+            changeNum(); //改变页面时调用（改变数量，加购物车）
           },
           error: function () {
             console.log("++");
@@ -1084,46 +1097,70 @@
 
     });
 
-    window.onload = function () {
+    function changeNum() {
       let plus = $('.search_list_plus'),
-          reduce = $('.search_list_reduce_gray'),
-          add_cart = $('.buy');
-      plus.click(function (e) {
+        reduce = $('.search_list_reduce_gray'),
+        add_cart = $('.add_cart_btn');
+      plus.click(function (e) { //数量加
         e.preventDefault();
         let inputVal = $(this).prev('input'),
-            count = parseInt(inputVal.val())+1;
+          count = parseInt(inputVal.val()) + 1;
         inputVal.val(count);
-        if(inputVal.val()>1){
+        if (inputVal.val() > 1) {
           reduce.addClass('search_list_reduce').removeClass('search_list_reduce_gray')
         }
       });
-      reduce.click(function (e) {
+      reduce.click(function (e) { //数量减
         e.preventDefault();
         let inputVal = $(this).next('input'),
-            count = parseInt(inputVal.val())-1;
-        if(inputVal.val()>1){
+          count = parseInt(inputVal.val()) - 1;
+        if (inputVal.val() > 1) {
           inputVal.val(count);
           $(this).addClass('search_list_reduce').removeClass('search_list_reduce_gray')
         };
-        if(inputVal.val()==1){
+        if (inputVal.val() == 1) {
           $(this).addClass('search_list_reduce_gray').removeClass('search_list_reduce')
         }
       });
       add_cart.click(function (e) {
         e.preventDefault();
-
-      });
-
-      $('#sortul li').mouseenter(function () {
-        $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
-        $(this).children('.category').css('display', 'block');
-      });
-      $('#sortul li').mouseleave(function () {
-        $(this).removeClass('stitle_hover');
-        // $('#allCategoryHeader').css('display', 'none');
-        $(this).children('.category').css('display', 'none');
+        let gid = Number($(this).parent().parent().attr('gid'))
+        num = Number($(this).siblings('.num').val()),
+          src = $(this).parent().siblings('a').children().attr('src'),
+          price = Number($(this).parent().siblings('.price').text().trim()),
+          title = $(this).parent().siblings('.titleBox').children('a').first().text().trim(),
+          store = $(this).parent().siblings('.sell_type_div').children('span').last().text(),
+          comment = Number($(this).parent().siblings('.sell_type_div').children('span').first().children()
+          .children().text());
+        $.ajax({
+          type: "post",
+          url: "../api/cart.php",
+          data: {
+            gid: gid,
+            title: title,
+            src: src,
+            price: price,
+            num: num,
+            comment: comment,
+            store: store
+          },
+          dataType: "json",
+          success: function (res) {
+            console.log(res);
+          }
+        });
       });
     }
+    
+    $(window).scroll(()=>{   //动态吸顶导航栏
+      if($(document).scrollTop() >= 164){
+        $('.head_wrap').addClass('hd_nav_fixed');
+      }
+      else{
+        $('.head_wrap').removeClass('hd_nav_fixed');
+      }
+    })
+    
   </script>
 </body>
 

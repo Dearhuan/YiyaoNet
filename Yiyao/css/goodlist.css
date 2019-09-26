@@ -12,19 +12,21 @@ textarea {
   width: 1190px;
 }
 
-.sortbox{
+.sortbox {
   display: none;
 }
 
 .searchColSub {
   width: 180px;
 }
+
 .itemChoose {
   overflow: hidden;
   margin: 10px 0;
   border: 1px solid #dbdbdb;
   border-top: 0;
 }
+
 .itemChoose h2 {
   font-size: 14px;
   font-weight: bold;
@@ -32,9 +34,13 @@ textarea {
   background-color: #ddd;
   border-top: 1px solid #dbdbdb;
 }
-.itemChoose h2 a, .itemChoose h3 a, .itemChoose li a {
+
+.itemChoose h2 a,
+.itemChoose h3 a,
+.itemChoose li a {
   color: #5e5e5e;
 }
+
 .itemChoose h3 {
   height: 36px;
   overflow: hidden;
@@ -44,9 +50,11 @@ textarea {
   border-top: 1px solid #e6e6e6;
   background-color: #f5f5f5;
 }
-.itemChoose .icon_btn{
+
+.itemChoose .icon_btn {
   background: url(//s.maiyaole.com/images/201306/images/global/search_sprite.png) no-repeat 0px 0px;
 }
+
 .itemChoose h3 .icon_btn {
   height: 38px;
 }
@@ -58,22 +66,27 @@ textarea {
   outline: none;
   background-position: -53px 13px;
 }
+
 .itemChoose h3 .icon_btn.open {
   background-position: -15px 13px;
 }
 
-.itemChoose h3 a:hover, .itemChoose li a:hover {
+.itemChoose h3 a:hover,
+.itemChoose li a:hover {
   color: #e54948;
 }
+
 .itemChoose ul {
   padding: 7px 0;
   overflow: hidden;
 }
+
 .itemChoose li {
   line-height: 25px;
   white-space: nowrap;
   padding: 0 5px 0 34px;
 }
+
 .itemChoose li a span {
   color: #999;
   font-weight: normal;
@@ -137,8 +150,7 @@ textarea {
 }
 
 .rankOp ul.rank li.up a,
-.rankOp ul.rank li.down a
-{
+.rankOp ul.rank li.down a {
   background: #fff;
   color: #e54948;
   font-weight: bold;
@@ -147,7 +159,8 @@ textarea {
 .rankOp ul.rank li {
   border-right: 1px solid #dbdbdb;
 }
-.rankOp ul.rank li.cur{
+
+.rankOp ul.rank li.cur {
   background: #fff;
 }
 
@@ -325,8 +338,24 @@ textarea {
   z-index: 0;
   width: 200px;
   margin: 7px 14px 10px 14px;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   background-color: #fff;
+}
+
+.itemSearchResult li .backOn {
+  z-index: 101;
+  border-color: #eaeaea;
+  background-color: #fff;
+}
+
+.itemSearchResult li .backOn .promo_info .promo_info_left {
+  height: auto;
+  overflow: auto;
+}
+
+.itemSearchResult li .backOn .promo_info {
+  height: auto;
+  overflow: auto;
 }
 
 .itemSearchResult li .pro_img {
@@ -381,7 +410,7 @@ u {
   height: 20px;
   color: #333333;
   line-height: 20px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .backOn .productName {
@@ -431,14 +460,17 @@ u {
   line-height: 20px;
   clear: both;
 }
+
 .itemSearchList .comment a {
   /* color: #0083ce; */
   float: left;
   padding-right: 20px;
 }
+
 .itemSearchList .comment_right a {
   color: #9d9d9d;
 }
+
 .itemSearchList .comment_right a em {
   font-style: normal;
   color: #ff6666;
@@ -469,6 +501,7 @@ u {
   height: 14px;
   margin-top: 6px;
 }
+
 .search_list_op {
   height: 28px;
   border: 1px solid #e5e5e5;
@@ -476,7 +509,11 @@ u {
   padding: 0 5px;
   outline: none;
 }
-.itemSearchResult li a.search_list_reduce, .itemSearchResult li a.search_list_reduce_gray, .itemSearchResult li a.search_list_plus, .itemSearchResult li a.search_list_plus_gray {
+
+.itemSearchResult li a.search_list_reduce,
+.itemSearchResult li a.search_list_reduce_gray,
+.itemSearchResult li a.search_list_plus,
+.itemSearchResult li a.search_list_plus_gray {
   width: 21px;
   height: 21px;
   border: 0;
@@ -484,26 +521,35 @@ u {
   vertical-align: middle;
   cursor: pointer;
 }
+
 .itemSearchResult li a.search_list_reduce {
   margin-right: 2px;
   background-position: 0 -23px;
 }
+
 .itemSearchResult li a.search_list_reduce_gray {
   margin-right: 2px;
   background-position: 0 0;
   cursor: no-drop;
 }
-.itemSearchResult li .search_list_op a{
+
+.itemSearchResult li .search_list_op a {
   display: inline-block;
 }
-.itemSearchResult li .search_list_op a.search_list_reduce, .itemSearchResult li .search_list_op a.search_list_reduce_gray, .itemSearchResult li .search_list_op a.search_list_plus, .itemSearchResult li .search_list_op input.search_list_plus_gray {
+
+.itemSearchResult li .search_list_op a.search_list_reduce,
+.itemSearchResult li .search_list_op a.search_list_reduce_gray,
+.itemSearchResult li .search_list_op a.search_list_plus,
+.itemSearchResult li .search_list_op input.search_list_plus_gray {
   margin-top: 4px;
   width: 19px;
   height: 19px;
 }
+
 .itemSearchResult li .search_list_op a.search_list_reduce_gray {
   background-position: -1px -1px;
 }
+
 .itemSearchResult li input.num {
   width: 30px;
   height: 19px;
@@ -513,16 +559,19 @@ u {
   text-align: center;
   vertical-align: middle;
 }
+
 .itemSearchResult li .search_list_op input.num {
   margin-top: 4px;
   border-top: none;
   border-bottom: none;
   height: 14px;
 }
+
 .itemSearchResult li a.search_list_plus {
   margin: 0 7px 0 2px;
   background-position: -23px -23px;
 }
+
 .itemSearchResult li .search_list_op a.search_list_plus {
   background-position: -24px -24px;
 }
@@ -537,11 +586,13 @@ u {
   vertical-align: middle;
   cursor: pointer;
 }
+
 .itemSearchResult li .buy {
   background: #e62418 none;
   font-size: 12px;
   color: #fff;
 }
+
 .itemSearchResult li .search_list_op .op_right_btn {
   padding-left: 26px;
   width: 88px;
@@ -552,9 +603,11 @@ u {
   background-repeat: no-repeat;
   background-size: 15px 15px;
 }
+
 .itemSearchResult li .search_list_op .border_left {
   border-left: 1px solid #e5e5e5;
 }
+
 .itemSearchResult li .search_list_op .add_cart_btn {
   background-image: url(//s.maiyaole.com/images/201306/images/searchList/search_cart.png);
   background-position: 8px 50%;
@@ -616,4 +669,99 @@ u {
 
 .ipage a:active {
   opacity: .8
+}
+.searchForm {
+  float: left;
+  margin: 34px 0 0 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 9999;
+}
+.searchForm .combobox-placeholder {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  line-height: 40px;
+  padding-left: 12px;
+  color: #5e5e5e;
+  width: 393px;
+  height: 30px;
+  overflow: hidden;
+  zoom: 1;
+}
+.searchForm input {
+  width: 435px;
+  outline: 0;
+  float: left;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 5px 0 9px;
+  border: 1px solid #c7a774;
+  color: #666;
+  font-size: 15px;
+  vertical-align: middle;
+  background-color: #fff;
+}
+.searchBtn {
+  float: left;
+  width: 82px;
+  height: 46px;
+  /* line-height: 55px; */
+  border: 1px solid #c7a774;
+  cursor: pointer;
+  background-color: #fff;
+  margin-left: -1px;
+}
+.searchBtn img {
+  vertical-align: initial;
+}
+.searchForm .search_tips_result_new {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 449px;
+}
+.searchForm .search_tips_result_new ul li a {
+  display: block;
+  line-height: 26px;
+  color: #333;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.searchForm .hd_clear_history_record {
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #666;
+  line-height: 26px;
+  text-decoration: none;
+}
+.hd_nav_fixed {
+  box-shadow: 0 0 5px #999;
+}
+.hd_nav_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #e0e0e0;
+}
+.hd_nav_fixed .sitenav {
+  display: none;
+}
+.hd_nav_fixed .searchForm {
+  display: block!important;
+  margin: 0;
+  left: 180px;
+}
+.hd_nav_fixed .searchForm input {
+  background-color: #fff;
+  border: 1px solid #c7a774;
+}
+.hd_nav_fixed .searchForm .searchBtn {
+  background-color: #fff;
 }

@@ -85,7 +85,7 @@ $.ajax({ //tabs渲染
               </li>`
     }));
     $('#sortul').find('i').addClass('iconfont');
-    $('#sortul li a').eq(0).attr('href','./goodlist.html');
+    $('#sortul li a').eq(0).attr('href', './goodlist.html');
   }
 });
 
@@ -208,22 +208,32 @@ new Promise(function (resolve, reject) {
       });
     })
   })
-})
+});
+
+setTimeout(() => { //TopTips
+  $('.safe_warm').slideDown();
+}, 1000);
 
 
-window.onload = function () { //brand切换
-  $('.y_foot .fri_tit').on('mouseenter', 'li', function () {
+
+window.onload = function () {
+  $('.close_ico').click(function () {
+    console.log(this)
+    $(this).parent().parent().slideUp();
+  });
+
+  $('.y_foot .fri_tit').on('mouseenter', 'li', function () { //brand切换
     console.log(this, $(this).index());
     $(this).stop().animate().addClass('cur').siblings().removeClass('cur');
     $('.ft_friendlylink').children('div').eq($(this).index()).css('display', 'block').siblings('div').css('display', 'none');
   });
 
-  $('#sortul li').hover(function(){
+  $('#sortul li').hover(function () {
     $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
-    $(this).children('div').css('display','block');
-  },function(){
+    $(this).children('div').css('display', 'block');
+  }, function () {
     $(this).removeClass('stitle_hover');
-    $(this).children('div').css('display','none');
+    $(this).children('div').css('display', 'none');
   })
 
   $('.f_top').click((e) => { //回到顶部
@@ -290,6 +300,98 @@ window.onload = function () { //brand切换
     $('html,body').animate({ //$('html,body')兼容问题body属于chrome
       scrollTop: 0
     }, 1000)
+  });
+
+  $('.fi').hover(function () { //float_box
+    console.log(this, 'aaa');
+    $(this).find('i').css('display', 'none');
+  }, function () {
+    console.log(this, 'bbb');
+    $(this).find('i').css('display', 'block');
+  });
+
+
+  $('.iyaonet').on('mouseenter', function () { //我的医药网（鼠标移入移出）
+    $(this).siblings('ul').stop().show();
+    $(this).siblings('ul').on('mouseenter', 'li', function () {});
+    $(this).siblings('ul').on('mouseleave', function () {
+      $(this).hide();
+    })
+  });
+
+  $('.favorite').click(function (e) { //收藏本站
+    e.preventDefault();
+    alert('抱歉，您所使用的的浏览器无法完成此操作 \n 加入收藏失败，请使用Ctrl+D进行添加');
+  });
+
+  $('.province_box').hover(function () { //省份
+    $(this).children('ul').stop().show();
+  }, function () {
+    $(this).children('ul').hide();
+  });
+
+  $('#headerAllProvince').on('click', 'a', function (e) {
+    e.preventDefault();
+    $('.province').children().text($(this).text());
+  })
+
+  $('.tell').hover(function () { //手机二维码
+    $(this).siblings('.tell_title').stop().show();
+    $(this).siblings('#menu_bd_app').stop().show();
+  }, function () {
+    $(this).siblings('.tell_title').hide();
+    $(this).siblings('#menu_bd_app').hide();
+  });
+
+  $('.mod_minicart').hover(function () {
+    $(this).children('#minicart_list').stop().show();
+    $.ajax({
+      type: "get",
+      url: "../api/getCartData.php",
+      dataType: "json",
+      success: function (res) {
+        console.log(res);
+        let num = res.data.goods.length,
+          data = res.data.goods;
+        console.log(num);
+        if (num > 0) {
+          $('.mod_minicart').html(`<a rel="nofollow" target="_self" href="" class="mini_cart_btn">
+          <span class="iconfont icongouwuche"></span>
+          <em class="cart_num">${num}</em>
+          <span class="icart">购物车</span>
+          <span class="iconfont iconjiantou1"></span>
+        </a>
+        <div id="minicart_list" style="display: block;" class="minicart_list">
+          <div class="list_detail">
+            <!--购物车有商品时begin-->
+            <ul style="display: block;">${data.map(li=>{
+              return `<li><a traget="_blank" class="pro_img" href=""><img heigth="40" width="40"
+              src=${li.src} onerror="imgERROR(this,'no_pic_50_50.jpg');"></a><a
+            traget="_blank" class="pro_name" href="./detail.html?product/${li.gid}">${li.title}</a><span class="pro_price">¥${li.price}</span>
+          <div class="num_box"><b name="editName_${li.gid}" class="minusDisable"></b><input type="text" class="minicart_num" value="${li.num}">
+            <b name="editName_${li.gid}" class="plus" ></b><a target="_self" style="display:block;" href="">删除</a></div>
+        </li>`;
+            }).join('')}</ul>
+            <div class="checkout_box" style="display: block;">
+              <p>
+                <span class="fl"> 共<em class="fstrong"></em>件商品</span> 合计：<em class="fstrong">¥0.00</em>
+              </p>
+              <p id="miniCart_p2">
+                <span style="color: gray;"> 满百免运费 </span>
+              </p>
+              <a rel="nofollow" class="checkout_btn" href="./cart.html" target="_self"> 去结算 </a>
+            </div>
+            <div style="display: none;" class="none_tips">
+              <i> </i>
+              <p>您的购物车里还没有商品，如已添加商品，请 <a rel="nofollow" href="./login.html" target="_self">登录 </a> 。</p>
+            </div>
+          </div>
+        </div>`)
+        }
+      }
+    });
+  }, function () {
+    $(this).children('#minicart_list').hide();
   });
 
 
