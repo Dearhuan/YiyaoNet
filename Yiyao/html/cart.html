@@ -8,7 +8,7 @@
   <title>我的购物车</title>
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/base_px.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <!-- <link rel="stylesheet" href="../css/index.css"> -->
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/carts.css">
   <link rel="stylesheet" href="../css/foot_simple.css">
@@ -23,18 +23,34 @@
     $('body').append('<div id="head"></head>');
     $('#head').load('./head.html');
   </script>
-
+  <div class="c_head clearfix">
+    <h1 id="logo"> <a title="1药网" target="_top" class="logo" href="./index.html">1药网<span class="i"></span></a>
+    </h1>
+    <div class="flow-steps">
+      <ol class="num5">
+        <li class="current">
+          <span>1. 我的购物车</span>
+        </li>
+        <li>
+          <span>2. 填写核对订单信息</span>
+        </li>
+        <li class="last">
+          <span>3. 成功提交订单</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <!--------------------------------购物车-------------------------------->
   <section class="cartMain">
     <div class="cartMain_hd">
       <ul class="order_lists cartTop">
         <li class="list_chk">
-          <!--所有商品全选-->
           <input type="checkbox" id="all" class="whole_check">
           <label for="all"></label>
           全选
         </li>
         <li class="list_con">商品信息</li>
-        <li class="list_info">评价数</li>
+        <li class="list_info">商品参数</li>
         <li class="list_price">单价</li>
         <li class="list_amount">数量</li>
         <li class="list_sum">金额</li>
@@ -42,12 +58,18 @@
       </ul>
     </div>
 
-    <!--底部-->
     <div class="bar-wrapper">
+      <div class="bar-left">
+        <li class="list_chk">
+          <input type="checkbox" id="all2" class="whole_check">
+          <label for="all2"></label>
+          全选
+        </li>
+        <li class="list_delall">清空购物车</li>
+      </div>
       <div class="bar-right">
         <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
         <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
-        <div class="goshop"><a href="./index.html">继续购物</a></div>
         <div class="calBtn"><a href="javascript:;">结算</a></div>
       </div>
     </div>
@@ -59,8 +81,7 @@
     <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
         class="dialog-close">关闭</a></div>
   </section>
-
-  <!-- <script src="../js/carts.js"></script> -->
+  <script src="../js/carts.js"></script>
 
   <!-- ------------------------------猜你喜欢------------------------------------------- -->
   <div class="recommend_cart">
@@ -69,45 +90,45 @@
       <ul class="recommend_ul">
         <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
           id="syhh">
-          <p><a href="//www.111.com.cn/product/50258970.html" title="松树 诺氟沙星片 0.1g*24片"><img class="pro_img"
-                src="https://p3.maiyaole.com/img/50258/50258970/120_120.jpg" alt="松树 诺氟沙星片 0.1g*24片"><span>松树 诺氟沙星片
-                0.1g*24片</span></a></p>
-          <p class="price"><span class="bfd_ls_price">￥5.00</span></p>
+          <p><a href="//www.111.com.cn/product/50088073.html" title="云南白药 小柴胡颗粒 10g*6袋"><img class="pro_img"
+                src="https://p3.maiyaole.com/img/50088/50088073/120_120.JPG" alt="云南白药 小柴胡颗粒 10g*6袋"><span>云南白药 小柴胡颗粒
+                10g*6袋</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥12.00</span></p>
         </li>
         <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
           id="syhh">
-          <p><a href="//www.111.com.cn/product/50522414.html" title="佳美舒 阿奇霉素肠溶胶囊 微丸型 0.25g*6粒"><img class="pro_img"
-                src="https://p1.maiyaole.com/img/item/201701/09/200_20170109164113850.jpg"
-                alt="佳美舒 阿奇霉素肠溶胶囊 微丸型 0.25g*6粒"><span>佳美舒 阿奇霉素肠溶胶囊 微丸型 0.25g*6粒</span></a></p>
-          <p class="price"><span class="bfd_ls_price">￥35.90</span></p>
+          <p><a href="//www.111.com.cn/product/50097411.html" title="贵州百灵 维C银翘片 18片 "><img class="pro_img"
+                src="https://p3.maiyaole.com/img/50097/50097411/120_120.jpg?a=981030183"
+                alt="贵州百灵 维C银翘片 18片 "><span>贵州百灵 维C银翘片 18片 </span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥3.00</span></p>
         </li>
         <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
           id="syhh">
-          <p><a href="//www.111.com.cn/product/50311989.html" title="联环 盐酸多西环素片 0.1g*100片"><img class="pro_img"
-                src="https://p1.maiyaole.com/img/50311/50311989/120_120.jpg" alt="联环 盐酸多西环素片 0.1g*100片"><span>联环 盐酸多西环素片
-                0.1g*100片</span></a></p>
-          <p class="price"><span class="bfd_ls_price">￥23.30</span></p>
+          <p><a href="//www.111.com.cn/product/974472.html" title="以岭 连花清瘟胶囊 24粒"><img class="pro_img"
+                src="https://p2.maiyaole.com/img/item/201909/20/200_20190920151507123.jpg" alt="以岭 连花清瘟胶囊 24粒"><span>以岭
+                连花清瘟胶囊 24粒</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥15.50</span></p>
         </li>
         <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
           id="syhh">
-          <p><a href="//www.111.com.cn/product/50500600.html" title="亚邦 桑美克拉霉素胶囊 0.25g*6s"><img class="pro_img"
-                src="https://p1.maiyaole.com/img/item/201609/23/200_20160923130934308.jpg"
-                alt="亚邦 桑美克拉霉素胶囊 0.25g*6s"><span>亚邦 桑美克拉霉素胶囊 0.25g*6s</span></a></p>
-          <p class="price"><span class="bfd_ls_price">￥9.30</span></p>
+          <p><a href="//www.111.com.cn/product/972424.html" title="白云山 何济公 阿咖酚散 100包"><img class="pro_img"
+                src="https://p4.maiyaole.com/img/item/201808/13/200_20180813151044553.jpg"
+                alt="白云山 何济公 阿咖酚散 100包"><span>白云山 何济公 阿咖酚散 100包</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥13.00</span></p>
         </li>
         <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
           id="syhh">
-          <p><a href="//www.111.com.cn/product/50080492.html" title="申洛 头孢克洛缓释胶囊 0.1875g*12粒"><img class="pro_img"
-                src="https://p3.maiyaole.com/img/201411/05/120_2014110513551696.jpg"
-                alt="申洛 头孢克洛缓释胶囊 0.1875g*12粒"><span>申洛 头孢克洛缓释胶囊 0.1875g*12粒</span></a></p>
-          <p class="price"><span class="bfd_ls_price">￥28.80</span></p>
+          <p><a href="//www.111.com.cn/product/50093220.html" title="安药 感冒清热颗粒 12g*10袋"><img class="pro_img"
+                src="https://p2.maiyaole.com/img/201510/05/120_20151005192432655.JPG" alt="安药 感冒清热颗粒 12g*10袋"><span>安药
+                感冒清热颗粒 12g*10袋</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥9.90</span></p>
         </li>
         <li class="bfd_sc_li1" data-sjtj="syhh" data-ywpoint="null_null_null_null_I0154_0" data-algorithmid="10"
           id="syhh">
-          <p><a href="//www.111.com.cn/product/987812.html" title="克拉仙 克拉霉素片 0.25g*8片"><img class="pro_img"
-                src="https://p2.maiyaole.com/img/987/987812/120_120.jpg?a=1550737125" alt="克拉仙 克拉霉素片 0.25g*8片"><span>克拉仙
-                克拉霉素片 0.25g*8片</span></a></p>
-          <p class="price"><span class="bfd_ls_price">￥60.80</span></p>
+          <p><a href="//www.111.com.cn/product/972416.html" title="陈李济 壮腰健肾丸 35g/瓶"><img class="pro_img"
+                src="https://p1.maiyaole.com/img/972/972416/120_120.jpg?a=1377640268" alt="陈李济 壮腰健肾丸 35g/瓶"><span>陈李济
+                壮腰健肾丸 35g/瓶</span></a></p>
+          <p class="price"><span class="bfd_ls_price">￥13.80</span></p>
         </li>
       </ul>
     </div>
@@ -120,7 +141,7 @@
   </script>
 
   <script>
-    window.onload = function(){
+    window.onload = function () {
       $.ajax({
         type: "get",
         url: "../api/getCartData.php",
@@ -128,22 +149,21 @@
         success: function (res) {
           let data = res.data;
           console.log(data);
-          $('.cartMain_hd').append(`<div class="cartBox">
+          $(`<div class="cartBox">
       <div class="shop_info">
         <div class="all_check">
-          <!--店铺全选-->
           <input type="checkbox" id="shop_a" class="shopChoice">
           <label for="shop_a" class="shop"></label>
         </div>
         <div class="shop_name">
-          店铺：<a href="javascript:;">${data.store}</a>
+          店铺：<a href="">${data.store}</a>
         </div>
       </div>
       <div class="order_content">${data.goods.map(item=>{
         return `<ul class="order_lists">
           <li class="list_chk">
-            <input type="checkbox" id="checkbox_2" class="son_check">
-            <label for="checkbox_2"></label>
+            <input type="checkbox" id="checkbox_${item.gid}" class="son_check">
+            <label for="checkbox_${item.gid}"></label>
           </li>
           <li class="list_con">
             <div class="list_img"><a href="javascript:;"><img src=${item.src} alt=""></a></div>
@@ -170,10 +190,10 @@
           </li>
         </ul>`;
       }).join('')}</div>
-    </div>`)
+    </div>`).insertAfter('.cartMain_hd');
         }
       });
-      
+
       $.getScript('../js/carts.js');
     }
   </script>

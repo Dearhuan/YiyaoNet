@@ -19,7 +19,7 @@ function switchLoginTab(type) {
   }
 }
 window.onload = function () {
- 
+
 
 
   let usernameInput = $('#userName');
@@ -32,6 +32,8 @@ window.onload = function () {
   let msgInfoBtn = $('#SmsCodeInfoBtn');
   let loginBtn = $('#btnSubmit');
   let quickLogin = $('#btnSubmit4QuickLogin');
+
+  let rememberBtn = $('#rememberPwd');
 
   let usernameVal = "";
   let passwordVal = "";
@@ -252,8 +254,13 @@ window.onload = function () {
         success: function (response) {
           if (response.status == "success") {
             // alert(response.data.msg);
-            Cookie.set('username', usernameVal, '/', 1);
-            Cookie.set('password', passwordVal, '/', 1);
+            if (rememberBtn.is(':checked')) {
+              Cookie.set('username', usernameVal, '/', 14);
+              Cookie.set('password', passwordVal, '/', 14);
+            }else{
+              Cookie.set('username', usernameVal, '/', 1);
+              Cookie.set('password', passwordVal, '/', 1);
+            }
             window.location.href = "./index.html";
           } else {
             alert(response.data.msg);

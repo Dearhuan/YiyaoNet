@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/iconfont.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script src="../js/index.js"></script>
+  <script src="../js/jquery.fly.min.js"></script>
   <script src="../js/Cookie.js"></script>
 </head>
 
@@ -1122,8 +1123,10 @@
           $(this).addClass('search_list_reduce_gray').removeClass('search_list_reduce')
         }
       });
+      let offset = $('.f_wei').offset(); //飞入位置的终点
       add_cart.click(function (e) {
         e.preventDefault();
+        console.log(e.pageX,e.pageY);
         let gid = Number($(this).parent().parent().attr('gid'))
         num = Number($(this).siblings('.num').val()),
           src = $(this).parent().siblings('a').children().attr('src'),
@@ -1131,7 +1134,33 @@
           title = $(this).parent().siblings('.titleBox').children('a').first().text().trim(),
           store = $(this).parent().siblings('.sell_type_div').children('span').last().text(),
           comment = Number($(this).parent().siblings('.sell_type_div').children('span').first().children()
-          .children().text());
+            .children().text());
+        let flyer = $('<img class="u-flyer" src="' + src + '">');
+        flyer.css({
+          "display": "block",
+          "width": "50px",
+          "height": "50px",
+          "border-radius": "50px",
+          "position": "fixed",
+          "z-index": "9999",
+        })
+        flyer.fly({
+          start: {
+            /* left: e.pageX,
+            top: e.pageY, */
+            left: e.clientX,
+            top: e.clientY
+          },
+          end: {
+            left: offset.left - 10,
+            top: offset.top - 10,
+            width: 0,
+            height: 0
+          },
+          onEnd: function(){
+            this.destory();
+          }
+        })
         $.ajax({
           type: "post",
           url: "../api/cart.php",
@@ -1151,16 +1180,14 @@
         });
       });
     }
-    
-    $(window).scroll(()=>{   //动态吸顶导航栏
-      if($(document).scrollTop() >= 164){
+
+    $(window).scroll(() => { //动态吸顶导航栏
+      if ($(document).scrollTop() >= 164) {
         $('.head_wrap').addClass('hd_nav_fixed');
-      }
-      else{
+      } else {
         $('.head_wrap').removeClass('hd_nav_fixed');
       }
     })
-    
   </script>
 </body>
 

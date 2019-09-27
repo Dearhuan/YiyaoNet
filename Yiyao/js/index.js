@@ -7,6 +7,7 @@ $.ajax({ //banner图渲染
     (new Banner(data).init());
     let swiper = new Swiper('.swiper-container', {
       loop: true,
+      mousewheel: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -22,19 +23,26 @@ $.ajax({ //banner图渲染
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    })
+    });
     //鼠标滑过pagination控制swiper切换
     for (i = 0; i < swiper.pagination.bullets.length; i++) {
       swiper.pagination.bullets[i].onmouseover = function () {
         this.click();
       };
-    }
+    };
     //如果你在swiper初始化后才决定使用clickable，可以这样设置
     swiper.params.pagination.clickable = true;
     //此外还需要重新初始化pagination
     swiper.pagination.destroy()
     swiper.pagination.init()
     swiper.pagination.bullets.eq(0).addClass('swiper-pagination-bullet-active');
+
+    $('.swiper-container').mouseenter(() => { //鼠标移入停止切换
+      swiper.autoplay.stop();
+    });
+    $('.swiper-container').mouseleave(() => { //鼠标移入停止切换
+      swiper.autoplay.start();
+    });
   }
 });
 
@@ -214,8 +222,6 @@ setTimeout(() => { //TopTips
   $('.safe_warm').slideDown();
 }, 1000);
 
-
-
 window.onload = function () {
   $('.close_ico').click(function () {
     console.log(this)
@@ -303,17 +309,15 @@ window.onload = function () {
   });
 
   $('.fi').hover(function () { //float_box
-    console.log(this, 'aaa');
     $(this).find('i').css('display', 'none');
   }, function () {
-    console.log(this, 'bbb');
     $(this).find('i').css('display', 'block');
   });
 
 
   $('.iyaonet').on('mouseenter', function () { //我的医药网（鼠标移入移出）
     $(this).siblings('ul').stop().show();
-    $(this).siblings('ul').on('mouseenter', 'li', function () {});
+    // $(this).siblings('ul').on('mouseenter', 'li', function () {});
     $(this).siblings('ul').on('mouseleave', function () {
       $(this).hide();
     })
@@ -330,7 +334,7 @@ window.onload = function () {
     $(this).children('ul').hide();
   });
 
-  $('#headerAllProvince').on('click', 'a', function (e) {
+  $('#headerAllProvince').on('click', 'a', function (e) { //点击省份替换
     e.preventDefault();
     $('.province').children().text($(this).text());
   })
@@ -343,8 +347,8 @@ window.onload = function () {
     $(this).siblings('#menu_bd_app').hide();
   });
 
-  $('.mod_minicart').hover(function () {
-    $(this).children('#minicart_list').stop().show();
+  getCartData();  // 页面进来时发送一次请求，获取购物车数据
+  function getCartData() {
     $.ajax({
       type: "get",
       url: "../api/getCartData.php",
@@ -355,44 +359,94 @@ window.onload = function () {
           data = res.data.goods;
         console.log(num);
         if (num > 0) {
-          $('.mod_minicart').html(`<a rel="nofollow" target="_self" href="" class="mini_cart_btn">
-          <span class="iconfont icongouwuche"></span>
-          <em class="cart_num">${num}</em>
-          <span class="icart">购物车</span>
-          <span class="iconfont iconjiantou1"></span>
-        </a>
-        <div id="minicart_list" style="display: block;" class="minicart_list">
+          $('.cart_num').text(num);
+          $('.icartNum').text(num);
+          let html = `<div class="list_detail">
+          <ul style="display: block;">${data.map((li,index)=>{
+            return `<li><a traget="_blank" class="pro_img" href=""><img heigth="40" width="40"
+        src=${li.src} onerror="imgERROR(this,'no_pic_50_50.jpg');"></a><a
+      traget="_blank" class="pro_name" href="./detail.html?product/${li.gid}">${li.title}</a><span class="pro_price">¥${li.price}</span>
+    <div class="num_box"><b name="editName_${li.gid}" class="minusDisable"></b><input type="text" class="minicart_num" value="${li.num}">
+      <b name="editName_${li.gid}" class="plus" ></b><a target="_self" style="display:block;" href="">删除</a></div>
+  </li>`;
+      }).join('')}</ul></div>`
+          $('.minicart_list').html(html);
+          let total_num = 0;
+          let total_price = 0;
+          $('#minicart_list li').each(function(){
+            let goodNum = parseInt($(this).find('.minicart_num').val());
+            let goodPrice = Math.round(parseFloat($(this).find('.pro_price').text().slice(1))*100)/100;
+            total_num += goodNum;   //当前商品总数量
+            total_price += goodPrice*goodNum;   //总价
+          });
+          console.log(total_num,total_price);
+          $('.minicart_list').append(`<div class="checkout_box" style="display: block;">
+          <p>
+            <span class="fl"> 共<em class="fstrong">${total_num}</em>件商品</span> 合计：<em class="fstrong">¥${total_price}</em>
+          </p>
+          <a rel="nofollow" class="checkout_btn" href="./cart.html" target="_self"> 去结算 </a>
+        </div>
+        <div style="display: none;" class="none_tips">
+          <i> </i>
+          <p>您的购物车里还没有商品，如已添加商品，请 <a rel="nofollow" href="./login.html" target="_self">登录 </a> 。</p>
+        </div>`);
+        } else if (num == 0) {
+          $('.cart_num').text(num);
+          $('.icartNum').text(num);
+          $('.minicart_list').html(`
           <div class="list_detail">
-            <!--购物车有商品时begin-->
-            <ul style="display: block;">${data.map(li=>{
-              return `<li><a traget="_blank" class="pro_img" href=""><img heigth="40" width="40"
-              src=${li.src} onerror="imgERROR(this,'no_pic_50_50.jpg');"></a><a
-            traget="_blank" class="pro_name" href="./detail.html?product/${li.gid}">${li.title}</a><span class="pro_price">¥${li.price}</span>
-          <div class="num_box"><b name="editName_${li.gid}" class="minusDisable"></b><input type="text" class="minicart_num" value="${li.num}">
-            <b name="editName_${li.gid}" class="plus" ></b><a target="_self" style="display:block;" href="">删除</a></div>
-        </li>`;
-            }).join('')}</ul>
-            <div class="checkout_box" style="display: block;">
+            <ul style="display: none;"></ul>
+            <div class="checkout_box" style="display: none;">
               <p>
-                <span class="fl"> 共<em class="fstrong"></em>件商品</span> 合计：<em class="fstrong">¥0.00</em>
-              </p>
-              <p id="miniCart_p2">
-                <span style="color: gray;"> 满百免运费 </span>
+                <span class="fl"> 共<em class="fstrong">${num}</em>件商品</span> 合计：<em class="fstrong">¥0</em>
               </p>
               <a rel="nofollow" class="checkout_btn" href="./cart.html" target="_self"> 去结算 </a>
             </div>
-            <div style="display: none;" class="none_tips">
+            <div style="display: block;" class="none_tips">
               <i> </i>
               <p>您的购物车里还没有商品，如已添加商品，请 <a rel="nofollow" href="./login.html" target="_self">登录 </a> 。</p>
             </div>
-          </div>
-        </div>`)
-        }
+          </div>`)
+        };
       }
     });
-  }, function () {
+  };
+
+  function debounce(fun, delay) { //防抖函数
+    let timer;
+    return function (args) {
+      let that = this;
+      let _args = args;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        fun.call(that, _args)
+      }, delay)
+    }
+  };
+
+  $('.mod_minicart').mouseenter(function () {  //  鼠标移入小购物车
+    $(this).children('#minicart_list').stop().show();
+    debounce(getCartData,1000)();   //防抖
+    
+  });
+
+  $('.mod_minicart').mouseleave(function () {
     $(this).children('#minicart_list').hide();
   });
 
+  $('.f_wei').mouseenter(function(){   //鼠标移入右边小购物车
+    $('#bottom_minicart_list').stop().show();
+  });
+  $('.minicart_list').mouseenter(function(){ 
+    $(this).stop().show();
+    debounce(getCartData,1000)();   //防抖
+  });
+  $('.minicart_list').mouseleave(function(){
+    $(this).hide();
+  });
+  $('.f_wei').mouseleave(function(){   //鼠标移入右边小购物车
+    $('#bottom_minicart_list').hide();
+  });
+ 
 
 }

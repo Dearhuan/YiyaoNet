@@ -476,11 +476,18 @@
   font: 12px Arial, tahoma, \5b8b\4f53;
   background: #fff;
 }
+
+.minibox {
+  width: 350px;
+  height: 100%;
+}
+
 .minusDisable,
 .none_tips i,
 .plus {
   background: url(//s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
 }
+
 .minicart_list .list_detail {
   width: 350px;
   background: #fff;
@@ -508,6 +515,7 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .minicart_list .list_detail li {
   width: 328px;
   height: 40px;
@@ -516,6 +524,7 @@
   position: relative;
   z-index: 999;
 }
+
 .minicart_list .list_detail .num_box {
   float: left;
   width: 65px;
@@ -530,6 +539,13 @@
   padding: 10px;
   text-align: right;
   border-top: 1px solid #d1d1d1;
+}
+
+.list_detail .mall_account .fstrong,
+.minicart_list .list_detail .checkout_box .fstrong {
+  color: #d00;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .minicart_list a {
@@ -552,7 +568,10 @@
   margin-right: 5px;
 }
 
-.minus, .minusDisable, .plus, .plusDisable {
+.minus,
+.minusDisable,
+.plus,
+.plusDisable {
   width: 13px;
   height: 13px;
   margin-top: 3px;
@@ -561,20 +580,22 @@
   vertical-align: middle;
   display: inline-block;
 }
+
 .minus {
-	margin-right: 3px;
-	background-position: 0 -581px
+  margin-right: 3px;
+  background-position: 0 -581px
 }
 
 .minusDisable {
-	margin-right: 3px;
-	background-position: 0 -596px
+  margin-right: 3px;
+  background-position: 0 -596px
 }
 
 .plus {
-	margin-left: 2px;
-	background-position: -15px -581px
+  margin-left: 2px;
+  background-position: -15px -581px
 }
+
 .num_box .minicart_num {
   width: 28px;
   height: 16px;
@@ -950,7 +971,7 @@
 }
 
 .swiper-pagination-bullet {
-  width: 100px;
+  width: 85px;
   height: 6px;
   border-radius: 0%;
 }
@@ -1994,6 +2015,119 @@ a:hover {
   background: url(//s.maiyaole.com/images/201306/img/yw_talk.gif) no-repeat 6px center;
 }
 
+.minicart_list {
+  position: absolute;
+  width: 350px;
+  margin-left: -221px;
+  margin-top: -1px;
+  z-index: 10000;
+  border: #e72418 1px solid;
+  border-top: #e72418 2px solid;
+  font: 12px Arial, tahoma, \5b8b\4f53;
+  background: #fff;
+}
+
+.float_box .minicart_list,
+.float_box .none_tips {
+  width: 268px;
+  left: -270px;
+  margin-left: 0;
+  margin-top: 0;
+  border-top: 1px solid #e72418;
+}
+
+.float_box .minicart_list {
+  top: -26px;
+}
+
+.float_box .minicart_list .list_detail {
+  width: 268px;
+}
+
+#bottom_minicart_list::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+#bottom_minicart_list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #535353;
+}
+
+#bottom_minicart_list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #EDEDED;
+}
+
+.float_box .minicart_list .list_detail ul {
+  width: 268px;
+  height: 207px;
+  margin: 0;
+  top: 0;
+}
+
+.float_box .minicart_list .list_detail li {
+  width: 248px;
+  overflow: hidden;
+  zoom: 1;
+  height: auto;
+}
+
+.float_box .minicart_list .list_detail a.pro_name {
+  width: 125px;
+}
+
+.float_box .minicart_list .list_detail .pro_price {
+  height: 20px;
+}
+
+.float_box .minicart_list .list_detail a.pro_name {
+  width: 125px;
+}
+
+.float_box .minicart_list .list_detail .pro_price {
+  height: 20px;
+}
+
+.float_box .minicart_list .checkout_box {
+  width: 249px;
+  height: 28px;
+  line-height: 28px;
+  padding: 10px 10px 8px 9px;
+}
+
+.float_box .checkout_box p {
+  float: left;
+  width: 170px;
+}
+
+.float_box .minicart_list .list_detail a.checkout_btn {
+  margin-top: 0;
+}
+
+.float_box .none_tips {
+  top: 0;
+}
+
+.float_box .none_tips {
+  position: absolute;
+  height: 176px;
+}
+
+.float_box .none_tips {
+  padding-top: 27px;
+  background-color: #fff;
+  border: #e72419 1px solid;
+  height: 227px;
+}
+
+.float_box .none_tips i {
+  width: 104px;
+  background-position: 15px -370px;
+}
+
 /* ------------------------------------------float_box-------------------------------------------- */
 
 /* -----------------------------------------底部------------------------------------------ */
@@ -2282,3 +2416,50 @@ a:hover {
 }
 
 /* -----------------------------------------底部------------------------------------------ */
+/* -----------------------------------------首屏广告------------------------------------------ */
+.health_packageCon {
+  position: fixed;
+  z-index: 20002;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+.newuser_box {
+  position: fixed;
+  z-index: 20002;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  height: 450px;
+  margin-left: -160px;
+  margin-top: -225px;
+  text-align: center;
+}
+.health_packageCon .close_a {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 320px;
+  top: 0;
+  display: inline-block;
+  background: url(//s.maiyaole.com/images/201306/images/user/close_icon_bg.png) no-repeat 0 0;
+  cursor: pointer;
+}
+.health_packageCon .btn_img {
+  width: 145px;
+  cursor: pointer;
+}
+#guide-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30000;
+  background-color: #000;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  z-index: 1;
+}
+/* -----------------------------------------首屏广告------------------------------------------ */

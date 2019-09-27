@@ -1,12 +1,336 @@
-html,body{
+html,
+body {
     position: relative;
     width: 100%;
     min-height: 950px;
 }
-input[type="checkbox"]{
+
+/* -----------------------------------------头部------------------------------------------ */
+#head {
+    height: 36px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.favorite em,
+.tell em {
+    background: url(https://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+}
+
+.tell em {
+    background-position: right -108px;
+    width: 9px;
+}
+
+.favorite em {
+    background-position: right -61px;
+    width: 15px;
+    margin-left: -2px;
+    margin-right: 5px;
+}
+
+.favorite em {
+    height: 20px;
+    margin-top: 8px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.tell em {
+    height: 20px;
+    margin-top: 8px;
+    margin-right: 0px;
+    overflow: hidden;
+}
+
+.favorite em,
+.tell em {
+    display: inline;
+    float: left;
+    cursor: pointer;
+}
+
+.ult {
+    float: left;
+}
+
+.ult li {
+    float: left;
+}
+
+.ult li a:first-child {
+    border-right: 1px solid #ccc;
+    padding: 0 10px 0 0;
+}
+
+.head a,
+.head span {
+    font-size: 12px;
+    text-align: center;
+    line-height: 36px;
+    color: #5e5e5e;
+}
+
+.ult div {
+    margin: 0 0 0 10px;
+}
+
+.ult .province {
+    margin: 0 0 0 5px;
+}
+
+.province_box {
+    position: relative;
+    z-index: 10000;
+}
+
+.hd_provinceList {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: -1px;
+    width: 280px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #333;
+    font-weight: 400;
+    cursor: default;
+    z-index: -1;
+    padding: 5px 0;
+    border-top: none;
+}
+
+.hd_provinceList li {
+    padding-left: 10px;
+    line-height: 22px;
+    color: #a5a5a5;
+    font-weight: 700;
+    float: none;
+}
+
+.hd_provinceList li em {
+    font-style: normal;
+    float: left;
+    width: 10px;
+    display: block;
+    color: #a5a5a5;
+    line-height: 22px;
+    font-family: tahoma, arial, "??&#65533;&#65533;?";
+}
+
+.hd_provinceList li a {
+    display: inline;
+    float: left;
+    line-height: 22px;
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+.hd_provinceList li a {
+    margin: 0 4px 0 4px;
+    padding: 1px 2px;
+    float: none;
+    font-weight: 400;
+}
+
+.hd_provinceList li a:hover {
+    color: #0083ce;
+    text-decoration: underline;
+}
+
+.urt {
+    float: right;
+}
+
+.urt>li {
+    float: left;
+    /* padding: 0 10px; */
+}
+
+.urt>li a {
+    border-right: 1px solid #ccc;
+    padding: 0 12px;
+}
+
+.urt>li .red {
+    color: #e54948
+}
+
+.urt>li:nth-child(1) a {
+    padding-left: 0;
+}
+
+.urt .last a {
+    border: none;
+    padding: 0;
+}
+
+.iyao {
+    position: relative;
+}
+
+.myyaowang {
+    position: absolute;
+    display: none;
+    top: 38px;
+    z-index: 99999;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.myyaowang li {
+    width: 80px;
+    padding: 2px 0px;
+}
+
+.myyaowang li a {
+    border: none;
+    line-height: 16px;
+    padding: 0 3px;
+}
+
+.telnum {
+    overflow: hidden;
+    float: left;
+    font-size: 12px;
+    color: #c7a774;
+    font-weight: 700;
+    font-family: Tahoma;
+    padding: 0;
+    line-height: 36px;
+    margin: 0 10px 0 10px;
+}
+
+.last {
+    position: relative;
+}
+
+.urt .menu_bd {
+    position: absolute;
+    margin: 0;
+    left: -7px;
+    top: 3px;
+    background: #fff;
+    z-index: 10001;
+}
+
+.tell_title {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    width: 74px;
+    height: 33px;
+    line-height: 33px;
+    overflow: hidden;
     display: none;
 }
-label{
+
+#menu_bd_app {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    display: none;
+    float: left;
+    line-height: 24px;
+    right: -13px;
+    top: 36px;
+    padding: 12px 0 12px 5px;
+    position: absolute;
+    width: 205px;
+}
+
+#menu_bd_app .dimensional {
+    width: 85px;
+    background-position: -88px -223px;
+    height: 85px;
+    display: block;
+    float: left;
+    margin: 0 auto;
+
+}
+
+.dimensional {
+    background: url(//s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+}
+
+#menu_bd_app .redBold {
+    color: #e72418;
+    font-weight: 700;
+    float: none;
+}
+
+#menu_bd_app p {
+    font-size: 12px;
+}
+
+/* -----------------------------------------头部------------------------------------------ */
+/* -----------------------------------------导航------------------------------------------ */
+.c_head {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#logo {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    float: left;
+}
+#logo .logo {
+    color: #0083ce;
+    display: inline-block;
+    font-size: 35px;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+}
+#logo .logo .i {
+    background: url(//s.maiyaole.com/images/cart/check_logo.png) no-repeat 0 0;
+    width: 180px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.flow-steps {
+    float: right;
+    overflow: hidden;
+    margin: 30px auto;
+}
+.flow-steps .num5 li {
+    width: 175px;
+}
+
+.flow-steps li {
+    float: left;
+    background: #f3f3f3 url(//s.maiyaole.com/images/cart/followstep.png) no-repeat right top;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #a5a5a5;
+    padding: 0 15px 0 0;
+    overflow: hidden;
+}
+.flow-steps li.current {
+    background-color: #0083ce;
+    color: #fff;
+    font-weight: bold;
+}
+.flow-steps li span, .flow-steps li strong {
+    display: block;
+}
+.flow-steps li.last {
+    background-image: none;
+}
+/* -----------------------------------------导航------------------------------------------ */
+
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
     position: relative;
     display: inline-block;
     z-index: 1;
@@ -17,66 +341,81 @@ label{
     height: 12px;
     cursor: pointer;
 }
-label.mark{
+
+label.mark {
     background: url("../images/mark1.png") no-repeat -1px -1px;
 }
 
-a:hover{
+a:hover {
     color: #ff873e;
     text-decoration: underline;
 }
 
-.wrap,.wrap_detail,.head_wrap,.nav,.head{
+.wrap,
+.wrap_detail,
+.head_wrap,
+.nav,
+.head {
     margin: 0 auto;
     width: 980px;
     height: 100%;
-  }
+}
 
-.cartMain{
+
+.cartMain {
     position: relative;
     width: 980px;
     min-width: 980px;
     max-width: 980px;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 0px 0px 0px;
     min-height: 210px;
+    height: auto;
 }
+
 /*购物车头部*/
-.cartMain_hd{
+.cartMain_hd {
     width: 100%;
     height: 50px;
     line-height: 50px;
     color: #3c3c3c;
 }
-.cartMain_hd .cartTop{
+
+.cartMain_hd .cartTop {
     height: 50px;
 }
-.cartMain_hd .cartTop .list_chk{
+
+.cartMain_hd .cartTop .list_chk {
     width: 54px;
     text-indent: 30px;
 }
-.cartMain_hd .cartTop .list_con{
+
+.cartMain_hd .cartTop .list_con {
     width: 280px;
 }
-.cartMain_hd .cartTop .list_chk label{
+
+.cartMain_hd .cartTop .list_chk label {
     position: absolute;
     left: 10px;
-    top:19px;
+    top: 19px;
     margin: 0;
 }
-.cartMain_hd .cartTop .list_info{
+
+.cartMain_hd .cartTop .list_info {
     padding: 0;
     text-indent: 15px;
 }
-.cartMain_hd .cartTop .list_con{
+
+.cartMain_hd .cartTop .list_con {
     text-indent: 29px;
 }
 
-.cartBox{
+.cartBox {
     width: 100%;
     margin-bottom: 15px;
 }
-.cartBox .shop_info{
+
+.cartBox .shop_info {
     position: relative;
     width: 100%;
     height: 38px;
@@ -84,122 +423,142 @@ a:hover{
     line-height: 38px;
     vertical-align: baseline;
 }
-.cartBox .shop_info .all_check{
+
+.cartBox .shop_info .all_check {
     position: relative;
     float: left;
     width: 30px;
     height: 38px;
 }
 
-.cartBox .shop_info .all_check input[type="checkbox"]{
+.cartBox .shop_info .all_check input[type="checkbox"] {
     position: absolute;
     z-index: 0;
     left: -20px;
     top: -20px;
 }
-.cartBox .shop_info .all_check .shop{
+
+.cartBox .shop_info .all_check .shop {
     position: absolute;
-    top:13px;
+    top: 13px;
 }
-.cartBox .shop_info .shop_name{
+
+.cartBox .shop_info .shop_name {
     float: left;
 }
 
 
 
 /*商品列表*/
-.cartBox .order_content{
+.cartBox .order_content {
     border: 1px solid #ccc;
 }
-.cartBox .order_content a{
+
+.cartBox .order_content a {
     display: block;
 }
-.order_lists{
+
+.order_lists {
     width: 100%;
     height: 130px;
     border-bottom: 1px solid #e7e7e7;
 }
-.order_lists:last-child{
+
+.order_lists:last-child {
     border-bottom: none;
 }
-.order_lists li{
+
+.order_lists li {
     float: left;
     height: 100%;
     padding: 0 6px;
     text-align: center;
 }
 
-.order_lists .list_chk{
+.order_lists .list_chk {
     position: relative;
     width: 44px;
 }
-.order_lists .list_chk input[type="checkbox"]{
+
+.order_lists .list_chk input[type="checkbox"] {
     position: absolute;
     z-index: 0;
     left: -20px;
     top: -20px;
 }
-.order_lists .list_chk label{
+
+.order_lists .list_chk label {
     margin: 20px 0 0 24px;
 }
 
-.order_lists .list_con{
+.order_lists .list_con {
     width: 280px;
 }
-.order_lists .list_con .list_img{
+
+.order_lists .list_con .list_img {
     width: 60px;
     height: 60px;
     margin-top: 20px;
     float: left;
 }
-.order_lists .list_con .list_img img{
+
+.order_lists .list_con .list_img img {
     width: 100%;
     vertical-align: top;
 }
-.order_lists .list_con .list_text{
+
+.order_lists .list_con .list_text {
     margin: 20px 0 0 10px;
     line-height: 18px;
     width: 200px;
     float: left;
 }
-.order_lists .list_con .list_text a{
+
+.order_lists .list_con .list_text a {
     color: #3c3c3c;
 }
-.order_lists .list_con .list_text a:hover{
+
+.order_lists .list_con .list_text a:hover {
     color: #ff873e;
     text-decoration: underline;
 }
 
-.order_lists .list_info{
+.order_lists .list_info {
     width: 158px;
     box-sizing: border-box;
     padding: 20px 0;
 }
-.order_lists .list_info p{
+
+.order_lists .list_info p {
     color: #9c9c9c;
     line-height: 18px;
     margin-left: 15px;
 }
-.order_lists .list_price{
+
+.order_lists .list_price {
     width: 100px;
 }
-.order_lists .list_price .price{
+
+.order_lists .list_price .price {
     margin-top: 20px;
     line-height: 18px;
-    font-family: Verdana,Tahoma,arial;
+    font-family: Verdana, Tahoma, arial;
     color: #3c3c3c;
     font-weight: bold;
 }
-.order_lists .list_amount{
+
+.order_lists .list_amount {
     width: 100px;
 }
-.order_lists .list_amount .amount_box{
+
+.order_lists .list_amount .amount_box {
     margin: 20px auto;
     width: 77px;
     height: 25px;
     position: relative;
 }
-.order_lists .list_amount .amount_box input{
+
+.order_lists .list_amount .amount_box input {
     width: 39px;
     height: 15px;
     line-height: 15px;
@@ -213,7 +572,8 @@ a:hover{
     left: 18px;
     float: left;
 }
-.order_lists .list_amount .amount_box a{
+
+.order_lists .list_amount .amount_box a {
     float: left;
     height: 23px;
     width: 17px;
@@ -223,55 +583,60 @@ a:hover{
     line-height: 23px;
     color: #444;
     position: absolute;
-    top:0;
+    top: 0;
 }
-.order_lists .list_amount .amount_box a:hover{
+
+.order_lists .list_amount .amount_box a:hover {
     border-color: #ff873e;
     text-decoration: none;
     color: #ff873e;
     z-index: 3;
 }
 
-.order_lists .list_amount .amount_box .reduce{
+.order_lists .list_amount .amount_box .reduce {
     left: 0;
 }
 
-.order_lists .list_amount .amount_box .reSty{
+.order_lists .list_amount .amount_box .reSty {
     color: #cbcbcb;
 }
-.order_lists .list_amount .amount_box .reSty:hover{
+
+.order_lists .list_amount .amount_box .reSty:hover {
     border-right: none;
     border-color: #e5e5e5;
     text-decoration: none;
     color: #cbcbcb;
 }
 
-.order_lists .list_amount .amount_box .plus{
+.order_lists .list_amount .amount_box .plus {
     border-left-color: transparent;
     right: 0;
 }
 
 
-.order_lists .list_sum{
+.order_lists .list_sum {
     width: 115px;
 }
-.order_lists .list_sum .sum_price{
+
+.order_lists .list_sum .sum_price {
     line-height: 18px;
     margin-top: 20px;
-    font-family: Verdana,Tahoma,arial;
+    font-family: Verdana, Tahoma, arial;
     color: #ff0000;
     font-weight: bold;
 }
-.order_lists .list_op{
+
+.order_lists .list_op {
     width: 100px;
 }
-.order_lists .list_op .del{
+
+.order_lists .list_op .del {
     margin-top: 20px;
     line-height: 18px;
 }
 
 /*底部总计算价*/
-.bar-wrapper{
+.bar-wrapper {
     width: 980px;
     height: 50px;
     position: fixed;
@@ -279,35 +644,52 @@ a:hover{
     z-index: 99;
     background: #e5e5e5;
 }
-.bar-wrapper .bar-right{
+.bar-wrapper .bar-left{
+    float: left;
+    color: #3c3c3c;
+}
+.bar-wrapper .bar-right {
     float: right;
     color: #3c3c3c;
 }
-.bar-wrapper .bar-right strong{
+.bar-wrapper .bar-left li{
+    float: left;
+    width: 70px;
+    padding: 0 10px;
+    line-height: 50px;
+}
+.bar-left .list_chk label{
+    margin: 10px 0 0 10px;
+}
+
+.bar-wrapper .bar-right strong {
     color: #f40;
 }
 
-.bar-wrapper .bar-right .piece{
+.bar-wrapper .bar-right .piece {
     float: left;
     min-width: 110px;
     margin-right: 20px;
     height: 50px;
     line-height: 50px;
 }
-.bar-wrapper .bar-right .piece .piece_num{
+
+.bar-wrapper .bar-right .piece .piece_num {
     display: inline-block;
     padding: 0 10px;
     font-weight: 700;
     font-size: 18px;
-    font-family: tohoma,arial;
+    font-family: tohoma, arial;
 }
-.bar-wrapper .bar-right .totalMoney{
+
+.bar-wrapper .bar-right .totalMoney {
     float: left;
     min-width: 100px;
     height: 50px;
     line-height: 50px;
 }
-.bar-wrapper .bar-right .totalMoney .total_text{
+
+.bar-wrapper .bar-right .totalMoney .total_text {
     float: right;
     font-weight: 400;
     font-size: 20px;
@@ -316,29 +698,35 @@ a:hover{
     margin-right: 10px;
     margin-left: 15px;
 }
-.bar-wrapper .bar-right .calBtn,.bar-wrapper .bar-right .goshop{
+
+.bar-wrapper .bar-right .calBtn,
+.bar-wrapper .bar-right .goshop {
     float: left;
 }
-.bar-wrapper .bar-right .calBtn a,.bar-wrapper .bar-right .goshop a{
+
+.bar-wrapper .bar-right .calBtn a,
+.bar-wrapper .bar-right .goshop a {
     display: block;
     box-sizing: border-box;
     width: 120px;
     height: 50px;
     font-size: 22px;
-    font-family: "Microsoft YaHei",tahoma,arial,锟斤拷锟斤拷;
+    font-family: "Microsoft YaHei", tahoma, arial, 锟斤拷锟斤拷;
     letter-spacing: 5px;
     text-decoration: none;
     line-height: 50px;
     text-align: center;
     border-radius: 2px;
 }
-.bar-wrapper .bar-right .calBtn a{
+
+.bar-wrapper .bar-right .calBtn a {
     color: #fff;
     background: #B0B0B0;
     cursor: not-allowed;
     font-weight: bold;
 }
-.bar-wrapper .bar-right .goshop a{
+
+.bar-wrapper .bar-right .goshop a {
     color: #E41C0C;
     border: 1px solid #E41C0C;
     background: #fff;
@@ -349,26 +737,28 @@ a:hover{
     margin: 5px 10px;
     font-weight: normal;
 }
-.bar-wrapper .bar-right .calBtn a.btn_sty{
+
+.bar-wrapper .bar-right .calBtn a.btn_sty {
     background: #f40;
     cursor: pointer;
 }
 
 /*自己定义的模态框*/
-.model_bg{
+.model_bg {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
     z-index: 999;
     display: none;
 }
-.my_model{
+
+.my_model {
     position: fixed;
     display: none;
-    top:50%;
+    top: 50%;
     left: 50%;
     margin-top: -50px;
     margin-left: -200px;
@@ -380,23 +770,28 @@ a:hover{
     padding: 20px;
     background: #fff;
 }
-.my_model .title{
+
+.my_model .title {
     font-size: 14px;
     color: #3c3c3c;
     font-weight: 700;
     margin-bottom: 20px;
 }
-.my_model .title .closeModel{
+
+.my_model .title .closeModel {
     float: right;
     cursor: pointer;
 }
-.my_model p{
-    line-height:16px;
+
+.my_model p {
+    line-height: 16px;
 }
-.my_model .opBtn{
+
+.my_model .opBtn {
     margin-top: 20px;
 }
-.my_model .opBtn a{
+
+.my_model .opBtn a {
     width: 58px;
     height: 28px;
     line-height: 28px;
@@ -409,25 +804,33 @@ a:hover{
     margin-right: 10px;
     font-weight: 700;
 }
-.my_model .dialog-sure{
+
+.my_model .dialog-sure {
     background: #52a0e5;
     color: #fff;
     border: 1px solid #52a0e5;
 }
 
-.my_model .dialog-close{
+.my_model .dialog-close {
     background: #fff;
     border: 1px solid #d9d9d9;
     color: #3c3c3c;
 }
 
 /* 猜你喜欢 */
+#recommend{
+    position: relative;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .recommend_cart {
     width: 980px;
     border: 1px solid #dbdbdb;
-    margin: 20px auto;
+    margin: 38px auto;
     clear: both;
 }
+
 .recommend_cart .recom_tt {
     height: 40px;
     line-height: 40px;
@@ -437,9 +840,11 @@ a:hover{
     font-weight: bold;
     border-bottom: 1px solid #dbdbdb;
 }
+
 .recommend_cart .recom_cart_con {
     padding: 10px 0 2px 0;
 }
+
 .recommend_cart ul {
     margin-left: 0;
 }
@@ -449,6 +854,7 @@ a:hover{
     overflow: hidden;
     margin-left: 15px;
 }
+
 .recommend_cart ul li {
     float: left;
     margin: 0 9px;
@@ -458,6 +864,7 @@ a:hover{
     width: 145px;
     margin-top: 8px;
 }
+
 .bfd_sc_li1 {
     display: inline;
     float: left;
@@ -465,6 +872,7 @@ a:hover{
     padding-bottom: 10px;
     width: 145px;
 }
+
 .bfd_sc_li1 a {
     display: inherit;
     height: 192px;
@@ -481,17 +889,25 @@ a:hover{
     height: 140px;
     width: 140px;
 }
+
 .bfd_sc_li1 a span {
     display: inline-block;
     height: 34px;
     line-height: 34px;
     overflow: hidden;
 }
+
 .price {
     text-align: center;
 }
+
 .bfd_ls_price {
     color: #d00;
     font: bold 16px Arial;
     margin-right: 10px;
+}
+
+/* ----------------------------底部------------------------------ */
+.common_footer_simple {
+    margin-bottom: 36px;
 }
