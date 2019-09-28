@@ -120,13 +120,13 @@ new Promise(function (resolve, reject) {
               <a id="tsSlideLi_${index+1}"><img alt="" src=${ele.simg} title="" class="y_slide_img" style="left:0;z-index:9" id="slideImg_10"></a>
             </div>
             <div class="sale_ads" id="sale_ads_${index+1}">
-              <a href=""><img src="${ele.rimglist[0]}" alt=""></a>
-              <a href=""><img class="last" src="${ele.rimglist[1]}" alt=""></a></div>
+              <a href="./detail.html?product/972419"><img src="${ele.rimglist[0]}" alt=""></a>
+              <a href="./detail.html?product/972419"><img class="last" src="${ele.rimglist[1]}" alt=""></a></div>
           </div>
           <ul class="sp_show clearfix">${ele.bulist.map(item=>{
             return `<li>
-                      <a href=""><img alt="${item.title}" src="${item.src}"></a>
-                      <a href="" class="tit" title="${item.title}">${item.title}</a>
+                      <a href="./detail.html?product/972419"><img alt="${item.title}" src="${item.src}"></a>
+                      <a href="./detail.html?product/972419" class="tit" title="${item.title}">${item.title}</a>
                       <p>${item.price}</p>
                     </li>`
           }).join('')}
@@ -163,13 +163,13 @@ new Promise(function (resolve, reject) {
                 <a id="tsSlideLi_${index+3}"><img alt="" src=${ele.simg} title="" class="y_slide_img" style="left:0;z-index:9" id="slideImg_10"></a>
               </div>
               <div class="sale_ads" id="sale_ads_${index+3}">
-                <a href=""><img src="${ele.rimglist[0]}" alt=""></a>
-                <a href=""><img class="last" src="${ele.rimglist[1]}" alt=""></a></div>
+                <a href="./detail.html?product/972419"><img src="${ele.rimglist[0]}" alt=""></a>
+                <a href="./detail.html?product/972419"><img class="last" src="${ele.rimglist[1]}" alt=""></a></div>
             </div>
             <ul class="sp_show clearfix">${ele.bulist.map(item=>{
               return `<li data-ywpoint="F1001_0_null_null_I1019_0">
-                        <a href=""><img alt="${item.title}" src="${item.src}" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
-                        <a href="" class="tit" title="${item.title}">${item.title}</a>
+                        <a href="./detail.html?product/972419"><img alt="${item.title}" src="${item.src}" onerror="imgERROR(this,'no_pic_80_80.jpg');"></a>
+                        <a href="./detail.html?product/972419" class="tit" title="${item.title}">${item.title}</a>
                         <p>${item.price}</p>
                       </li>`
             }).join('')}
@@ -223,39 +223,17 @@ setTimeout(() => { //TopTips
 }, 1000);
 
 window.onload = function () {
-  $('.close_ico').click(function () {
-    console.log(this)
+  $.getScript('../js/common.js');   
+
+  $('.close_ico').click(function () {  //关闭TopTips
     $(this).parent().parent().slideUp();
   });
 
   $('.y_foot .fri_tit').on('mouseenter', 'li', function () { //brand切换
-    console.log(this, $(this).index());
     $(this).stop().animate().addClass('cur').siblings().removeClass('cur');
     $('.ft_friendlylink').children('div').eq($(this).index()).css('display', 'block').siblings('div').css('display', 'none');
   });
-
-  $('#sortul li').hover(function () {
-    $(this).addClass('stitle_hover').siblings().removeClass('stitle_hover');
-    $(this).children('div').css('display', 'block');
-  }, function () {
-    $(this).removeClass('stitle_hover');
-    $(this).children('div').css('display', 'none');
-  })
-
-  $('.f_top').click((e) => { //回到顶部
-    e.preventDefault();
-    $('html,body').animate({
-      scrollTop: 0
-    }, 1000);
-  });
-
-  let cookieUsername = Cookie.get('username'); //检查cookie
-  let cookiePassword = Cookie.get('password');
-  let cookiePhone = Cookie.get('phone');
-  if (cookieUsername && cookiePassword) {
-    $('#ilogin').text(cookieUsername);
-  };
-
+ 
   $('.consult_tabMenu').on('click', 'div', function () {
     // console.log(this,$(this).index());
     $(this).addClass('tabMenu_cur').siblings().removeClass('tabMenu_cur');
@@ -273,6 +251,7 @@ window.onload = function () {
 
   //1.楼梯什么时候显示，800px scroll--->scrollTop
   $(window).on('scroll', function () {
+    // console.log(123)
     var $scroll = $(this).scrollTop();
     if ($scroll >= 700) {
       $('#elevator_n').show();
@@ -307,146 +286,5 @@ window.onload = function () {
       scrollTop: 0
     }, 1000)
   });
-
-  $('.fi').hover(function () { //float_box
-    $(this).find('i').css('display', 'none');
-  }, function () {
-    $(this).find('i').css('display', 'block');
-  });
-
-
-  $('.iyaonet').on('mouseenter', function () { //我的医药网（鼠标移入移出）
-    $(this).siblings('ul').stop().show();
-    // $(this).siblings('ul').on('mouseenter', 'li', function () {});
-    $(this).siblings('ul').on('mouseleave', function () {
-      $(this).hide();
-    })
-  });
-
-  $('.favorite').click(function (e) { //收藏本站
-    e.preventDefault();
-    alert('抱歉，您所使用的的浏览器无法完成此操作 \n 加入收藏失败，请使用Ctrl+D进行添加');
-  });
-
-  $('.province_box').hover(function () { //省份
-    $(this).children('ul').stop().show();
-  }, function () {
-    $(this).children('ul').hide();
-  });
-
-  $('#headerAllProvince').on('click', 'a', function (e) { //点击省份替换
-    e.preventDefault();
-    $('.province').children().text($(this).text());
-  })
-
-  $('.tell').hover(function () { //手机二维码
-    $(this).siblings('.tell_title').stop().show();
-    $(this).siblings('#menu_bd_app').stop().show();
-  }, function () {
-    $(this).siblings('.tell_title').hide();
-    $(this).siblings('#menu_bd_app').hide();
-  });
-
-  getCartData();  // 页面进来时发送一次请求，获取购物车数据
-  function getCartData() {
-    $.ajax({
-      type: "get",
-      url: "../api/getCartData.php",
-      dataType: "json",
-      success: function (res) {
-        console.log(res);
-        let num = res.data.goods.length,
-          data = res.data.goods;
-        console.log(num);
-        if (num > 0) {
-          $('.cart_num').text(num);
-          $('.icartNum').text(num);
-          let html = `<div class="list_detail">
-          <ul style="display: block;">${data.map((li,index)=>{
-            return `<li><a traget="_blank" class="pro_img" href=""><img heigth="40" width="40"
-        src=${li.src} onerror="imgERROR(this,'no_pic_50_50.jpg');"></a><a
-      traget="_blank" class="pro_name" href="./detail.html?product/${li.gid}">${li.title}</a><span class="pro_price">¥${li.price}</span>
-    <div class="num_box"><b name="editName_${li.gid}" class="minusDisable"></b><input type="text" class="minicart_num" value="${li.num}">
-      <b name="editName_${li.gid}" class="plus" ></b><a target="_self" style="display:block;" href="">删除</a></div>
-  </li>`;
-      }).join('')}</ul></div>`
-          $('.minicart_list').html(html);
-          let total_num = 0;
-          let total_price = 0;
-          $('#minicart_list li').each(function(){
-            let goodNum = parseInt($(this).find('.minicart_num').val());
-            let goodPrice = Math.round(parseFloat($(this).find('.pro_price').text().slice(1))*100)/100;
-            total_num += goodNum;   //当前商品总数量
-            total_price += goodPrice*goodNum;   //总价
-          });
-          console.log(total_num,total_price);
-          $('.minicart_list').append(`<div class="checkout_box" style="display: block;">
-          <p>
-            <span class="fl"> 共<em class="fstrong">${total_num}</em>件商品</span> 合计：<em class="fstrong">¥${total_price}</em>
-          </p>
-          <a rel="nofollow" class="checkout_btn" href="./cart.html" target="_self"> 去结算 </a>
-        </div>
-        <div style="display: none;" class="none_tips">
-          <i> </i>
-          <p>您的购物车里还没有商品，如已添加商品，请 <a rel="nofollow" href="./login.html" target="_self">登录 </a> 。</p>
-        </div>`);
-        } else if (num == 0) {
-          $('.cart_num').text(num);
-          $('.icartNum').text(num);
-          $('.minicart_list').html(`
-          <div class="list_detail">
-            <ul style="display: none;"></ul>
-            <div class="checkout_box" style="display: none;">
-              <p>
-                <span class="fl"> 共<em class="fstrong">${num}</em>件商品</span> 合计：<em class="fstrong">¥0</em>
-              </p>
-              <a rel="nofollow" class="checkout_btn" href="./cart.html" target="_self"> 去结算 </a>
-            </div>
-            <div style="display: block;" class="none_tips">
-              <i> </i>
-              <p>您的购物车里还没有商品，如已添加商品，请 <a rel="nofollow" href="./login.html" target="_self">登录 </a> 。</p>
-            </div>
-          </div>`)
-        };
-      }
-    });
-  };
-
-  function debounce(fun, delay) { //防抖函数
-    let timer;
-    return function (args) {
-      let that = this;
-      let _args = args;
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        fun.call(that, _args)
-      }, delay)
-    }
-  };
-
-  $('.mod_minicart').mouseenter(function () {  //  鼠标移入小购物车
-    $(this).children('#minicart_list').stop().show();
-    debounce(getCartData,1000)();   //防抖
-    
-  });
-
-  $('.mod_minicart').mouseleave(function () {
-    $(this).children('#minicart_list').hide();
-  });
-
-  $('.f_wei').mouseenter(function(){   //鼠标移入右边小购物车
-    $('#bottom_minicart_list').stop().show();
-  });
-  $('.minicart_list').mouseenter(function(){ 
-    $(this).stop().show();
-    debounce(getCartData,1000)();   //防抖
-  });
-  $('.minicart_list').mouseleave(function(){
-    $(this).hide();
-  });
-  $('.f_wei').mouseleave(function(){   //鼠标移入右边小购物车
-    $('#bottom_minicart_list').hide();
-  });
- 
 
 }

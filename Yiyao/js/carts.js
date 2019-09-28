@@ -1,8 +1,96 @@
-/**
- * Created by Administrator on 2017/5/24.
- */
+$.ajax({ //获取商品数据
+    type: "get",
+    url: "../api/getCartData.php",
+    dataType: "json",
+    success: function (res) {
+        let data = res.data;
+        console.log(data);
+        $(`<div class="cartBox">
+    <div class="shop_info">
+      <div class="all_check">
+        <input type="checkbox" id="shop_a" class="shopChoice">
+        <label for="shop_a" class="shop"></label>
+      </div>
+      <div class="shop_name">
+        店铺：<a href="">${data.store}</a>
+      </div>
+    </div>
+    <div class="order_content">${data.goods.map(item=>{
+      return `<ul class="order_lists" gid=${item.gid}>
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_${item.gid}" class="son_check">
+          <label for="checkbox_${item.gid}"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_img"><a href="./detail.html?product/${item.gid}"><img src=${item.src} alt=""></a></div>
+          <div class="list_text"><a href="./detail.html?product/${item.gid}">${item.title}</a></div>
+        </li>
+        <li class="list_info">
+          <p>${item.comment}条评价</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥${item.price}</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box">
+            <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="${item.num}" class="sum">
+            <a href="javascript:;" class="plus">+</a>
+          </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥${Math.round(item.price*item.num*100)/100}</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>`;
+    }).join('')}</div>
+  </div>`).insertAfter('.cartMain_hd');
+    }
+});
+window.onload = function () {
+    // $.getScript('../js/Cookie.js');
+    $('.iyaonet').on('mouseenter', function () { //我的医药网（鼠标移入移出common）
+        $(this).siblings('ul').stop().show();
+        // $(this).siblings('ul').on('mouseenter', 'li', function () {});
+        $(this).siblings('ul').on('mouseleave', function () {
+            $(this).hide();
+        })
+    });
 
-$(function () {
+    $('.favorite').click(function (e) { //收藏本站(common)
+        e.preventDefault();
+        confirm('抱歉，您所使用的的浏览器无法完成此操作 \n 加入收藏失败，请使用Ctrl+D进行添加');
+    });
+
+    $('.province_box').hover(function () { //(省份)(common)
+        $(this).children('ul').stop().show();
+    }, function () {
+        $(this).children('ul').hide();
+    });
+
+    $('#headerAllProvince').on('click', 'a', function (e) { //点击省份替换(common)
+        e.preventDefault();
+        $('.province').children().text($(this).text());
+    })
+
+    $('.tell').hover(function () { //手机二维码(common)
+        $(this).siblings('.tell_title').stop().show();
+        $(this).siblings('#menu_bd_app').stop().show();
+    }, function () {
+        $(this).siblings('.tell_title').hide();
+        $(this).siblings('#menu_bd_app').hide();
+    });
+    let cUsername, cPassword;
+
+    function checkCookie() {
+        cUsername = Cookie.get('username'); //检查cookie
+        cPassword = Cookie.get('password');
+        if (cUsername && cPassword) return true;
+    };
+
+    checkCookie() ? $('#ilogin').text(cUsername) : $('#ilogin').text('请登录');
 
     //全局的checkbox选中和未选中的样式
     var $allCheckbox = $('input[type="checkbox"]'), //全局的全部checkbox
@@ -125,6 +213,16 @@ $(function () {
 
 
     //=================================================商品数量==============================================
+    function changeGoodNum(gid, flag) {
+        $.ajax({
+            type: "post",
+            url: "../api/changeCart.php",
+            data: {
+                gid: gid,
+                flag: flag
+            }
+        });
+    }
     var $plus = $('.plus'),
         $reduce = $('.reduce'),
         $all_sum = $('.sum');
@@ -142,6 +240,9 @@ $(function () {
             $obj.removeClass('reSty');
         }
         totalMoney();
+        let gid = $(this).parents('.order_lists').attr('gid');
+        let flag = 'plus';
+        changeGoodNum(gid, flag);
     });
 
     $reduce.click(function () {
@@ -159,6 +260,9 @@ $(function () {
             $(this).addClass('reSty');
         }
         totalMoney();
+        let gid = $(this).parents('.order_lists').attr('gid');
+        let flag = 'reduce';
+        changeGoodNum(gid, flag);
     });
 
     $all_sum.keyup(function () {
@@ -213,10 +317,15 @@ $(function () {
         totalMoney();
     })
 
+    //清空购物车
     let cartMain = $('.cartMain');
     $('.list_delall').click(function () {
-        alert('确定要清空购物车吗？');
-        cartMain.remove();
+        if (confirm('确定要清空购物车吗？')) {
+            cartMain.remove();
+            let gid = 'remove';
+            let flag = 'remove';
+            changeGoodNum(gid, flag);
+        }
     })
 
     //======================================总计==========================================
@@ -248,7 +357,16 @@ $(function () {
                 calBtn.removeClass('btn_sty');
             }
         }
-    }
+    };
 
-
-});
+    //=======================================结算==========================================
+    let account = $('.calBtn');
+    account.click(function () {
+        if (checkCookie()) {
+            console.log('ok');
+            location.href = './confirmOrder.html';
+        } else {
+            console.log('no')
+        }
+    })
+}

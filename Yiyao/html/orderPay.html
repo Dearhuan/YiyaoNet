@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>订单确认</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/base_px.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/carts.css">
+  <link rel="stylesheet" href="../css/orderPay.css">
+  <link rel="stylesheet" href="../css/foot_simple.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="../js/Cookie.js"></script>
+  <script src="../js/carts.js"></script>
+</head>
+
+<body>
+  <!--  ----------------------------头部---------------------------------------- -->
+  <script>
+    $('body').append('<div id="head"></head>');
+    $('#head').load('./head.html');
+  </script>
+  <div class="c_head clearfix">
+    <h1 id="logo"> <a title="1药网" target="_top" class="logo" href="./index.html">1药网<span class="i"></span></a>
+    </h1>
+    <div class="flow-steps">
+      <ol class="num5">
+        <li>
+          <span>1. 我的购物车</span>
+        </li>
+        <li>
+          <span>2. 填写核对订单信息</span>
+        </li>
+        <li class="last current">
+          <span>3. 成功提交订单</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- -----------------------------商品信息------------------------------------------------ -->
+  <div class="c_content">
+    <div class="success_box zaixin">
+      <div class="s_inner clearfix">
+        <div class="s_l"><i class="s_ok"></i></div>
+        <div class="s_r">
+          <h4>订单已提交成功，请您尽快付款！</h4>
+          <p>请您在提交订单后<b class="red">24小时</b>内完成支付，否则订单会自动取消。 </p>
+          <div class="s_o">
+            <p class="mb10"><b>订单编号：</b>
+              <a href="//my.111.com.cn/ucenter/orderDetail.action?orderId=20190928214058554917" target="_blank"
+                class="blue mr10">20190928214058554917</a>
+              <span class="ml20"> 订单金额：<span class="red">
+                  <em class="f_a">¥</em>34.50</span></span>
+              <a href="javascript:;" onclick="javascript:showOtherBank(0);" class="blue choseother">选择其他在线支付<i
+                  class="b_icon"></i> </a>
+            </p>
+            <div class="p_online" id="orderBankInfo" style="display: block;">
+              <div id="zx_pay_other" style="display: block;">
+                <div class="zx_pay">
+                  <ul class="clearfix">
+                    <li id="userOrderSelectBank" class="b_608">
+                      <input type="radio" class="ra_bank" checked="checked">
+                    </li>
+                    <li class="pay_price">支付金额：<span class="red"><em class="f_a">¥</em>
+                        34.50</span>
+                    </li>
+                  </ul>
+                  <!--Add by Dancy-->
+                  <div class="scanCode clearfix" id="alipayDiv" style="display: none;">
+                    <i class="ico_or">&nbsp;</i>
+                    <div class="sc_box fl">
+                      <h5 class="sc_tit">使用电脑支付</h5>
+                      <div class="sc_pic">&nbsp;</div>
+                      <a href="javascript:;" onclick="javascript:goAndOrderForOrder();" class="pay_last_c"></a>
+                    </div>
+                    <div class="sc_box sc_boxRight fl">
+                      <h5 class="sc_tit">使用支付宝钱包扫一扫即可付款</h5>
+                      <!--h5 class="sc_tit">扫码支付立减5-10元（名额有限）</h5-->
+                      <div class="sc_pic">
+                        <iframe width="320" height="260" scrolling="no" frameborder="0" id="alipayUrl" src=""></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End add-->
+                  <!--Add by weixin-->
+                  <div class="scanCode clearfix" id="alipayDiv_weixin" style="display: block;">
+                    <div class="erweima fl">
+                      <img id="weixin_MatrixImgUrl"
+                        src="//buy.111.com.cn/payment/getMatrixImg.action?id=20190928214058554917&amp;v=1569678059167"
+                        width="280" height="280">
+                      <div class="btn_tip">请使用微信扫一扫<br>扫描二维码支付</div>
+                    </div>
+                    <div class="saoma fl">
+                      <img src="//s.maiyaole.com/images/201306/images/2014/saoma.png">
+                    </div>
+                  </div>
+                  <!--End add-->
+                </div>
+                <div class="operate clearfix">
+                  <a href="javascript:;" onclick="javascript:goAndOrderForOrder();" class="pay_last" id="common_submit"
+                    style="display: none;"></a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="zx_pay_douli" style="display: none;">
+                <div class="zx_pay">
+                  <div class="pay_h">
+                    <div class="fl">
+                      <label class="lbs mr10" for="">
+                        <input type="radio" checked="">
+                      </label>
+                      <img class="logo_douli" src="//s.maiyaole.com/images/baogang/logo_douli.png" alt="">
+                      <span>兜礼积分</span>
+                    </div>
+                    <span class="fr font12">需扣除兜礼积分：<span class="red">
+                        34.50</span>分</span>
+                  </div>
+                  <div class="pay_b">
+                    <p id="tip_getVerCode">已向您的兜礼账户预留手机号发送验证码，请注意查看</p>
+                    <div class="check_num_box">
+                      <input type="text" class="num" value="" maxlength="1">
+                      <input type="text" class="num" value="" maxlength="1">
+                      <input type="text" class="num" value="" maxlength="1">
+                      <input type="text" class="num" value="" maxlength="1">
+                      <input type="text" class="num" value="" maxlength="1">
+                      <input type="text" class="num" value="" maxlength="1">
+                      <input type="button" id="sendBtn" class="send_btn" value="重新发送">
+                      <p id="douli_pay_error" class="tip">支付失败，手机验证码错误</p>
+                    </div>
+                    <div class="btn_wrap">
+                      <button id="submit" class="btn disable" disabled="disabled">确认支付</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_other" id="showOtherBank" style="display: none;">
+              <div class="p_t">支付平台</div>
+              <ul class="pay_select clearfix">
+                <li data-ywpoint="null_null_null_null_I5000_0" class="zhifu bank"><input type="radio" class="ra_bank"
+                    value="600" name="ra_bank">
+                </li>
+
+                <li data-ywpoint="null_null_null_null_I5000_3" class="weixin bank"><input type="radio" name="ra_bank"
+                    value="608" class="ra_bank" checked="checked"></li>
+                <input value="0 0" type="hidden">
+              </ul>
+              <a href="javascript:;" onclick="javascript:changeBank();" class="paysure_btn">确认支付方式</a>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="mask_div" id="maskDiv" style="display: none;"></div>
+    <div class="pop_pay" id="orderPaySure" style="display: none;">
+      <div class="pop_inner">
+        <h4>请在新的支付页面完成付款！</h4>
+        <p>付款成功：<a href="//my.111.com.cn/ucenter/orderDetail.action?orderId=20190928214058554917" target="_blank"
+            class="blue">查看订单详情</a></p>
+        <p>付款失败：<a href="javascript:;" onclick="javascript:showOtherBank(0);" class="blue">选择其他在线支付</a></p>
+      </div>
+      <a href="javascript:;" onclick="javascript:showMaskDiv(1);" class="pop_close"></a>
+    </div>
+    <div class="wrap">
+      <div class="q_a">
+        付款遇到问题？
+        <b>1.网上银行已经扣款，但订单状态仍显示未付款？</b>
+        答：由于银行的数据没有及时传输给系统，我们会尽快与银行对账后给与确认，请您耐心等待。
+        <b>2.网上银行页面打不开，怎么办？</b>
+        答：建议使用IE浏览器。点击IE菜单“工具”－“Internet选项”－“安全”，将安全中的各项设置恢复到默认级别。
+        <b>3.网上银行重复多次付款了怎么办？</b>
+        答：请联系客服，我们会在你提交申请后，尽快和银行核对。确认您的汇款后，重复支付付款会原路返回至你的支付账户。
+        <b class="red">其他付款问题请咨询客服：400-007-0958</b>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------底部------------------------------------------------- -->
+  <script>
+    $('body').append('<div class="common_footer_simple">');
+    $('.common_footer_simple').load('./footer_simple.html');
+  </script>
+
+  <script>
+    let cookieUsername = Cookie.get('username'); //检查cookie
+    let cookiePassword = Cookie.get('password');
+  </script>
+</body>
+
+</html>

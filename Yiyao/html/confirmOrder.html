@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>订单确认</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/base_px.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/carts.css">
+  <link rel="stylesheet" href="../css/confirmOrder.css">
+  <link rel="stylesheet" href="../css/foot_simple.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="../js/Cookie.js"></script>
+  <script src="../js/carts.js"></script>
+</head>
+
+<body>
+  <!--  ----------------------------头部---------------------------------------- -->
+  <script>
+    $('body').append('<div id="head"></head>');
+    $('#head').load('./head.html');
+  </script>
+  <div class="c_head clearfix">
+    <h1 id="logo"> <a title="1药网" target="_top" class="logo" href="./index.html">1药网<span class="i"></span></a>
+    </h1>
+    <div class="flow-steps">
+      <ol class="num5">
+        <li>
+          <span>1. 我的购物车</span>
+        </li>
+        <li class="current">
+          <span>2. 填写核对订单信息</span>
+        </li>
+        <li class="last">
+          <span>3. 成功提交订单</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- -----------------------------商品信息------------------------------------------------ -->
+  <div class="order-product-wrapper" id="orderItemListInfo">
+    <h3 class="infoTitle"> 商品信息 <a class="gotocart" href="./cart.html">返回购物车修改</a></h3>
+    <div id="orderItemContent">
+      <table cellspacing="0" cellpadding="0" class="showInfoOrder">
+        <colgroup>
+          <col width="10%">
+          <col width="55%">
+          <col width="20%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th class="first_td" colspan="2"><b>1药网</b>
+              <div class="delivery-wrapper"><span>配送方式：</span>
+                <div class="delivery-way"> 普通快递</div>
+              </div>
+            </th>
+            <th>数量</th>
+            <th class="end_td">金额</th>
+          </tr>
+          <tr class="tr_parcel">
+            <td colspan="4"><span>包裹1</span> 18:00之前完成订单，可当日出库。 </td>
+          </tr>
+          <tr data-overseas-shopping="true">
+            <td class="first_td"><img class="product-img"
+                src="https://p1.maiyaole.com/img/item/201907/29/65_20190729100000138.jpg"></td>
+            <td class="taLeft"> 江中 江中 板蓝根颗粒 10g*18袋 </td>
+            <td>6</td>
+            <td class="end_td"><em class="f_a">¥</em> 135.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="order_box clearfix">
+      <div class="box_r">
+        <table class="check_table" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td class="c_name"><span class="red">1</span>种商品，共计<span class="red">6</span>件，总商品金额：</td>
+              <td class="c_price"><em class="f_a">¥</em><span id="theItemAllMoney"> 135.00</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="check_table" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td class="c_name">运费：</td>
+              <td class="c_price red"><em class="f_a">¥</em><span id="orderTheFei">0.00</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pay_float clearfix" id="pay_floatdiv">
+      <div class="p_b clearfix">
+        <div class="p_row1"><span class="pay_lable">应付金额：</span>
+          <div class="p_sum"><span class="pay_allmoney"><em class="f_a">¥</em><em id="theAllMoney">135.00</em></span>
+          </div>
+        </div>
+        <p class="payBox01"><span class="pay_addressinfo">送货至：</span> </p>
+      </div>
+      <div class="p_row3 clearfix">&nbsp;<div class="clearfix"><span data-ywpoint="F4007_null_null_null_I4006_0"
+            class="pay_submit" id="orderSubmitButton">提交订单</span></div>
+        <p id="submitErrorSpan" class="pay_error"><i class="y_icon"></i>请确认收货地址</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------底部------------------------------------------------- -->
+  <script>
+    $('body').append('<div class="common_footer_simple">');
+    $('.common_footer_simple').load('./footer_simple.html');
+  </script>
+
+  <script>
+    let cookieUsername = Cookie.get('username'); //检查cookie
+    let cookiePassword = Cookie.get('password');
+
+    $('#orderSubmitButton').click(function(){
+      location.href = './orderPay.html';
+    })
+  </script>
+</body>
+
+</html>
