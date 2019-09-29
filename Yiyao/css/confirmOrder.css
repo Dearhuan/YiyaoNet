@@ -89,6 +89,13 @@ h3 {
   padding: 7px 12px 8px;
   color: #5e5e5e;
 }
+.showInfoOrder .tr_parcel td span {
+  display: inline-block;
+  background-color: #dd1300;
+  color: #fff;
+  padding: 1px 5px;
+  margin-right: 14px;
+}
 .showInfoOrder th, .showInfoOrder td {
   text-align: center;
   vertical-align: middle;

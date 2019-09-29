@@ -1,10 +1,11 @@
-.c_content{
+.c_content {
   width: 980px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   line-height: 1.2;
 }
+
 .success_box {
   width: 980px;
   min-height: 184px;
@@ -12,24 +13,47 @@
   border-top: #0083ce 2px solid;
   background-color: #eaf9ff;
 }
+
 .success_box {
   overflow: visible;
   height: auto;
 }
+
 .s_inner {
   padding: 30px 0;
 }
+
 .zaixin .s_l {
   width: 50px;
 }
+
 .s_l {
   width: 340px;
   float: left;
   text-align: right;
 }
-.ad_bgicon, .short-btn, .add-btn, .b_icon, .b_icon_on, .b_icon_off, .invoice-btn, .y_icon, .ok, .s_ok, .w_inner, .pay_last, .paysure_btn, .pop_close, .package_icon, .print_icon, .pay_last_c, .balance_btn {
+
+.ad_bgicon,
+.short-btn,
+.add-btn,
+.b_icon,
+.b_icon_on,
+.b_icon_off,
+.invoice-btn,
+.y_icon,
+.ok,
+.s_ok,
+.w_inner,
+.pay_last,
+.paysure_btn,
+.pop_close,
+.package_icon,
+.print_icon,
+.pay_last_c,
+.balance_btn {
   background: url(//s.maiyaole.com/images/201306/images/2014/cart.png) no-repeat -9999px -9999px;
 }
+
 .s_ok {
   display: inline-block;
   width: 30px;
@@ -40,14 +64,17 @@
   margin-right: 4px;
   background-position: 0 -510px;
 }
+
 .s_r {
   float: right;
   width: 630px;
   color: #5e5e5e;
 }
+
 .zaixin .s_r {
   width: 920px;
 }
+
 .s_r h4 {
   font-size: 18px;
   line-height: 1;
@@ -56,31 +83,39 @@
   margin-bottom: 10px;
   font-weight: normal;
 }
+
 .red {
-  color: #e71a0f!important;
+  color: #e71a0f !important;
 }
+
 .s_o {
   padding: 18px 0 0 0;
 }
+
 .mb10 {
-  margin-bottom: 10px!important;
+  margin-bottom: 10px !important;
 }
+
 .blue {
-  color: #0083ce!important;
+  color: #0083ce !important;
 }
 
 .ml20 {
-  margin-left: 20px!important;
+  margin-left: 20px !important;
 }
+
 .f_a {
-  font-family: Arial!important;
+  font-family: Arial !important;
 }
+
 .choseother {
   float: right;
   font-weight: bold;
   width: 180px;
 }
-.b_icon, .b_icon_on {
+
+.b_icon,
+.b_icon_on {
   display: inline-block;
   width: 11px;
   height: 11px;
@@ -89,76 +124,141 @@
   vertical-align: middle;
   margin-right: 10px;
 }
+
 .choseother .b_icon {
   background-position: 5px -76px;
   margin-right: 0;
   width: 18px;
 }
+
 .zx_pay {
   width: 856px;
   line-height: 56px;
   border: #e71a0f 2px solid;
   background-color: #fff;
 }
-.b_500, .b_506, .b_502, .b_510, .b_516, .b_517, .b_512, .b_508, .b_515, .b_513, .b_511, .b_518, .b_522, .b_523, .b_521, .b_525, .b_520, .b_524, .b_503, .b_600, .b_602, .b_604, .b_605, .b_606, .b_505, .b_601, .b_603, .b_607, .b_608, .b_609, .b_610, .b_615, .b_617, .b_626, .b_630, .b_635 {
+
+.b_500,
+.b_506,
+.b_502,
+.b_510,
+.b_516,
+.b_517,
+.b_512,
+.b_508,
+.b_515,
+.b_513,
+.b_511,
+.b_518,
+.b_522,
+.b_523,
+.b_521,
+.b_525,
+.b_520,
+.b_524,
+.b_503,
+.b_600,
+.b_602,
+.b_604,
+.b_605,
+.b_606,
+.b_505,
+.b_601,
+.b_603,
+.b_607,
+.b_608,
+.b_609,
+.b_610,
+.b_615,
+.b_617,
+.b_626,
+.b_630,
+.b_635 {
   width: 160px;
   float: left;
   background: #fff url(//s.maiyaole.com/images/201306/images/2014/bank_big.png) no-repeat -999px -999px;
 }
+
 .zx_pay li {
   height: 56px;
   line-height: 56px;
   padding-left: 20px;
 }
+.b_500, .b_600 {
+  background-position: 0 0;
+}
 .b_608 {
   background-position: -950px -132px;
 }
+
 #userOrderSelectBank {
   height: 36px;
   line-height: 1.2;
   padding-top: 20px;
 }
+
 .zx_pay .ra_bank {
   margin-left: 2px;
   vertical-align: top;
 }
+
 .zx_pay li {
   height: 56px;
   line-height: 56px;
   padding-left: 20px;
 }
+
 .pay_price {
   float: right;
   margin-right: 20px;
 }
+
 .pay_price span {
   font-size: 18px;
 }
+
 .scanCode {
   padding: 20px;
   border-top: 1px solid #E6E6E6;
   position: relative;
   width: 816px;
 }
+
 .sc_box {
   width: 405px;
   border-right: 1px solid #E6E6E6;
 }
+
 .sc_tit {
   font: 16px/24px Microsoft Yahei;
   *font-family: Microsoft Yahei;
   color: #000;
   text-align: center;
 }
-.sc_pic, .ico_or {
+
+.sc_pic,
+.ico_or {
   background: url(//s.maiyaole.com/images/201306/images/2014/pay_bg.gif) no-repeat 0% 0%;
 }
+
 .sc_pic {
   background-position: 0% -222px;
   width: 195px;
   height: 165px;
   margin: 20px auto;
 }
+
+.ico_or {
+  background-position: 0% -388px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -28px;
+  margin-top: -24px;
+}
+
 .pay_last_c {
   margin: 0 auto;
   background-position: -138px -217px;
@@ -171,33 +271,58 @@
   line-height: 120px;
   display: block;
 }
+
 .sc_box {
   width: 405px;
   border-right: 1px solid #E6E6E6;
 }
+
 .sc_boxRight {
   border: 0;
 }
+
 .sc_tit {
   font: 16px/24px Microsoft Yahei;
   *font-family: Microsoft Yahei;
   color: #000;
   text-align: center;
 }
+
 .sc_boxRight .sc_pic {
   background: none;
   width: 330px;
-  height: 222px;
+  height: 260px;
   margin: 0 auto 0 30px;
 }
+
+.alipayImg {
+  position: relative;
+}
+
+#alipayCode {
+  margin: 0 0 0 45px;
+}
+
+#aliCode {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  width: 77.5px;
+  height: 74.5px;
+  margin-left: -28.75px;
+  margin-top: -28.75px;
+}
+
 .scanCode .erweima {
   width: 350px;
   margin: 30px 0 0 20px;
 }
+
 .scanCode .erweima img {
   border: 1px solid #ddd;
   padding: 16px;
 }
+
 .scanCode .btn_tip {
   width: 190px;
   height: 42px;
@@ -209,9 +334,11 @@
   font-family: Microsoft Yahei;
   background: url(//s.maiyaole.com/images/201306/images/2014/sao.png) no-repeat 70px 10px #E72418;
 }
+
 .scanCode .saoma {
   width: 440px;
 }
+
 .operate {
   position: relative;
   float: right;
@@ -222,6 +349,7 @@
   text-align: right;
   margin-right: 36px;
 }
+
 .pay_last {
   float: right;
   background-position: -138px -217px;
@@ -236,12 +364,14 @@
   text-align: center;
   margin: 0 24px 0 0;
 }
+
 .zx_pay {
   width: 856px;
   line-height: 56px;
   border: #e71a0f 2px solid;
   background-color: #fff;
 }
+
 .zx_pay .pay_h {
   height: 50px;
   padding: 0 20px;
@@ -249,29 +379,36 @@
   font-size: 16px;
   line-height: 50px;
 }
-.zx_pay .pay_h .logo_douli, .zx_pay .pay_h .lbs {
+
+.zx_pay .pay_h .logo_douli,
+.zx_pay .pay_h .lbs {
   vertical-align: middle;
 }
 
 .mr10 {
-  margin-right: 10px!important;
+  margin-right: 10px !important;
 }
+
 .zx_pay .pay_h .font12 {
   font-size: 12px;
 }
+
 .zx_pay .pay_b {
   padding-top: 30px;
   text-align: center;
 }
+
 .zx_pay .pay_b p {
   font-size: 14px;
   line-height: 20px;
 }
+
 .zx_pay .pay_b .check_num_box {
   position: relative;
   padding-top: 20px;
   font-size: 0;
 }
+
 .zx_pay .pay_b .check_num_box .num {
   display: inline-block;
   width: 38px;
@@ -284,6 +421,7 @@
   text-align: center;
   background-color: #FCFCFC;
 }
+
 .zx_pay .pay_b .check_num_box .send_btn {
   display: inline-block;
   width: 74px;
@@ -298,6 +436,7 @@
   vertical-align: top;
   cursor: pointer;
 }
+
 .zx_pay .pay_b .check_num_box .tip {
   position: absolute;
   width: 100%;
@@ -308,9 +447,11 @@
   text-align: center;
   color: #F23B3B;
 }
+
 .zx_pay .pay_b .btn_wrap {
   padding: 50px 0;
 }
+
 .zx_pay .pay_b .btn_wrap .btn {
   display: inline-block;
   width: 174px;
@@ -325,24 +466,29 @@
   background-color: #E6221A;
   cursor: pointer;
 }
+
 .zx_pay .pay_b .btn_wrap .btn.disable {
   background-color: #D5D5D5;
   cursor: default;
 }
+
 .s_other {
   display: none;
   padding-top: 20px;
 }
+
 .p_t {
   font-size: 14px;
   font-weight: bold;
   margin-left: 65px;
   color: #333;
 }
+
 .s_other .p_t {
   margin-bottom: 10px;
   margin-left: 0;
 }
+
 .s_other .pay_select {
   left: 0;
 }
@@ -353,15 +499,44 @@
   width: 700px;
   *padding-bottom: 10px;
 }
+
 .bank {
   width: 118px;
   height: 30px;
   background-color: #fff;
   border: #e6e6e6 1px solid;
 }
-.zhifu, .kuaiqian, .zhaoshang, .gongshang, .jianshe, .nongye, .pingan, .zhongguo, .jiaotong, .pufa, .minsheng, .shanghai, .guangda, .zhongxin, .hangzhou, .guangfa, .ningbo, .wanlitong, .yikatong, .jiankangka, .shande, .weixin, .yinlian, .jianbaoka, .haohe, .shangbaotong, .yizhifu {
+
+.zhifu,
+.kuaiqian,
+.zhaoshang,
+.gongshang,
+.jianshe,
+.nongye,
+.pingan,
+.zhongguo,
+.jiaotong,
+.pufa,
+.minsheng,
+.shanghai,
+.guangda,
+.zhongxin,
+.hangzhou,
+.guangfa,
+.ningbo,
+.wanlitong,
+.yikatong,
+.jiankangka,
+.shande,
+.weixin,
+.yinlian,
+.jianbaoka,
+.haohe,
+.shangbaotong,
+.yizhifu {
   background: #fff url(//s.maiyaole.com/images/201306/images/2014/bank.png) no-repeat -999px -999px;
 }
+
 .pay_select li {
   float: left;
   margin-bottom: 10px;
@@ -369,16 +544,20 @@
   cursor: pointer;
   display: inline;
 }
+
 .zhifu {
   background-position: -1px -1px;
 }
+
 .weixin {
   background-position: -701px -44px;
 }
+
 .pay_select .ra_bank {
   margin: 8px 0 0 10px;
   float: left;
 }
+
 .paysure_btn {
   display: inline-block;
   background-position: -110px -16px;
@@ -387,14 +566,17 @@
   line-height: 120px;
   overflow: hidden;
 }
+
 .wrap {
   margin: 0 auto;
   width: 980px;
 }
+
 .q_a {
   margin: 30px 30px 30px 60px;
   color: #5e5e5e;
 }
+
 .q_a b {
   display: block;
   padding: 15px 0;

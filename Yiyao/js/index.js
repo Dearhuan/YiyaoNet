@@ -140,7 +140,7 @@ new Promise(function (resolve, reject) {
     }
   });
 }).then(function () {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     $.ajax({ //floor3_9
       type: "get",
       url: "../api/floor3_9.php",
@@ -235,7 +235,6 @@ window.onload = function () {
   });
  
   $('.consult_tabMenu').on('click', 'div', function () {
-    // console.log(this,$(this).index());
     $(this).addClass('tabMenu_cur').siblings().removeClass('tabMenu_cur');
     $('.consult_text').eq($(this).index()).removeClass('hide').siblings().addClass('hide');
   });

@@ -289,7 +289,6 @@ window.onload = function () {
     $('.delBtn').click(function () {
         $order_lists = $(this).parents('.order_lists');
         $order_content = $order_lists.parents('.order_content');
-        console.log($order_lists)
         $('.model_bg').fadeIn(300);
         $('.my_model').fadeIn(300);
     });
@@ -315,6 +314,10 @@ window.onload = function () {
         closeM();
         $sonCheckBox = $('.son_check');
         totalMoney();
+        let gid = $order_lists.attr('gid')*1,
+            flag = 'del';
+        console.log(gid);
+        changeGoodNum(gid,flag);     
     })
 
     //清空购物车
@@ -346,8 +349,6 @@ window.onload = function () {
         $('.total_text').html('￥' + total_money.toFixed(2));
         $('.piece_num').html(total_count);
 
-        // console.log(total_money,total_count);
-
         if (total_money != 0 && total_count != 0) {
             if (!calBtn.hasClass('btn_sty')) {
                 calBtn.addClass('btn_sty');
@@ -360,13 +361,18 @@ window.onload = function () {
     };
 
     //=======================================结算==========================================
-    let account = $('.calBtn');
-    account.click(function () {
-        if (checkCookie()) {
-            console.log('ok');
-            location.href = './confirmOrder.html';
-        } else {
-            console.log('no')
+    let calBtn = $('.calBtn a');
+    calBtn.click(function (event) {
+        event.preventDefault();
+        if ($(this).hasClass('btn_sty')) {        
+            if (checkCookie()) {
+                location.href = './confirmOrder.html';
+            } else {
+                alert('请登录！');
+                location.href = './login.html';
+            }
+        }else{
+            confirm('请选择商品！');
         }
     })
 }

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/foot_simple.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script src="../js/Cookie.js"></script>
-  <script src="../js/carts.js"></script>
+  <!-- <script src="../js/carts.js"></script> -->
 </head>
 
 <body>
@@ -64,13 +64,6 @@
           <tr class="tr_parcel">
             <td colspan="4"><span>包裹1</span> 18:00之前完成订单，可当日出库。 </td>
           </tr>
-          <tr data-overseas-shopping="true">
-            <td class="first_td"><img class="product-img"
-                src="https://p1.maiyaole.com/img/item/201907/29/65_20190729100000138.jpg"></td>
-            <td class="taLeft"> 江中 江中 板蓝根颗粒 10g*18袋 </td>
-            <td>6</td>
-            <td class="end_td"><em class="f_a">¥</em> 135.00</td>
-          </tr>
         </tbody>
       </table>
     </div>
@@ -78,9 +71,9 @@
       <div class="box_r">
         <table class="check_table" cellpadding="0" cellspacing="0">
           <tbody>
-            <tr>
-              <td class="c_name"><span class="red">1</span>种商品，共计<span class="red">6</span>件，总商品金额：</td>
-              <td class="c_price"><em class="f_a">¥</em><span id="theItemAllMoney"> 135.00</span></td>
+            <tr class="info">
+              <td class="c_name"><span class="red num"></span>种商品，共计<span class="red total_num"></span>件，总商品金额：</td>
+              <td class="c_price"><em class="f_a">¥</em><span id="theItemAllMoney"></span></td>
             </tr>
           </tbody>
         </table>
@@ -97,7 +90,7 @@
     <div class="pay_float clearfix" id="pay_floatdiv">
       <div class="p_b clearfix">
         <div class="p_row1"><span class="pay_lable">应付金额：</span>
-          <div class="p_sum"><span class="pay_allmoney"><em class="f_a">¥</em><em id="theAllMoney">135.00</em></span>
+          <div class="p_sum"><span class="pay_allmoney"><em class="f_a">¥</em><em id="theAllMoney"></em></span>
           </div>
         </div>
         <p class="payBox01"><span class="pay_addressinfo">送货至：</span> </p>
@@ -118,11 +111,8 @@
   <script>
     let cookieUsername = Cookie.get('username'); //检查cookie
     let cookiePassword = Cookie.get('password');
-
-    $('#orderSubmitButton').click(function(){
-      location.href = './orderPay.html';
-    })
   </script>
+  <script src="../js/confirmOrder.js"></script>
 </body>
 
 </html>

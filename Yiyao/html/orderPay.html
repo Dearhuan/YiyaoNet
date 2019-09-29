@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/foot_simple.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script src="../js/Cookie.js"></script>
-  <script src="../js/carts.js"></script>
+  <!-- <script src="../js/carts.js"></script> -->
 </head>
 
 <body>
@@ -51,47 +51,42 @@
           <p>请您在提交订单后<b class="red">24小时</b>内完成支付，否则订单会自动取消。 </p>
           <div class="s_o">
             <p class="mb10"><b>订单编号：</b>
-              <a href="//my.111.com.cn/ucenter/orderDetail.action?orderId=20190928214058554917" target="_blank"
-                class="blue mr10">20190928214058554917</a>
-              <span class="ml20"> 订单金额：<span class="red">
-                  <em class="f_a">¥</em>34.50</span></span>
-              <a href="javascript:;" onclick="javascript:showOtherBank(0);" class="blue choseother">选择其他在线支付<i
-                  class="b_icon"></i> </a>
+              <a href="#" target="_blank" class="blue mr10 orderNum"></a>
+              <span class="ml20"> 订单金额：<span class="red oPrice"></span></span>
+              <a href="javascript:;" class="blue choseother">选择其他在线支付<i class="b_icon"></i> </a>
             </p>
             <div class="p_online" id="orderBankInfo" style="display: block;">
               <div id="zx_pay_other" style="display: block;">
                 <div class="zx_pay">
                   <ul class="clearfix">
-                    <li id="userOrderSelectBank" class="b_608">
+                    <li id="userOrderSelectBank" class="b_600">
                       <input type="radio" class="ra_bank" checked="checked">
                     </li>
-                    <li class="pay_price">支付金额：<span class="red"><em class="f_a">¥</em>
-                        34.50</span>
+                    <li class="pay_price">支付金额：<span class="red oPrice"></span>
                     </li>
                   </ul>
                   <!--Add by Dancy-->
-                  <div class="scanCode clearfix" id="alipayDiv" style="display: none;">
+                  <div class="scanCode clearfix" id="alipayDiv" style="display: block;">
                     <i class="ico_or">&nbsp;</i>
                     <div class="sc_box fl">
                       <h5 class="sc_tit">使用电脑支付</h5>
                       <div class="sc_pic">&nbsp;</div>
-                      <a href="javascript:;" onclick="javascript:goAndOrderForOrder();" class="pay_last_c"></a>
+                      <a href="javascript:;" class="pay_last_c"></a>
                     </div>
                     <div class="sc_box sc_boxRight fl">
                       <h5 class="sc_tit">使用支付宝钱包扫一扫即可付款</h5>
                       <!--h5 class="sc_tit">扫码支付立减5-10元（名额有限）</h5-->
-                      <div class="sc_pic">
-                        <iframe width="320" height="260" scrolling="no" frameborder="0" id="alipayUrl" src=""></iframe>
+                      <div class="sc_pic alipayImg">
+                        <img id="alipayCode" src="../images/alipay.jpg" alt="" width="260" height="260">
+                        <!-- <img src="../images/aliCode.png" id="aliCode" alt=""> -->
                       </div>
                     </div>
                   </div>
                   <!--End add-->
                   <!--Add by weixin-->
-                  <div class="scanCode clearfix" id="alipayDiv_weixin" style="display: block;">
+                  <div class="scanCode clearfix" id="alipayDiv_weixin" style="display: none;">
                     <div class="erweima fl">
-                      <img id="weixin_MatrixImgUrl"
-                        src="//buy.111.com.cn/payment/getMatrixImg.action?id=20190928214058554917&amp;v=1569678059167"
-                        width="280" height="280">
+                      <img id="weixin_MatrixImgUrl" src="../images/wechatpay.png" width="280" height="280">
                       <div class="btn_tip">请使用微信扫一扫<br>扫描二维码支付</div>
                     </div>
                     <div class="saoma fl">
@@ -101,8 +96,7 @@
                   <!--End add-->
                 </div>
                 <div class="operate clearfix">
-                  <a href="javascript:;" onclick="javascript:goAndOrderForOrder();" class="pay_last" id="common_submit"
-                    style="display: none;"></a>
+                  <a href="javascript:;" class="pay_last" id="common_submit" style="display: none;"></a>
                 </div>
                 <div class="clearfix"></div>
               </div>
@@ -141,15 +135,15 @@
             <div class="s_other" id="showOtherBank" style="display: none;">
               <div class="p_t">支付平台</div>
               <ul class="pay_select clearfix">
-                <li data-ywpoint="null_null_null_null_I5000_0" class="zhifu bank"><input type="radio" class="ra_bank"
-                    value="600" name="ra_bank">
+                <li data-ywpoint="null_null_null_null_I5000_0" class="zhifu bank">
+                  <input type="radio" class="ra_bank" value="600" name="ra_bank">
                 </li>
-
-                <li data-ywpoint="null_null_null_null_I5000_3" class="weixin bank"><input type="radio" name="ra_bank"
-                    value="608" class="ra_bank" checked="checked"></li>
+                <li data-ywpoint="null_null_null_null_I5000_3" class="weixin bank">
+                  <input type="radio" name="ra_bank" value="608" class="ra_bank" checked="checked">
+                </li>
                 <input value="0 0" type="hidden">
               </ul>
-              <a href="javascript:;" onclick="javascript:changeBank();" class="paysure_btn">确认支付方式</a>
+              <a href="javascript:;" class="paysure_btn">确认支付方式</a>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -191,6 +185,101 @@
   <script>
     let cookieUsername = Cookie.get('username'); //检查cookie
     let cookiePassword = Cookie.get('password');
+
+    $.ajax({ //获取订单金额，生成订单编号，生成支付二维码
+      type: "get",
+      url: "../api/getCartData.php",
+      dataType: "json",
+      success: function (res) {
+        if (res.status == 'success') {
+          let data = res.data.goods;
+          let total_money = 0;
+          data.forEach(ele => {
+            let goodNum = ele.num * 1;
+            let goodPrice = ele.price * 1;
+            total_money += goodNum * goodPrice;
+          })
+          let orderNum = location.search.split('=')[1];
+          $('.orderNum').text(orderNum);
+          $('.oPrice').html(`<em class="f_a">¥</em>${total_money}`);
+        } else if (res.status == 'none') {
+          let data = res.data;
+        }
+      }
+    });
+
+
+    window.onload = function () {
+      $('.choseother').click(function (e) { //切换支付方式
+        e.preventDefault();
+        console.log('toggle');
+        $('#zx_pay_other').hide();
+        $('#showOtherBank').show();
+      });
+
+      $('.paysure_btn').click(function (e) {
+        e.preventDefault();
+        if ($('.weixin input').is(':checked')) {  //微信支付
+          $('#userOrderSelectBank').addClass('b_608').removeClass('.b_600');
+          $('#zx_pay_other').show();
+          $('#alipayDiv').hide();
+          $('#showOtherBank').hide();
+          $('#alipayDiv_weixin').show(); 
+        }else if($('.zhifu input').is(':checked')){   //支付宝
+          $('#userOrderSelectBank').addClass('b_600').removeClass('b_608');
+          $('#zx_pay_other').show();
+          $('#alipayDiv_weixin').hide();
+          $('#showOtherBank').hide();
+          $('#alipayDiv').show();
+        }
+      })
+
+
+      $('.iyaonet').on('mouseenter', function () { //我的医药网（鼠标移入移出common）
+        $(this).siblings('ul').stop().show();
+        // $(this).siblings('ul').on('mouseenter', 'li', function () {});
+        $(this).siblings('ul').on('mouseleave', function () {
+          $(this).hide();
+        })
+      });
+
+      $('.favorite').click(function (e) { //收藏本站(common)
+        e.preventDefault();
+        confirm('抱歉，您所使用的的浏览器无法完成此操作 \n 加入收藏失败，请使用Ctrl+D进行添加');
+      });
+
+      $('.province_box').hover(function () { //(省份)(common)
+        $(this).children('ul').stop().show();
+      }, function () {
+        $(this).children('ul').hide();
+      });
+
+      $('#headerAllProvince').on('click', 'a', function (e) { //点击省份替换(common)
+        e.preventDefault();
+        $('.province').children().text($(this).text());
+      })
+
+      $('.tell').hover(function () { //手机二维码(common)
+        $(this).siblings('.tell_title').stop().show();
+        $(this).siblings('#menu_bd_app').stop().show();
+      }, function () {
+        $(this).siblings('.tell_title').hide();
+        $(this).siblings('#menu_bd_app').hide();
+      });
+      let cUsername, cPassword;
+
+      function checkCookie() {
+        cUsername = Cookie.get('username'); //检查cookie
+        cPassword = Cookie.get('password');
+        if (cUsername && cPassword) return true;
+      };
+
+      checkCookie() ? $('#ilogin').text(cUsername) : $('#ilogin').text('请登录');
+
+      $('#orderSubmitButton').click(function () {
+        location.href = './orderPay.html';
+      })
+    }
   </script>
 </body>
 

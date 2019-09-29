@@ -20,7 +20,7 @@
          }
      },
      remove(key) {
-         this.set(key, null, -1);
+         this.set(key, null,'/', -1);
      },
      clear() {
          this.keys().forEach(ele => this.remove(ele));
