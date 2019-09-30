@@ -11,7 +11,8 @@
 <html>
 	<head>
 	<title>支付宝电脑网站支付</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 <style>
     *{
         margin:0;
@@ -212,7 +213,7 @@
                     <dt></dt>
                     <dd id="btn-dd">
                         <span class="new-btn-login-sp">
-                            <button class="new-btn-login" type="submit" style="text-align:center;">付 款</button>
+                            <button class="new-btn-login" id="alipay" type="submit" style="text-align:center;">付 款</button>
                         </span>
                         <span class="note-help">如果您点击“付款”按钮，即表示您同意该次的执行操作。</span>
                     </dd>
@@ -386,9 +387,26 @@
         }
     }
 
+    const getQuerySearch = () => {
+    // 获取 ？后面的内容
+    let search = location.search.length ? location.search.substr(1)  :  '';
+    const obj = {};
+    if (search.length) {
+        const arr = search.split('&');
+        arr.forEach(item => {
+            const [key, value] = item.split('=');
+            obj[key] = value;
+            // 或
+            // [key, obj[key]] = item.split('=')
+        })
+    }
+    return obj;
+    }
+
 	function GetDateNow() {
 		var vNow = new Date();
-		var sNow = "";
+        var sNow = "";
+        var data = getQuerySearch();
 		sNow += String(vNow.getFullYear());
 		sNow += String(vNow.getMonth() + 1);
 		sNow += String(vNow.getDate());
@@ -398,8 +416,21 @@
 		sNow += String(vNow.getMilliseconds());
 		document.getElementById("WIDout_trade_no").value =  sNow;
 		document.getElementById("WIDsubject").value = "测试";
-		document.getElementById("WIDtotal_amount").value = "0.01";
+        document.getElementById("WIDtotal_amount").value = `${Math.round(data.price*100)/100}`;
+        
+        $('#alipay').click();   
 	}
-	GetDateNow();
+    GetDateNow();
+    
+    
+
+    // console.log(getQuerySearch())
+    function RenderData(){
+        let data = getQuerySearch();
+        document.getElementById("WIDout_trade_no").value =  data.orderId;
+		document.getElementById("WIDsubject").value = data.order;
+		document.getElementById("WIDtotal_amount").value = data.price;
+    }
+    // RenderData();
 </script>
 </html>

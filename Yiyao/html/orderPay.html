@@ -201,7 +201,12 @@
           })
           let orderNum = location.search.split('=')[1];
           $('.orderNum').text(orderNum);
-          $('.oPrice').html(`<em class="f_a">¥</em>${total_money}`);
+          $('.oPrice').html(`<em class="f_a">¥</em>${total_money.toFixed(2)}`);
+
+          $('.pay_last_c').click(function (e) { //接入支付宝沙箱
+            e.preventDefault();
+            location.href = `../alipay/index.php?orderId=${orderNum}&price=${total_money.toFixed(2)}&order=myOrder`;
+          })
         } else if (res.status == 'none') {
           let data = res.data;
         }
@@ -217,15 +222,17 @@
         $('#showOtherBank').show();
       });
 
+
+
       $('.paysure_btn').click(function (e) {
         e.preventDefault();
-        if ($('.weixin input').is(':checked')) {  //微信支付
+        if ($('.weixin input').is(':checked')) { //微信支付
           $('#userOrderSelectBank').addClass('b_608').removeClass('.b_600');
           $('#zx_pay_other').show();
           $('#alipayDiv').hide();
           $('#showOtherBank').hide();
-          $('#alipayDiv_weixin').show(); 
-        }else if($('.zhifu input').is(':checked')){   //支付宝
+          $('#alipayDiv_weixin').show();
+        } else if ($('.zhifu input').is(':checked')) { //支付宝
           $('#userOrderSelectBank').addClass('b_600').removeClass('b_608');
           $('#zx_pay_other').show();
           $('#alipayDiv_weixin').hide();

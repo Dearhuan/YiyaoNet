@@ -16,6 +16,12 @@ if($sign == "plus"){
 }elseif($sign == "del"){
   $delSql = "DELETE FROM `cart` WHERE gid = $gid";
   mysqli_query($db,$delSql);
+}elseif($sign == 'checked'){
+  $checkSql = "UPDATE `cart` SET `isChecked`= 1 WHERE `gid`=$gid";
+  mysqli_query($db,$checkSql);
+}elseif($sign == 'unchecked'){
+  $uncheckSql = "UPDATE `cart` SET `isChecked`= 0 WHERE `gid`=$gid";
+  mysqli_query($db,$uncheckSql);
 }
 
 ?>

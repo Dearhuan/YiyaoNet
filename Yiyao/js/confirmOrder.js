@@ -1,6 +1,9 @@
 $.ajax({
-  type: "get",
-  url: "../api/getCartData.php",
+  type: "post",
+  url: "../api/getOrder.php",
+  data:{
+    flag:0
+  },
   dataType: "json",
   success: function (res) {
     let data = res.data.goods;
@@ -23,11 +26,11 @@ $.ajax({
       let goodPrice = Math.round(parseFloat($(this).find('.end_td').text().slice(1)) * 100) / 100;
       total_num += goodNum, total_price += goodPrice;
     });
-    console.log(total_num, total_price);
+    console.log(total_num, total_price.toFixed(2));
     $('.info .num').text($('.item_goods').length);
     $('.info .total_num').text(total_num);
-    $('#theItemAllMoney').text(total_price);
-    $('#theAllMoney').text(total_price);
+    $('#theItemAllMoney').text(total_price.toFixed(2));
+    $('#theAllMoney').text(total_price.toFixed(2));
   }
 });
 

@@ -16,8 +16,8 @@ $flag = mysqli_num_rows($result);
 //   更新
 // UPDATE `cart` SET `num`= `num`+2 WHERE `gid`='972419';
 if($flag == "0"){
-  $sql = "INSERT INTO `cart` (`id`,`gid`,`title`,`src`,`price`,`num`, `store`,`comment`) 
-  VALUES (NULL, '$gid','$title','$src', '$price', '$num', '$store','$comment');";
+  $sql = "INSERT INTO `cart` (`id`,`gid`,`title`,`src`,`price`,`num`, `store`,`isChecked`,`comment`) 
+  VALUES (NULL, '$gid','$title','$src', '$price', '$num', '$store',0,'$comment');";
   mysqli_query($db,$sql);
 }elseif($flag == "1"){
   $sql2 = "UPDATE `cart` SET `num`= `num`+$num WHERE `gid`=$gid";

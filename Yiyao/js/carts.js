@@ -84,8 +84,8 @@ window.onload = function () {
     });
     let cUsername, cPassword;
 
-    function checkCookie() {
-        cUsername = Cookie.get('username'); //检查cookie
+    function checkCookie() { //检查cookie
+        cUsername = Cookie.get('username');
         cPassword = Cookie.get('password');
         if (cUsername && cPassword) return true;
     };
@@ -112,9 +112,23 @@ window.onload = function () {
         if ($(this).is(':checked')) {
             $checkboxs.prop("checked", true);
             $checkboxs.next('label').addClass('mark');
+            $.ajax({
+                type: "post",
+                url: "../api/getOrder.php",
+                data: {
+                    flag:'all'
+                }
+            });
         } else {
             $checkboxs.prop("checked", false);
             $checkboxs.next('label').removeClass('mark');
+            $.ajax({
+                type: "post",
+                url: "../api/getOrder.php",
+                data: {
+                    flag:'notall'
+                }
+            });
         }
         totalMoney();
     });
@@ -194,8 +208,17 @@ window.onload = function () {
                     $sonChecks.each(function () {
                         if ($(this).is(':checked')) {
                             num++;
-                        }
-                    });
+                            let gid = $(this).parent().parent().attr('gid')*1;
+                            let flag = 'checked';
+                            console.log($(this).parent().parent().attr('gid'),num);
+                            changeGoodNum(gid,flag);
+                        }else if(!$(this).is(':checked')){
+                            let gid = $(this).parent().parent().attr('gid')*1;
+                            let flag = 'unchecked';
+                            console.log(gid)
+                            changeGoodNum(gid,flag);
+                        } 
+                        });
                     if (num == len) {
                         $(this).parents('.cartBox').find('.shopChoice').prop("checked", true);
                         $(this).parents('.cartBox').find('.shopChoice').next('label').addClass('mark');
@@ -314,10 +337,10 @@ window.onload = function () {
         closeM();
         $sonCheckBox = $('.son_check');
         totalMoney();
-        let gid = $order_lists.attr('gid')*1,
+        let gid = $order_lists.attr('gid') * 1,
             flag = 'del';
         console.log(gid);
-        changeGoodNum(gid,flag);     
+        changeGoodNum(gid, flag);
     })
 
     //清空购物车
@@ -362,17 +385,19 @@ window.onload = function () {
 
     //=======================================结算==========================================
     let calBtn = $('.calBtn a');
+
     calBtn.click(function (event) {
         event.preventDefault();
-        if ($(this).hasClass('btn_sty')) {        
-            if (checkCookie()) {
-                location.href = './confirmOrder.html';
-            } else {
-                alert('请登录！');
-                location.href = './login.html';
-            }
-        }else{
-            confirm('请选择商品！');
-        }
+        let checkedNum = $('.order_lists input:checked').length;
+         if ($(this).hasClass('btn_sty')) {
+             if (checkCookie()) {
+                 location.href = './confirmOrder.html';
+             } else {
+                 alert('请登录！');
+                 location.href = './login.html';
+             }
+         } else {
+             confirm('请选择商品！');
+         }
     })
 }
