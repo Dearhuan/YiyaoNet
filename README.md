@@ -6,7 +6,7 @@
 
 项目目录：
 
-![](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1569825846894.png)
+![](Yiyao\images\mulu.png)
 
 项目目录说明：
 
@@ -38,36 +38,36 @@ sql：数据库导出的SQL文件夹
 
 首页：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\yiyaonet.png)
+![](Yiyao\images\yiyaonet.png)
 
 商品列表页：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\goodlist.png)
+![](Yiyao\images\goodlist.png)
 
 商品详情页：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\detail.png)
+![](Yiyao\images\detail.png)
 
 购物车页面：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\cart.png)
+![](Yiyao\images\cart.png)
 
 订单页面：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\order.png)
+![](Yiyao\images\order.png)
 
 支付页面：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\confirmOrder.png)
+![](Yiyao\images\confirmOrder.png)
 
 支付成功页面：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\pay2.png)
+![](Yiyao\images\pay2.png)
 
 登录页面：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\login.png)
+![](Yiyao\images\login.png)
 
 注册页面：
 
-![](E:\Program\wamp2\www\project\YiyaoNet\Yiyao\images\regist.png)
+![](Yiyao\images\regist.png)
