@@ -6,7 +6,7 @@
 
 项目目录：
 
-![](Yiyao\images\mulu.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/mulu.png)
 
 项目目录说明：
 
@@ -38,36 +38,36 @@ sql：数据库导出的SQL文件夹
 
 首页：
 
-![](Yiyao\images\yiyaonet.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/yiyaonet.png)
 
 商品列表页：
 
-![](Yiyao\images\goodlist.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/goodlist.png)
 
 商品详情页：
 
-![](Yiyao\images\detail.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/detail.png)
 
 购物车页面：
 
-![](Yiyao\images\cart.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/cart.png)
 
 订单页面：
 
-![](Yiyao\images\order.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/order.png)
 
 支付页面：
 
-![](Yiyao\images\confirmOrder.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/pay1.png)
 
 支付成功页面：
 
-![](Yiyao\images\pay2.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/pay2.png)
 
 登录页面：
 
-![](Yiyao\images\login.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/login.png)
 
 注册页面：
 
-![](Yiyao\images\regist.png)
+![](https://github.com/Dearhuan/YiyaoNet/blob/master/regist.png)
