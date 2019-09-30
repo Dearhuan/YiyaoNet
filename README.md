@@ -1,17 +1,6 @@
----
-title: Ajax基础介绍
-categories: 网络编程相关
-tags: 
-- 网络编程
-- Ajax
-- 序列化
-copyright: true
+作者：何欢
 
----
-
-#### Ajax：Async JavaScript andXML
-
-<!--more-->
+欢迎点赞！！！
 
 # YiyaoNet
 
