@@ -1,12 +1,12 @@
-作者：何欢
-
-欢迎点赞！！！
-
 # YiyaoNet
+
+##### This is a "医药网" written by JavaScript. The author is [Hehuan(何欢)](https://github.com/dearhuan).
+
+##### 该项目主要是使用JQuery对医药网进行了一个简单的仿写
 
 项目目录：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/mulu.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/mulu.png)
 
 项目目录说明：
 
@@ -38,35 +38,36 @@ sql：数据库导出的SQL文件夹
 
 首页：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/yiyaonet.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/yiyaonet.png)
 
 商品列表页：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/goodlist.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/goodlist.png)
 
 商品详情页：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/detail.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/detail.png)
 
 购物车页面：
-https://github.com/Dearhuan/YiyaoNet/blob/master/cart.png
+
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/cart.png)
 
 订单页面：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/order.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/order.png)
 
 支付页面：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/pay1.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/pay1.png)
 
 支付成功页面：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/pay2.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/pay2.png)
 
 登录页面：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/login.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/login.png)
 
 注册页面：
 
-https://github.com/Dearhuan/YiyaoNet/blob/master/regist.png
+![alt text](https://gitee.com/dearhuan/images/raw/master/image/regist.png)
